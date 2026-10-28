@@ -1,0 +1,106 @@
+/* =========================================================================
+   MILLI PEAK 毫剪 — Design tokens（依《MilliPeak VI.pdf》2026，16 頁）
+   來源：Drive 1Q7HbFu3QvsaEjNHFRYmwQ2nIKYvOluK0；色值直接取自 PDF 向量色彩
+   標記：[VI] = 手冊明確規定；[VI-例] = 手冊應用範例可見；[建議] = 手冊未規定，網站實作建議
+   ========================================================================= */
+:root {
+  /* ---------- 品牌五色 [VI p6] ---------- */
+  --mp-orange: #DC4B35;  /* 橘紅 C9 M84 Y79 K0｜HSB 8,76%,86%｜僅限準心/關鍵節點 */
+  --mp-black:  #231815;  /* 深黑 C0 M0 Y0 K100｜HSB 13,40%,14%｜主色、文字 */
+  --mp-gray:   #727171;  /* 冷灰 K70｜HSB 0,1%,45%｜logo 刀刃與標準字 */
+  --mp-silver: #C9CACA;  /* 金屬銀 K30｜HSB 180,0%,79%｜大面積底色 */
+  --mp-white:  #FFFFFF;  /* 白 K0 */
+  /* RGB（便於 rgb()/透明度運算） */
+  --mp-orange-rgb: 220 75 53;
+  --mp-black-rgb: 35 24 21;
+  --mp-gray-rgb: 114 113 113;
+  --mp-silver-rgb: 201 202 202;
+
+  /* ---------- 色階 [VI p7]：飽和度 -00 / -20 / -40 / -60（= 100% / 80% / 60% / 40% 濃度）---------- */
+  --mp-gray-100:   #727171;
+  --mp-gray-80:    #929292;
+  --mp-gray-60:    #B1B1B2;
+  --mp-gray-40:    #CDCECE;
+
+  --mp-orange-100: #DC4B35;
+  --mp-orange-80:  #E27254;
+  --mp-orange-60:  #E9987A;
+  --mp-orange-40:  #F1BCA5;
+
+  --mp-silver-100: #C9CACA;
+  --mp-silver-80:  #D5D5D6;
+  --mp-silver-60:  #E0E1E1;
+  --mp-silver-40:  #EBECEC;
+
+  --mp-black-100:  #231815;
+  --mp-black-80:   #595757;
+  --mp-black-60:   #898989;
+  --mp-black-40:   #B5B6B6;
+
+  --mp-white-100:  #FFFFFF; /* 白無色階；VI 以 #231815 細框標示白色塊 */
+  /* 只允許以上 20 個值；不得自行內插其他百分比 */
+
+  /* ---------- 語意色 [建議，皆取自上列] ---------- */
+  --mp-bg:            var(--mp-white);
+  --mp-bg-alt:        var(--mp-silver-100);   /* VI 章節頁底色 p2/p5/p8/p10 */
+  --mp-bg-subtle:     var(--mp-silver-40);
+  --mp-bg-accent:     var(--mp-orange);       /* 僅限封面型滿版區塊 p1/p15/p16 */
+  --mp-text:          var(--mp-black);
+  --mp-text-muted:    var(--mp-black-80);     /* VI p6 規格文字用色 */
+  --mp-text-on-accent:var(--mp-black);        /* 橘底上一律用黑 [VI-例 p1] */
+  --mp-rule:          var(--mp-black);        /* 分隔線 [VI-例 p1-p10] */
+  --mp-hairline:      var(--mp-black);        /* 白色塊外框 [VI p7] */
+
+  /* ---------- 字體 [VI p9] ---------- */
+  --mp-font-latin: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mp-font-cjk: "Source Han Sans TC", "Noto Sans TC", "思源黑體", sans-serif;
+  --mp-font: "Helvetica Neue", Helvetica, Arial, "Source Han Sans TC", "Noto Sans TC", sans-serif;
+  /* 手冊版面本身：標題 思源黑體 Heavy(900)、副標 Medium(500)、內文 Regular/Normal(400/350) */
+  --mp-weight-display: 900;
+  --mp-weight-medium: 500;
+  --mp-weight-body: 400;
+  --mp-line-height-body: 1.75;      /* 內文 16pt / 行距 28pt [VI-例 p2] */
+  --mp-tracking-display: 0.06em;    /* 大標字距略開 [VI-例 p1，估算] */
+  --mp-tracking-label: 0.08em;      /* 「Personal Brand」等小標 [VI-例，估算] */
+
+  /* ---------- Logo 比例（由向量原稿量測）---------- */
+  --mp-lockup-ratio: 2.4444;   /* 完整 logo 785.9 × 321.5 */
+  --mp-icon-ratio: 2.4562;     /* 純圖（刀刃+準心）785.9 × 320.0 */
+  --mp-wordmark-ratio: 10.3245;/* 標準字 376.45 × 36.46 */
+  --mp-symbol-ratio: 1.0069;   /* 準心符號 19.50 × 19.37 */
+
+  /* ---------- 最小尺寸 [VI p4] ---------- */
+  --mp-lockup-min-w: 120px;    /* 完整 logo：螢幕 ≥120px / 印刷 ≥20mm（→ 高 ≈49px）*/
+  --mp-icon-min-w: 120px;      /* p4 標示 W:20mm，比照完整 logo */
+  --mp-wordmark-min-w: 120px;  /* p4 標示 W:20mm，比照完整 logo（→ 高 ≈11.6px）*/
+  --mp-symbol-min-w: 64px;     /* 純圖 logo（準心）：螢幕 ≥64px / 印刷 ≥12mm */
+
+  /* ---------- 留白 [建議：VI p4 標題有 Clear Space，但未給數值] ---------- */
+  /* H = logo 實際顯示高度 */
+  --mp-lockup-clear: 0.25;     /* 四周 ≥ 0.25H */
+  --mp-icon-clear: 0.25;
+  --mp-wordmark-clear: 1;      /* 四周 ≥ 1H（標準字很扁） */
+  --mp-symbol-clear: 0.5;      /* 四周 ≥ 0.5H */
+
+  /* ---------- 版位尺寸 [建議] ---------- */
+  --mp-header-wordmark-w: clamp(120px, 12vw, 200px);
+  --mp-footer-lockup-w: 160px;
+  --mp-hero-lockup-w: clamp(280px, 50vw, 880px);
+}
+
+/* Logo 元件：尺寸由寬度決定、比例鎖定、留白以 padding 保留 */
+.mp-logo { display: inline-block; line-height: 0; flex: none; }
+.mp-logo img, .mp-logo svg { display: block; width: 100%; height: auto; }
+
+.mp-logo--lockup  { width: max(var(--w, 160px), var(--mp-lockup-min-w));
+                    padding: calc(var(--w, 160px) / var(--mp-lockup-ratio) * var(--mp-lockup-clear)); }
+.mp-logo--icon    { width: max(var(--w, 160px), var(--mp-icon-min-w));
+                    padding: calc(var(--w, 160px) / var(--mp-icon-ratio) * var(--mp-icon-clear)); }
+.mp-logo--wordmark{ width: max(var(--w, 180px), var(--mp-wordmark-min-w));
+                    padding: calc(var(--w, 180px) / var(--mp-wordmark-ratio) * var(--mp-wordmark-clear)); }
+.mp-logo--symbol  { width: max(var(--w, 64px), var(--mp-symbol-min-w));
+                    padding: calc(var(--w, 64px) / var(--mp-symbol-ratio) * var(--mp-symbol-clear)); }
+
+/* 禁止任何會改變 logo 的效果 */
+.mp-logo, .mp-logo * { filter: none !important; box-shadow: none !important; transform: none !important;
+                       mix-blend-mode: normal !important; opacity: 1 !important; }
