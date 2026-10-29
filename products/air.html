@@ -56,97 +56,132 @@
 </header>
 
 <main id="main">
-  <section class="pd-intro" aria-labelledby="pd-title">
-    <div class="te-center wrap">
-      <p class="crumb"><a href="../index.html#products">產品</a> / 透 air</p>
-      <h1 id="pd-title" class="pd-title-te">
-        <span class="pd-title-te__zh">透 <span class="en">air</span>.</span>
-        <span class="pd-title-te__model model">MP–103S air thinners.</span>
-      </h1>
-      <p class="pd-claim">調整髮量、追求通透（10%～15% 打薄刀）</p>
-      <div class="te-body pd-intro__body">
-        <p>特別針對調整髮量、追求通透感；不一定要打薄，而是讓線條更輕盈。</p>
-        <p>鹿角結構，剪裁更絲滑；對稱設計，刀口在上或在下都好用。</p>
-        <p>顛覆傳統：鋸齒切割、刀刃不切割；內置耐磨片。</p>
-      </div>
-      <p class="pd-intro__facts muted">10%～15% 打薄刀　NT$4,500</p>
-      <!-- WShop：把 href="#" 換成商品頁（data-wshop-link="air"） -->
-        <a class="accent-link" href="#" data-wshop-link="air">購買 <span class="en">buy</span></a>
-    </div>
-  </section>
-
-  <section class="seq" aria-label="產品主視覺">
-  <p class="seq-note muted wrap">盒裝產品圖待補；購買區先放平面／手持圖。</p>
-    <figure class="seq__frame seq__frame--hero">
-      <div class="media"><img src="../assets/img/air-hero.webp" width="1400" height="1400" alt="毫剪 透 air 10%～15% 牙剪打薄刀 乾淨產品主視覺" fetchpriority="high" decoding="async" data-placeholder="air-hero"></div>
+  <!-- 1. 首屏：黑底大圖＋一行短標（產品主導；購買後置） -->
+  <section class="pd-hero" aria-labelledby="pd-title">
+    <figure class="pd-hero__figure">
+      <div class="media pd-hero__media"><img src="../assets/img/air-hero.webp" width="1400" height="1400" alt="毫剪 透 air 10%～15% 牙剪打薄刀 乾淨產品主視覺" fetchpriority="high" decoding="async" data-placeholder="air-hero"></div>
     </figure>
-  </section>
-
-  <section class="section pd-sell" aria-label="賣點">
-    <div class="te-center wrap">
-      <p class="pd-sell__line">為通透與輕盈，不是為了硬打薄。</p>
+    <div class="pd-hero__caption wrap te-center">
+      <p class="crumb crumb--on-dark"><a href="../index.html#products">產品</a> / 透 air</p>
+      <h1 id="pd-title" class="pd-hero__title">
+        <span class="pd-hero__zh">透 <span class="en">air</span>.</span>
+      </h1>
+      <p class="pd-hero__line">lighter lines.</p>
+      <p class="pd-hero__claim muted">調整髮量、追求通透 · MP–103S</p>
+      <a class="pd-hero__anchor" href="#buy">購買 <span class="en">buy</span></a>
     </div>
   </section>
-  <figure class="bleed seq__frame" aria-label="設計主視覺">
+
+  <!-- 2. 短 intro（不重複三段＋價） -->
+  <section class="pd-chapter" aria-label="介紹">
+    <div class="te-center wrap">
+      <p class="te-body">特別針對調整髮量、追求通透感；不一定要打薄，而是讓線條更輕盈。</p>
+    </div>
+  </section>
+
+  <!-- 3. 全寬美感大圖 -->
+  <figure class="bleed seq__frame seq__frame--dark" aria-label="設計主視覺">
     <div class="media"><img src="../assets/img/air-band-design.webp" width="2100" height="900" alt="毫剪 透 air 10%～15% 牙剪打薄刀 設計主視覺" srcset="../assets/img/air-band-design-800.webp 800w, ../assets/img/air-band-design.webp 2100w" sizes="100vw" loading="lazy" decoding="async" data-placeholder="air-band-design"></div>
   </figure>
 
-  <section class="section feat-circles-wrap" aria-labelledby="feat-title">
+  <!-- 4. 短章節 -->
+  <section class="pd-chapter pd-chapter--pause" aria-labelledby="ch-title">
+    <div class="te-center wrap">
+      <h2 id="ch-title" class="h-m">為通透與輕盈。</h2>
+      <p class="te-body muted">鹿角結構，剪裁更絲滑；對稱設計，刀口在上或在下都好用。</p>
+    </div>
+  </section>
+
+  <!-- 5. 細節圓：h3＋一句說明 -->
+  <section class="section feat-circles-wrap feat-circles-wrap--dark" aria-labelledby="feat-title">
     <div class="wrap">
-      <div class="te-center" style="margin-bottom:var(--sp-xl)">
+      <div class="te-center feat-circles__head">
         <h2 id="feat-title" class="h-m">細節 <span class="en">details</span></h2>
-        <p class="te-body muted" style="margin-top:var(--sp-sm)">把正在講的特點拉近看。</p>
+        <p class="te-body muted">把正在講的特點拉近看。</p>
       </div>
       <ul class="feat-circles">
       <li class="feat-circles__item">
         <div class="feat-circles__orb"><div class="media"><img src="../assets/img/air-feat-1.webp" width="900" height="900" alt="毫剪 透 air 10%～15% 牙剪打薄刀 鹿角結構" loading="lazy" decoding="async" data-placeholder="air-feat-1"></div></div>
         <h3 class="feat-circles__name">鹿角結構</h3>
+        <p class="feat-circles__blurb">剪裁更絲滑的結構曲線。</p>
         <p class="feat-circles__en en">deer-horn</p>
       </li>
       <li class="feat-circles__item">
         <div class="feat-circles__orb"><div class="media"><img src="../assets/img/air-feat-2.webp" width="900" height="900" alt="毫剪 透 air 10%～15% 牙剪打薄刀 鋸齒" loading="lazy" decoding="async" data-placeholder="air-feat-2"></div></div>
         <h3 class="feat-circles__name">鋸齒</h3>
+        <p class="feat-circles__blurb">鋸齒切割、刀刃不切，效果絲滑。</p>
         <p class="feat-circles__en en">teeth</p>
       </li>
       <li class="feat-circles__item">
         <div class="feat-circles__orb"><div class="media"><img src="../assets/img/air-feat-3.webp" width="900" height="900" alt="毫剪 透 air 10%～15% 牙剪打薄刀 耐磨片" loading="lazy" decoding="async" data-placeholder="air-feat-3"></div></div>
         <h3 class="feat-circles__name">耐磨片</h3>
+        <p class="feat-circles__blurb">內置耐磨片，磨合順暢。</p>
         <p class="feat-circles__en en">wear plate</p>
       </li>
       <li class="feat-circles__item">
         <div class="feat-circles__orb"><div class="media"><img src="../assets/img/air-feat-4.webp" width="900" height="900" alt="毫剪 透 air 10%～15% 牙剪打薄刀 對稱握感" loading="lazy" decoding="async" data-placeholder="air-feat-4"></div></div>
         <h3 class="feat-circles__name">對稱握感</h3>
+        <p class="feat-circles__blurb">刀口在上或在下都好用。</p>
         <p class="feat-circles__en en">symmetric grip</p>
       </li>
       </ul>
     </div>
   </section>
 
-  <section class="section pd-block" aria-labelledby="role-title">
+  <figure class="macro-bleed bleed" aria-label="特寫">
+    <div class="media macro-bleed__media"><img src="../assets/img/air-detail-1.webp" width="1200" height="802" alt="毫剪 透 air 10%～15% 牙剪打薄刀 特寫" srcset="../assets/img/air-detail-1-800.webp 800w, ../assets/img/air-detail-1.webp 1200w" sizes="100vw" loading="lazy" decoding="async" data-placeholder="air-detail-1"></div>
+    <figcaption class="macro-bleed__callout"><span class="macro-bleed__zh">鹿角結構</span><span class="en">deer-horn</span></figcaption>
+  </figure>
+  <!-- 6. 角色一句（不複述圓形說明） -->
+  <section class="pd-chapter pd-chapter--pause" aria-labelledby="role-title">
     <div class="te-center wrap">
       <h2 id="role-title" class="h-m">通透輕盈</h2>
-      <div class="te-body">
-        <p>10%～15% 打薄刀。調整髮量，讓線條更輕盈。</p>
-        <p>結構：鹿角結構＋對稱設計，刀口上下都好用。</p>
-        <p>顛覆傳統：一般打薄刀是刀刃切、鋸齒不切；透相反——鋸齒切、刀刃不切，效果絲滑。</p>
-      </div>
-      <a class="accent-link" href="#buy">購買 <span class="en">buy</span></a>
-    </div>
-  </section>
-  <figure class="bleed seq__frame" aria-label="設計節奏">
-    <div class="media"><img src="../assets/img/air-band-rhythm.webp" width="2100" height="900" alt="毫剪 透 air 10%～15% 牙剪打薄刀 設計節奏" srcset="../assets/img/air-band-rhythm-800.webp 800w, ../assets/img/air-band-rhythm.webp 2100w" sizes="100vw" loading="lazy" decoding="async" data-placeholder="air-band-rhythm"></div>
-  </figure>
-  <section class="section pd-block" aria-labelledby="feature-title">
-    <div class="te-center wrap">
-      <h2 id="feature-title" class="h-m en">lighter lines.</h2>
-      <p class="te-body">鹿角結構、對稱、鋸齒切割——為通透與輕盈，不是為了硬打薄。</p>
+      <p class="te-body muted">10%～15% 打薄刀。顛覆傳統：鋸齒切割、刀刃不切割，效果絲滑。</p>
     </div>
   </section>
 
+  <figure class="bleed seq__frame seq__frame--dark" aria-label="設計節奏">
+    <div class="media"><img src="../assets/img/air-band-rhythm.webp" width="2100" height="900" alt="毫剪 透 air 10%～15% 牙剪打薄刀 設計節奏" srcset="../assets/img/air-band-rhythm-800.webp 800w, ../assets/img/air-band-rhythm.webp 2100w" sizes="100vw" loading="lazy" decoding="async" data-placeholder="air-band-rhythm"></div>
+  </figure>
+  <section class="pd-chapter" aria-labelledby="feature-title">
+    <div class="te-center wrap">
+      <h2 id="feature-title" class="h-m en">lighter lines.</h2>
+      <p class="te-body muted">鹿角結構、對稱、鋸齒切割——為通透與輕盈，不是為了硬打薄。</p>
+    </div>
+  </section>
+
+  <!-- 7. 規格帶：多欄小字、深→淺 -->
+  <section id="specs" class="specs-band" aria-labelledby="specs-title">
+    <div class="specs-band__lead wrap">
+      <h2 id="specs-title" class="specs-band__title">MP–103S <span class="en">specifications</span></h2>
+      <p class="specs-band__note muted">僅列已確認項目；其餘規格待樣品確認後補上。</p>
+    </div>
+    <div class="specs-band__grid">
+      <div class="specs-band__col specs-band__col--0">
+        <h3 class="specs-band__h">型號 <span class="en">model</span></h3>
+        <p class="specs-band__v">MP–103S</p>
+      </div>
+      <div class="specs-band__col specs-band__col--1">
+        <h3 class="specs-band__h">長度 <span class="en">length</span></h3>
+        <p class="specs-band__v">待提供</p>
+      </div>
+      <div class="specs-band__col specs-band__col--2">
+        <h3 class="specs-band__h">用途名 <span class="en">use</span></h3>
+        <p class="specs-band__v">10%～15% 打薄刀</p>
+      </div>
+      <div class="specs-band__col specs-band__col--3">
+        <h3 class="specs-band__h">價格 <span class="en">price</span></h3>
+        <p class="specs-band__v">NT$4,500</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. 購買後置（payoff） -->
   <section id="buy" class="section buy-te" aria-labelledby="buy-title">
     <div class="wrap buy-te__grid">
       <div class="media buy-te__media"><img src="../assets/img/air-box.webp" width="1000" height="1500" alt="毫剪 透 air 10%～15% 牙剪打薄刀 包裝／購買區圖" loading="lazy" decoding="async" data-placeholder="air-box"></div>
       <div class="buy-te__info te-center">
+        <p class="seq-note muted">盒裝產品圖待補；購買區先放平面／手持圖。</p>
         <h2 id="buy-title" class="h-m">透 <span class="en">air</span>.</h2>
         <p class="buy-te__model model muted">MP–103S</p>
         <p class="buy-te__desc">通透輕盈</p>
@@ -155,25 +190,6 @@
         <a class="accent-link" href="#" data-wshop-link="air">購買 <span class="en">buy</span></a>
         <p class="price-note">價格為新台幣，含稅。</p>
         <p class="buy__also">亦可搭配其他款組成三刀組 NT$12,600／四刀組 NT$16,800</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="specs" class="section wrap specs-te" aria-labelledby="specs-title">
-    <div class="specs-te__grid specs-te__grid--verified">
-      <div class="specs-te__col">
-        <h2 id="specs-title" class="h-m">MP–103S <span class="en">specifications</span></h2>
-        <p class="muted">僅列已確認項目；其餘規格待樣品確認後補上。</p>
-      </div>
-      <div class="specs-te__col specs-te__col--table">
-        <table class="specs-table">
-          <tbody>
-          <tr><th scope="row">型號 <span class="en">model</span></th><td>MP–103S</td></tr>
-          <tr><th scope="row">長度 <span class="en">length</span></th><td class="tbd">待提供</td></tr>
-          <tr><th scope="row">用途名 <span class="en">use</span></th><td>10%～15% 打薄刀</td></tr>
-          <tr><th scope="row">價格 <span class="en">price</span></th><td>NT$4,500</td></tr>
-          </tbody>
-        </table>
       </div>
     </div>
   </section>

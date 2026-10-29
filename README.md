@@ -2,7 +2,7 @@
 
 純 HTML／CSS，沒有建置步驟、沒有框架、沒有外部 CDN、沒有 JavaScript（手機選單用原生 `<details>`）。所有路徑都是相對路徑。
 
-構圖／節奏對齊 teenage.engineering（尤產品頁 TP-7）：置中大標＋短述＋橘紅文字連結 → 全寬 1:1 幾乎無縫產品圖序列 → story／細節 → 四欄規格。
+構圖／節奏對齊 teenage.engineering OP–XY：黑底 hero 產品先行＋一行短標 → 短章節停頓＋美感大圖 → 細節圓（h3＋一句說明）→ 規格帶（已確認欄）→ 購買後置 payoff。
 
 ## 結構
 

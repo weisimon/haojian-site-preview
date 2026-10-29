@@ -586,3 +586,250 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   .feat-circles__orb { width: min(100%, 44vw); }
   .feat-circles-wrap .wrap > .te-center { padding-inline: var(--pad); }
 }
+
+/* =========================================================================
+   OP–XY product rhythm (2026-10-29)
+   hero 黑底先行 → 短章節停頓 → 深底細節圓 → 規格帶 → 購買後置
+   ========================================================================= */
+
+/* ---------- 產品首屏：黑底大圖＋短標 ---------- */
+.pd-hero {
+  background: #0a0a0a;
+  color: var(--mp-silver-40);
+  padding: 0 0 calc(var(--u) * 50);
+}
+.pd-hero__figure { margin: 0; }
+.pd-hero__media {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: 88vh;
+  background: #0a0a0a;
+}
+.pd-hero__media img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.pd-hero__caption {
+  padding-block: calc(var(--u) * 28) 0;
+  text-align: center;
+}
+.crumb--on-dark,
+.crumb--on-dark a {
+  color: var(--mp-gray-60);
+}
+.pd-hero__title { margin: 0; }
+.pd-hero__zh {
+  display: block;
+  font-size: var(--fs-40);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: .04em;
+  color: var(--mp-silver-40);
+}
+.pd-hero__line {
+  margin-top: var(--sp-md);
+  font-size: var(--fs-30);
+  font-weight: 300;
+  letter-spacing: .06em;
+  line-height: 1.35;
+  color: var(--mp-silver-80);
+}
+.pd-hero__claim {
+  margin-top: var(--sp-sm);
+  font-size: var(--fs-15);
+  color: var(--mp-gray-60);
+}
+/* 很淡的錨點，不是主 CTA */
+.pd-hero__anchor {
+  display: inline-block;
+  margin-top: var(--sp-lg);
+  font-size: var(--fs-10);
+  letter-spacing: .12em;
+  color: var(--mp-gray-60);
+  text-transform: lowercase;
+  border-bottom: 1px solid transparent;
+}
+.pd-hero__anchor:hover {
+  color: var(--mp-silver-80);
+  text-decoration: none;
+  border-bottom-color: currentColor;
+}
+@media (max-width: 767px) {
+  .pd-hero__media {
+    aspect-ratio: 1 / 1;
+    max-height: none;
+    min-height: 72vw;
+  }
+  .pd-hero__zh { font-size: clamp(28px, 9vw, 40px); }
+  .pd-hero__line { font-size: clamp(20px, 5.5vw, 28px); }
+  .pd-hero { padding-bottom: var(--sp-xl); }
+}
+
+/* ---------- 短章節＋停頓留白 ---------- */
+.pd-chapter {
+  padding-block: calc(var(--u) * 55);
+  background: var(--mp-bg);
+}
+.pd-chapter--pause {
+  padding-block: calc(var(--u) * 70);
+}
+.pd-chapter .te-body { margin-top: var(--sp-md); }
+@media (max-width: 767px) {
+  .pd-chapter { padding-block: var(--sp-xl); }
+  .pd-chapter--pause { padding-block: calc(var(--sp-xl) * 1.35); }
+  .pd-chapter .wrap.te-center { padding-inline: var(--pad); }
+}
+
+/* 美感大圖黑底，避免蒼白燙平黑產品 */
+.seq__frame--dark .media {
+  background: #0a0a0a;
+  aspect-ratio: 21 / 9;
+  max-height: 78vh;
+}
+.seq__frame--dark .media img {
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 767px) {
+  .seq__frame--dark .media {
+    aspect-ratio: 4 / 3;
+    max-height: none;
+    min-height: 56vw;
+  }
+}
+
+/* ---------- 細節圓：深底＋一句說明 ---------- */
+.feat-circles-wrap--dark {
+  background: #0a0a0a;
+  color: var(--mp-silver-40);
+  padding-block: calc(var(--u) * 60);
+}
+.feat-circles-wrap--dark .feat-circles__head { margin-bottom: var(--sp-xl); }
+.feat-circles-wrap--dark .h-m { color: var(--mp-silver-40); }
+.feat-circles-wrap--dark .muted,
+.feat-circles-wrap--dark .te-body.muted { color: var(--mp-gray-60); }
+.feat-circles__blurb {
+  margin: .45em 0 0;
+  font-size: var(--fs-15);
+  line-height: 1.5;
+  letter-spacing: .03em;
+  color: var(--mp-gray-60);
+  max-width: 18em;
+  margin-inline: auto;
+}
+.feat-circles-wrap--dark .feat-circles__name { color: var(--mp-silver-40); }
+.feat-circles-wrap--dark .feat-circles__en { color: var(--mp-gray-80); opacity: .7; }
+.feat-circles-wrap--dark .feat-circles__orb { background: #000; }
+
+/* ---------- macro 特寫＋角落 callout ---------- */
+.macro-bleed {
+  position: relative;
+  margin: 0;
+  background: #0a0a0a;
+}
+.macro-bleed__media {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  max-height: 78vh;
+  background: #0a0a0a;
+}
+.macro-bleed__media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.macro-bleed__callout {
+  position: absolute;
+  right: var(--pad);
+  bottom: var(--sp-lg);
+  text-align: right;
+  font-size: var(--fs-15);
+  letter-spacing: .06em;
+  color: var(--mp-silver-40);
+  line-height: 1.35;
+}
+.macro-bleed__zh { display: block; }
+.macro-bleed__callout .en {
+  display: block;
+  font-size: .75em;
+  color: var(--mp-gray-60);
+  margin-top: .15em;
+}
+@media (max-width: 767px) {
+  .macro-bleed__media {
+    aspect-ratio: 4 / 3;
+    max-height: none;
+    min-height: 56vw;
+  }
+  .macro-bleed__callout {
+    right: var(--pad);
+    bottom: var(--sp-md);
+    font-size: var(--fs-10);
+  }
+}
+
+/* ---------- 規格帶：多欄小字、深→淺 ---------- */
+.specs-band {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  color: var(--mp-silver-40);
+}
+.specs-band__lead {
+  padding-block: calc(var(--u) * 40) var(--sp-lg);
+  max-width: 40em;
+}
+.specs-band__title {
+  font-size: var(--fs-20);
+  font-weight: 300;
+  letter-spacing: .04em;
+  margin: 0;
+}
+.specs-band__note {
+  margin-top: var(--sp-sm);
+  font-size: var(--fs-10);
+  color: var(--mp-gray-60);
+}
+.specs-band__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  min-height: 12rem;
+}
+.specs-band__col {
+  padding: var(--sp-xl) var(--pad);
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.specs-band__col--0 { background: #0a0a0a; }
+.specs-band__col--1 { background: #161616; }
+.specs-band__col--2 { background: #222222; }
+.specs-band__col--3 { background: #2e2e2e; color: var(--mp-silver-80); }
+.specs-band__col--4 { background: #3a3a3a; color: var(--mp-silver-100); }
+.specs-band__h {
+  font-size: var(--fs-10);
+  font-weight: 300;
+  letter-spacing: .1em;
+  color: var(--mp-gray-60);
+  margin: 0 0 var(--sp-md);
+  text-transform: lowercase;
+}
+.specs-band__h .en { display: block; opacity: .7; margin-top: .2em; }
+.specs-band__v {
+  font-size: var(--fs-20);
+  font-weight: 300;
+  letter-spacing: .03em;
+  line-height: 1.35;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .specs-band__grid { grid-template-columns: 1fr 1fr; }
+  .specs-band__col { padding: var(--sp-lg) var(--pad); }
+  .specs-band__v { font-size: var(--fs-15); }
+}
+
+/* 購買區稍加深紙感，當整頁 payoff */
+.buy-te {
+  background: var(--mp-silver-60);
+  padding-block: calc(var(--u) * 55);
+}
+.buy-te__media { background: #0a0a0a; }
