@@ -10,7 +10,6 @@
   <link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon-180.png">
   <link rel="stylesheet" href="../assets/css/tokens.css">
   <link rel="stylesheet" href="../assets/css/site.css">
-  <link rel="preload" as="image" href="../assets/img/air-hero.webp" type="image/webp" fetchpriority="high">
 </head>
 <body class="pd pd--air">
 <a class="skip" href="#main">跳到主要內容</a>
@@ -39,20 +38,12 @@
 <nav class="mstrip" aria-label="產品"><ul class="sw-row"><li><a class="sw" href="../products/fine.html"><span class="sw__ch" lang="zh-Hant">緻</span><span class="sw__en">fine</span><span class="sw__no">MP–100S</span></a></li><li><a class="sw" href="../products/core.html"><span class="sw__ch" lang="zh-Hant">通</span><span class="sw__en">core</span><span class="sw__no">MP–101S</span></a></li><li><a class="sw is-current" href="../products/air.html" aria-current="page"><span class="sw__ch" lang="zh-Hant">透</span><span class="sw__en">air</span><span class="sw__no">MP–103S</span></a></li><li><a class="sw" href="../products/flow.html"><span class="sw__ch" lang="zh-Hant">順</span><span class="sw__en">flow</span><span class="sw__no">MP–102S</span></a></li></ul></nav>
 
 <main id="main">
-  <!-- 1. 首屏：黑底大圖＋一行短標（產品主導；購買後置） -->
-  <section class="pd-hero" aria-labelledby="pd-title">
-    <figure class="pd-hero__figure">
-      <div class="media pd-hero__media"><img src="../assets/img/air-hero.webp" width="1400" height="1400" alt="毫剪 透 air 10%～15% 牙剪打薄刀 乾淨產品主視覺" fetchpriority="high" decoding="async" data-placeholder="air-hero"></div>
-    </figure>
-    <div class="pd-hero__caption wrap te-center">
-      <p class="crumb crumb--on-dark"><a href="../index.html#products">產品</a> / 透 air</p>
-      <h1 id="pd-title" class="pd-hero__title">
-        <span class="pd-hero__zh">透 <span class="en">air</span>.</span>
-      </h1>
-      <p class="pd-hero__line">讓<span class="nw">頭髮</span>通透的無痕<span class="nw">打薄刀</span>。</p>
-      <p class="pd-hero__line-en en muted">A traceless thinning shear for airy hair.</p>
-      <p class="pd-hero__claim muted">MP–103S</p>
-      <a class="pd-hero__anchor" href="#buy">購買 <span class="en">buy</span></a>
+  <!-- 1. 首屏橫幅：剪刀在右、左側黑底白字（圖字融合） -->
+  <section class="pd-banner" aria-labelledby="pd-title">
+    <picture class="pd-banner__pic"><source media="(max-width:767px)" srcset="../assets/img/banner-air-m.webp" width="1080" height="1240"><img src="../assets/img/banner-air.webp" srcset="../assets/img/banner-air-1200.webp 1200w, ../assets/img/banner-air.webp 2400w" sizes="100vw" width="2400" height="1000" alt="毫剪 透 air 10%～15% 牙剪打薄刀，黑底橫幅產品主視覺" fetchpriority="high" decoding="async"></picture>
+    <div class="pd-banner__text">
+      <h1 id="pd-title" class="pd-banner__title"><span class="pd-banner__zh"><span class="nw">讓<span class="nw">頭髮</span>通透，</span><span class="nw">不留痕跡</span></span><span class="pd-banner__en en">air</span></h1>
+      <p class="pd-banner__model en">透・MP–103S</p>
     </div>
   </section>
 
