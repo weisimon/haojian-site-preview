@@ -939,3 +939,62 @@ p, li { text-wrap: pretty; }
   .founder__media { aspect-ratio: 1 / 1; }
   .founder__text, .founder__text .te-body { text-align:center; }
 }
+
+/* ================= 黑色故事：圖字融合 band（白字壓在黑底留白） ================= */
+.bs-flow { background:#000; color:#fff; }
+.bs { position:relative; background:#000; color:#fff; overflow:hidden; }
+.bs__pic, .bs__pic img { display:block; width:100%; height:auto; }
+.bs__text { position:absolute; z-index:1; max-width:min(36%, 30em); left:7vw; top:50%; transform:translateY(-50%); }
+.bs--r .bs__text { left:auto; right:7vw; }
+.bs--bl .bs__text { top:auto; bottom:10%; transform:none; }
+.bs--tl .bs__text { top:9%; transform:none; }
+.bs--br .bs__text { top:auto; bottom:10%; transform:none; left:auto; right:7vw; }
+.bs__eyebrow { font-size:13px; letter-spacing:.12em; color:rgba(255,255,255,.62); margin:0 0 var(--sp-md); font-weight:300; line-height:1.4; }
+.bs__eyebrow .en { margin-left:.3em; }
+.bs__display { font-family:var(--mp-font-cjk); font-weight:300; font-size:clamp(40px,4.4vw,72px); line-height:1.15; letter-spacing:.06em; }
+.bs__display--quote { letter-spacing:.02em; margin-left:-.5em; }
+.bs__sub { font-size:clamp(17px,1.5vw,22px); margin-top:var(--sp-sm); letter-spacing:.12em; }
+.bs__name { font-size:clamp(28px,2.6vw,40px); font-weight:300; letter-spacing:.08em; margin-bottom:var(--sp-md); }
+.bs__zh { font-size:clamp(19px,1.65vw,26px); line-height:1.75; letter-spacing:.06em; font-weight:300; text-wrap:pretty; }
+.bs__display + .bs__zh { margin-top:var(--sp-md); }
+.bs__en { font-family:var(--mp-font-latin); font-size:clamp(13px,1vw,15px); line-height:1.6; color:rgba(255,255,255,.66); margin-top:var(--sp-md); letter-spacing:.02em; }
+.bs__link { margin-top:var(--sp-lg); }
+.bs + .bs { margin-top:-1px; }
+.page-black { --mp-bg:#000; --mp-text:#fff; --mp-text-muted:var(--mp-gray-60); --mp-rule:#fff; background:#000; color:#fff; }
+.page-black :focus-visible { outline-color:#fff; }
+.page-black .wm { color:#fff; }
+.page-black .wm::after { background:#fff; }
+.page-black .wm__no { color:var(--mp-gray-80); }
+.page-black .wm-row, .page-black .wm-row li, .page-black .wp-logo { border-color:var(--mp-black-80); }
+.page-black .nav__sec a { color:var(--mp-gray-60); }
+.page-black .nav__sec a:hover, .page-black .nav__sec a[aria-current] { color:#fff; }
+.page-black .nav__sec .en { color:var(--mp-gray-100); }
+.page-black .site-footer { border-top-color:var(--mp-black-80); }
+.page-black .footer__copy { color:var(--mp-gray-80); }
+@media (max-width: 767px) {
+  .bs__text { left:6vw; right:6vw; top:auto; bottom:8vw; transform:none; max-width:none; }
+  .bs--r .bs__text, .bs--br .bs__text, .bs--bl .bs__text { left:6vw; right:6vw; bottom:8vw; }
+  .bs__display { font-size:clamp(34px,10vw,44px); }
+  .bs__zh { font-size:18px; line-height:1.7; }
+  .bs__en { font-size:13px; margin-top:10px; }
+  .bs__eyebrow { margin-bottom:10px; }
+  .page-black .mstrip { background:#000; border-color:var(--mp-black-80); }
+  .page-black .sw { color:#fff; }
+  .page-black .sw-row li + li { border-color:var(--mp-black-80); }
+  .page-black .menu > summary { color:#fff; }
+}
+@media (max-width: 767px) {
+  /* 手機：文字流在圖下方、上疊進圖底漸層入黑處，不壓主體 */
+  .bs__text, .bs--r .bs__text, .bs--br .bs__text, .bs--bl .bs__text { position:relative; left:auto; right:auto; bottom:auto; top:auto; transform:none;
+    margin-top:-14vw; padding:0 6vw 16vw; }
+  .page-black .site-footer { background:#000; border-top:1px solid var(--mp-black-80); }
+}
+@media (max-width: 767px) {
+  .bs--tl .bs__text { top:auto; }
+  body:has(main > .bs-flow:last-child) .site-footer { background:#000; border-top:1px solid var(--mp-black-80); }
+}
+@media (min-width: 768px) and (max-width: 1100px) {
+  /* 平板：橫幅高度不足，文字改接在圖下方黑底，不壓主體 */
+  .bs__text, .bs--r .bs__text, .bs--br .bs__text, .bs--bl .bs__text, .bs--tl .bs__text { position:relative; left:auto; right:auto; top:auto; bottom:auto; transform:none;
+    max-width:40em; margin-top:-3vw; padding:0 7vw 9vw; }
+}
