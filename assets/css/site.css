@@ -1025,3 +1025,14 @@ p, li { text-wrap: pretty; }
   .pd-banner__en { font-size:20px; }
 }
 .pd-banner__sub { font-family:var(--mp-font-latin); font-size:clamp(13px,1vw,15px); letter-spacing:.04em; color:rgba(255,255,255,.62); margin-top:6px; }
+@media (min-width: 768px) { .pd-banner__text { max-width:none; } .pd-banner__zh { white-space:nowrap; } }
+
+/* 橫幅 v4：標語中→英→品名→型號，一致層級；手機 3:4 滿版，文字壓在圖底黑色留白 */
+.pd-banner__slogan { display:block; font-family:var(--mp-font-latin); font-size:clamp(15px,1.25vw,20px); letter-spacing:.03em; color:rgba(255,255,255,.78); margin-top:clamp(8px,.9vw,14px); }
+.pd-banner__name { font-family:var(--mp-font-latin); font-size:clamp(18px,1.6vw,26px); letter-spacing:.04em; color:#fff; margin-top:clamp(18px,2vw,32px); }
+.pd-banner__name + .pd-banner__model { margin-top:6px; }
+@media (max-width: 767px) {
+  .pd-banner__text { bottom:10vw; }
+  .pd-banner__slogan { font-size:15px; margin-top:8px; }
+  .pd-banner__name { font-size:20px; margin-top:18px; }
+}
