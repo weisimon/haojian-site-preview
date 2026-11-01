@@ -1024,3 +1024,4 @@ p, li { text-wrap: pretty; }
   .pd-banner__zh { font-size:clamp(24px,7.4vw,32px); }
   .pd-banner__en { font-size:20px; }
 }
+.pd-banner__sub { font-family:var(--mp-font-latin); font-size:clamp(13px,1vw,15px); letter-spacing:.04em; color:rgba(255,255,255,.62); margin-top:6px; }
