@@ -853,3 +853,20 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   padding-block: calc(var(--u) * 55);
 }
 .buy-te__media { background: #0a0a0a; }
+
+/* 2026-11-01 approved bilingual copy */
+.feat-circles__name .en { display:block; font-size:.78em; opacity:.7; margin-top:.15em; }
+.pd-hero__line-en { margin-top:.2em; font-size:.95rem; }
+.pd-points { list-style:none; margin:1.5rem auto 0; padding:0; max-width:40rem; text-align:left; }
+.pd-points__item { padding:.9rem 0; border-top:1px solid rgba(128,128,128,.25); font-weight:300; }
+.pd-points__item:last-child { border-bottom:1px solid rgba(128,128,128,.25); }
+.pd-points__zh { display:block; }
+.pd-points__en { display:block; opacity:.6; font-size:.9em; margin-top:.2em; }
+.specs-band__foot { font-size:.75rem; padding-top:1rem; padding-bottom:1rem; font-weight:300; }
+.specs-band__foot .en { margin-left:.6em; }
+.buy__course { font-size:.85rem; margin-top:.8rem; }
+.buy__course a { color:inherit; }
+@media (max-width: 720px) {
+  .pd-points { padding:0 .25rem; }
+  .pd-points__item { font-size:.95rem; }
+}
