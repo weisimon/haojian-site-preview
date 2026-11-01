@@ -928,3 +928,14 @@ p, li { text-wrap: pretty; }
 .te-body, .te-body p, .pd-chapter p, .feat-one__blurb, .buy__course { text-wrap: balance; }
 .mp-logo picture { display:block; }
 .nw { white-space: nowrap; }
+
+/* 關於：創辦人人像（桌機 4:5 左欄、手機 1:1 全寬） */
+.founder__portrait { margin:0; }
+.founder__media { aspect-ratio: 4 / 5; overflow:hidden; background:#000; }
+.founder__media img { width:100%; height:100%; object-fit:cover; display:block; }
+.founder__text { text-align:left; }
+.founder__text .te-body { margin-top: var(--sp-md); text-align:left; }
+@media (max-width: 767px) {
+  .founder__media { aspect-ratio: 1 / 1; }
+  .founder__text, .founder__text .te-body { text-align:center; }
+}
