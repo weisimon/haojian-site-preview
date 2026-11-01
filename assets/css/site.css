@@ -870,3 +870,25 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   .pd-points { padding:0 .25rem; }
   .pd-points__item { font-size:.95rem; }
 }
+
+/* 2026-11-01 curated big images (TE-like full-bleed) */
+.cur-bleed { margin:0; width:100%; background:#0d0d0d; }
+.cur-bleed__media, .cur-bleed__media picture { display:block; width:100%; }
+.cur-bleed__media img { display:block; width:100%; height:auto; aspect-ratio:2400/1260; object-fit:cover; }
+.cur-bleed + .cur-bleed { margin-top:2px; }
+.pd-point { padding:clamp(3.5rem,9vw,7.5rem) 0; }
+.pd-point__zh { font-size:clamp(1.25rem,2.4vw,2rem); font-weight:300; line-height:1.6; max-width:34em; margin:0 auto; letter-spacing:.03em; }
+.pd-point__en { margin:.6em auto 0; font-size:clamp(.85rem,1.2vw,1rem); font-weight:300; max-width:40em; }
+.feat-one { padding:clamp(4rem,10vw,8rem) 0; background:#0b0b0b; color:#e8e8e8; }
+.feat-one__orb { width:min(70vw,420px); aspect-ratio:1; margin:0 auto; border-radius:50%; overflow:hidden; }
+.feat-one__orb img { width:100%; height:100%; object-fit:cover; display:block; }
+.feat-one__name { margin:2rem 0 0; font-weight:300; font-size:1.5rem; }
+.feat-one__name .en { display:block; font-size:.7em; opacity:.6; margin-top:.2em; }
+.feat-one__blurb { margin:.8rem 0 0; font-weight:300; }
+.feat-one__en { margin:.3rem 0 0; font-size:.85rem; }
+@media (max-width:767px) {
+  .cur-bleed__media img { aspect-ratio:4/5; }
+  .pd-point { padding:3rem 1.25rem; }
+  .pd-point__zh { text-align:left; }
+  .pd-point__en { text-align:left; }
+}
