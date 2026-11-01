@@ -1014,7 +1014,7 @@ p, li { text-wrap: pretty; }
 /* ================= 產品頁首屏橫幅：剪刀在右、左側黑底白字 ================= */
 .pd-banner { position:relative; background:#000; color:#fff; overflow:hidden; }
 .pd-banner__pic, .pd-banner__pic img { display:block; width:100%; height:auto; }
-.pd-banner__text { position:absolute; z-index:1; left:7vw; top:50%; transform:translateY(-50%); max-width:38%; }
+.pd-banner__text { position:absolute; z-index:1; left:7vw; top:50%; transform:translateY(-50%); max-width:34%; }
 .pd-banner__title { margin:0; font-weight:300; }
 .pd-banner__zh { display:block; font-family:var(--mp-font-cjk); font-size:clamp(26px,3vw,50px); line-height:1.35; letter-spacing:.08em; text-wrap:balance; }
 .pd-banner__en { display:block; font-family:var(--mp-font-latin); font-size:clamp(18px,1.7vw,28px); letter-spacing:.04em; color:rgba(255,255,255,.86); margin-top:clamp(10px,1.2vw,20px); }
