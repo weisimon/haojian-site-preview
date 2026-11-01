@@ -126,6 +126,10 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 .wp-logo { flex:none; display:block; padding-left:clamp(20px,2.4vw,40px); border-left:1px solid var(--mp-silver-100); }
 .wp-logo img { display:block; height:36px; width:auto; }
 .wp-logo:hover { opacity:.75; text-decoration:none; }
+/* W 選物 V1 compact SVG：W.PICKED 字高 (160/360) = MP 標準字高（桌機／手機同公式） */
+.wp-logo--v1 img, .wp-logo.wp-logo--v1 img { height:calc(var(--mp-header-wordmark-w) / var(--mp-wordmark-ratio) * 2.25); }
+/* 主頁雙 logo：MP 字標上下留白對稱，讓 MP 與 W.PICKED 共用同一水平中線 */
+.site-header:has(.wp-logo--v1) > .brand { margin-bottom:0; }
 
 @media (max-width: 1100px) and (min-width: 768px) {
   .nav__sec { display:none; }
@@ -138,6 +142,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   .site-header { gap:14px; }
   .wp-logo { margin-left:auto; padding-left:14px; border-left:1px solid var(--mp-silver-100); }
   .wp-logo img { height:24px; }
+  .wp-logo.wp-logo--v1 img { height:calc(var(--mp-header-wordmark-w) / var(--mp-wordmark-ratio) * 2.25); }
   .menu > summary { white-space:nowrap; }
   .menu > summary { list-style:none; cursor:pointer; font-size:15px; padding:8px 0 8px 4px; color:var(--mp-text); }
   .menu > summary::-webkit-details-marker { display:none; }
