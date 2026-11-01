@@ -9,8 +9,7 @@
 - `index.html` — 首頁（slogan 置中 → 大圖 → 2×2 產品卡）
 - `products/{fine,core,air,flow}.html` — 單品（TP-7 節奏）
 - `story.html` — 品牌故事（人像待補）
-- `contact.html` — 聯絡 stub
-- `assets/` — css / img / logo / video
+- `assets/` — css / img / logo / fonts（Noto Sans TC Light 自架子集：`python /workspace/haojian/_qa/make_font.py` 重新產生，需 brotli）
 - `_preview/` — 本機預覽截圖（不上 preview repo）
 
 ## 暫存預覽

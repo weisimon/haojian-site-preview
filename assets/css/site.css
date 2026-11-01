@@ -26,7 +26,7 @@
   --fs-l: var(--fs-30);
   --fs-xl: var(--fs-40);
   --font: "Helvetica Neue", Helvetica, Arial,
-          "PingFang TC", "Noto Sans TC", "Noto Sans CJK TC", "Source Han Sans TC",
+          "Noto Sans TC", "Noto Sans CJK TC", "Source Han Sans TC", "PingFang TC",
           "Microsoft JhengHei", sans-serif;
   --paper: var(--mp-silver-40); /* ≈ TE #E5E5E5 / #F5F5F5 */
   --tile: #F5F5F5;
@@ -188,7 +188,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
     background: var(--mp-black); color: var(--mp-gray-40);
     margin-top: 0; padding: var(--sp-xl) var(--pad); border-top: 0;
   }
-  .site-footer .mp-logo img { filter: invert(1) brightness(1.1); }
+  /* 深底改用 VI 反白字標（logo 不可加濾鏡） */
   .footer__copy { color: var(--mp-gray-60); }
 }
 
@@ -909,3 +909,22 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   .pd-point__zh { text-align:left; }
   .pd-point__en { text-align:left; }
 }
+
+/* 購買選項：單支／三刀組／四刀組，精簡一列一項（不搶戲） */
+.buy-opts { list-style:none; margin: var(--sp-md) auto 0; padding:0; max-width: 22rem; font-size: var(--fs-15); }
+.buy-opts__row { display:flex; justify-content:space-between; align-items:baseline; gap: 1rem; padding: .55rem 0; border-bottom: 1px solid var(--mp-silver-100); color: var(--mp-text-muted); }
+.buy-opts__row:first-child { border-top: 1px solid var(--mp-silver-100); }
+.buy-opts__row.is-main { color: var(--mp-text); }
+.buy-opts__name { text-align:left; white-space:nowrap; }
+.buy-opts__name .en { font-size:.8em; color: var(--mp-text-muted); margin-left:.2em; }
+.buy-opts__set { font-size:.8em; color: var(--mp-text-muted); margin-left:.3em; }
+.buy-opts__price { white-space:nowrap; letter-spacing:.02em; }
+.buy-opts + .accent-link { display:inline-block; margin-top: var(--sp-md); }
+.buy__course { font-size: var(--fs-10); }
+
+/* 中文斷行：標題平衡、內文避免單字孤行 */
+h1, h2, h3, .hero__slogan, .pd-hero__line, .pd-point__zh, .feat-one__blurb, .banner-dark__text { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+.te-body, .te-body p, .pd-chapter p, .feat-one__blurb, .buy__course { text-wrap: balance; }
+.mp-logo picture { display:block; }
+.nw { white-space: nowrap; }

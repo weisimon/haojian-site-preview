@@ -1,3 +1,11 @@
+/* 中文字型：思源黑體 Noto Sans TC Light 自架子集（僅本站用字，~140KB）；有本機字型優先 */
+@font-face {
+  font-family: "Noto Sans TC";
+  font-style: normal; font-weight: 300; font-display: swap;
+  src: local("Noto Sans TC Light"), local("NotoSansTC-Light"), local("Noto Sans CJK TC Light"), local("NotoSansCJKtc-Light"),
+       url("../fonts/noto-sans-tc-light-subset.woff2") format("woff2");
+  unicode-range: U+2010-206F, U+3000-303F, U+3400-9FFF, U+F900-FAFF, U+FF00-FFEF;
+}
 /* =========================================================================
    MILLI PEAK 毫剪 — Design tokens（依《MilliPeak VI.pdf》2026，16 頁）
    來源：Drive 1Q7HbFu3QvsaEjNHFRYmwQ2nIKYvOluK0；色值直接取自 PDF 向量色彩
@@ -53,8 +61,8 @@
 
   /* ---------- 字體 [VI p9] ---------- */
   --mp-font-latin: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --mp-font-cjk: "Source Han Sans TC", "Noto Sans TC", "思源黑體", sans-serif;
-  --mp-font: "Helvetica Neue", Helvetica, Arial, "Source Han Sans TC", "Noto Sans TC", sans-serif;
+  --mp-font-cjk: "Noto Sans TC", "Source Han Sans TC", "思源黑體", sans-serif;
+  --mp-font: "Helvetica Neue", Helvetica, Arial, "Noto Sans TC", "Source Han Sans TC", sans-serif;
   /* 手冊版面本身：標題 思源黑體 Heavy(900)、副標 Medium(500)、內文 Regular/Normal(400/350) */
   --mp-weight-display: 900;
   --mp-weight-medium: 500;
