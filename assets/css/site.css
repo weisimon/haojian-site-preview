@@ -508,7 +508,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   .specs-te__grid--verified{ grid-template-columns: 1fr; }
 }
 
-/* hero sub: 拿掉多餘 剛好手感 — one line, small gap */
+/* hero sub: 拿掉多餘 剛好順手 — one line, small gap */
 .slogan-line { white-space: nowrap; }
 .slogan-gap { display: inline-block; width: 0.5em; }
 
