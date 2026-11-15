@@ -1139,3 +1139,8 @@ p, li { text-wrap: pretty; }
 /* 2026-11-15 商品卡：整把剪刀置於 4:3 黑底，不裁切 */
 .pcard__media { aspect-ratio: 4 / 3; background: #000; overflow: hidden; }
 .pcard__media img { width: 100%; height: 100%; object-fit: contain; }
+
+/* 2026-11-15 頁尾：VI 原始標誌組合（X 標＋MILLI·PEAK 字標，官方向量，不重繪） */
+.site-footer .mp-logo--lockup { --w: auto; margin-left: 0; display:block; }
+.site-footer .mp-logo--lockup img { display:block; width:132px; height:auto; }
+@media (max-width: 767px) { .site-footer .mp-logo--lockup img { width:118px; } }
