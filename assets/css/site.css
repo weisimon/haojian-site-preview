@@ -1135,3 +1135,7 @@ p, li { text-wrap: pretty; }
 .pd-buy__media img { display:block; width:100%; height:auto; }
 @media (max-width: 767px) { .pd .buy-te__grid.pd-buy { grid-template-columns:1fr; } }
 @media (max-width: 767px) { .pd .pd-buy__media { margin-inline:calc(var(--pad) * -1); width:auto; } }
+
+/* 2026-11-15 商品卡：整把剪刀置於 4:3 黑底，不裁切 */
+.pcard__media { aspect-ratio: 4 / 3; background: #000; overflow: hidden; }
+.pcard__media img { width: 100%; height: 100%; object-fit: contain; }
