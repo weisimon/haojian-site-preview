@@ -1101,3 +1101,8 @@ p, li { text-wrap: pretty; }
 @media (min-width: 768px) and (max-width: 1100px) {
   .pf--hero .bs__text { margin-top:2vw; }
 }
+
+/* 2026-11-15 定位區：黑底產品照，文字在刀下方黑色區（各尺寸皆下排） */
+.pf--stack .bs__text, .pf--stack.bs--r .bs__text { position:relative; left:auto; right:auto; top:auto; bottom:auto; transform:none;
+  width:min(86vw, 40em); max-width:none; margin:-3vw auto 0; padding:0 0 8vw; }
+@media (max-width: 767px) { .pf--stack .bs__text, .pf--stack.bs--r .bs__text { width:auto; margin:-10vw 0 0; padding:0 6vw 14vw; } }
