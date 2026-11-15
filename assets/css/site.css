@@ -1260,3 +1260,10 @@ select.co-input { appearance:auto; }
 .buy-opts { max-width:28em; }
 .buy-opts__name { flex:1 1 auto; }
 .co-inst-sum dd { white-space:nowrap; }
+/* 2026-11-15 Simon [pt140u]：分期改成灰色副字，不用橘框 */
+.buy-opts__set--sub { display:block; margin:.25em 0 0; white-space:normal; }
+.buy-opts__set--sub .en { margin-left:.3em; }
+.buy-opts__name { white-space:normal; }
+.co-mode__sub { display:block; flex-basis:100%; font-size:.85em; color:var(--mp-black-80); font-weight:300; }
+.co-inst-sum, .co-inst-sum dt .en { color:inherit !important; }
+.co-inst-sum dt .en { color:var(--mp-black-80) !important; }
