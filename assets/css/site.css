@@ -1087,3 +1087,6 @@ p, li { text-wrap: pretty; }
   .pf .bs__text { max-width:40em; }
 }
 .pd .buy-te__grid { grid-template-columns:1fr; justify-items:center; }
+.pf-label { font-size:13px; letter-spacing:.1em; color:rgba(255,255,255,.75); margin:0 0 var(--sp-md); font-weight:300; }
+.pf-label .en { color:rgba(255,255,255,.5); margin:0 .2em; }
+.buy-opts__set .en { margin-left:.3em; }
