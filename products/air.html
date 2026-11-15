@@ -48,6 +48,22 @@
     </div>
   </section>
 
+  <!-- 1b. 滑動圖庫：不同角度／組合圖（不自動播放） -->
+  <section class="pg" aria-roledescription="carousel" aria-label="透 air 產品照片，可左右滑動">
+    <div class="pg__wrap">
+      <ul class="pg__track" id="pg-air-track" tabindex="0" aria-label="產品照片，左右滑動瀏覽">
+        <li class="pg__slide" id="pg-air-s1" role="group" aria-roledescription="slide" aria-label="第 1 張，共 5 張"><img src="../assets/img/pg-air-1.webp" srcset="../assets/img/pg-air-1-900.webp 900w, ../assets/img/pg-air-1.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀，張開整把" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-air-s2" role="group" aria-roledescription="slide" aria-label="第 2 張，共 5 張"><img src="../assets/img/pg-air-2.webp" srcset="../assets/img/pg-air-2-900.webp 900w, ../assets/img/pg-air-2.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀，直立角度" loading="lazy" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-air-s3" role="group" aria-roledescription="slide" aria-label="第 3 張，共 5 張"><img src="../assets/img/pg-air-3.webp" srcset="../assets/img/pg-air-3-900.webp 900w, ../assets/img/pg-air-3.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀，指環與握柄" loading="lazy" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-air-s4" role="group" aria-roledescription="slide" aria-label="第 4 張，共 5 張"><img src="../assets/img/pg-air-4.webp" srcset="../assets/img/pg-air-4-900.webp 900w, ../assets/img/pg-air-4.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀，手持整把" loading="lazy" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-air-s5" role="group" aria-roledescription="slide" aria-label="第 5 張，共 5 張"><img src="../assets/img/pg-air-5.webp" srcset="../assets/img/pg-air-5-900.webp 900w, ../assets/img/pg-air-5.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀，盒裝組合" loading="lazy" decoding="async" draggable="false"></li>
+      </ul>
+      <button type="button" class="pg__arrow pg__arrow--prev" aria-label="上一張" aria-controls="pg-air-track">‹</button>
+      <button type="button" class="pg__arrow pg__arrow--next" aria-label="下一張" aria-controls="pg-air-track">›</button>
+    </div>
+    <div class="pg__dots" role="group" aria-label="選擇照片"><button type="button" class="pg__dot" aria-label="看第 1 張" aria-controls="pg-air-s1" aria-current="true"></button><button type="button" class="pg__dot" aria-label="看第 2 張" aria-controls="pg-air-s2"></button><button type="button" class="pg__dot" aria-label="看第 3 張" aria-controls="pg-air-s3"></button><button type="button" class="pg__dot" aria-label="看第 4 張" aria-controls="pg-air-s4"></button><button type="button" class="pg__dot" aria-label="看第 5 張" aria-controls="pg-air-s5"></button></div>
+  </section>
+
   <div class="bs-flow pf-flow">
   <!-- 2. 定位：手持主圖＋定位句 -->
   <section class="bs bs--r pf--hero pf--stack pf" aria-labelledby="pos-h">
@@ -56,22 +72,19 @@
   </section>
 
   <!-- 3. 三個重點：每點一個細節圓，字壓在圖上 -->
-  <section class="bs bs--l pf" aria-labelledby="feat-1">
-    <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-air-f1-m.webp" width="1080" height="902"><img src="../assets/img/pb-air-f1.webp" srcset="../assets/img/pb-air-f1-1200.webp 1200w, ../assets/img/pb-air-f1.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀，中走絲工藝" loading="lazy" decoding="async"></picture>
+  <section class="bs bs--r pf" aria-labelledby="feat-1">
+    <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-air-f1-m.webp" width="1080" height="855"><img src="../assets/img/pb-air-f1.webp" srcset="../assets/img/pb-air-f1-1200.webp 1200w, ../assets/img/pb-air-f1.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀，中走絲工藝" loading="lazy" decoding="async"></picture>
     <div class="bs__text"><p class="pf-no en">01</p><h3 class="pf-name" id="feat-1"><span class="nw">中走絲工藝</span> <span class="en">wire-cut teeth</span></h3><p class="bs__zh pf-blurb"><span class="nw">切割更絲滑穩定，</span><span class="nw">打薄時不扯髮。</span></p><p class="bs__en en">A smoother, steadier cut that doesn’t pull when thinning.</p></div>
   </section>
-  <section class="bs bs--l pf" aria-labelledby="feat-2">
-    <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-air-f2-m.webp" width="1080" height="1073"><img src="../assets/img/pb-air-f2.webp" srcset="../assets/img/pb-air-f2-1200.webp 1200w, ../assets/img/pb-air-f2.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀，無痕設計" loading="lazy" decoding="async"></picture>
+  <section class="bs bs--tl pf" aria-labelledby="feat-2">
+    <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-air-f2-m.webp" width="1080" height="1091"><img src="../assets/img/pb-air-f2.webp" srcset="../assets/img/pb-air-f2-1200.webp 1200w, ../assets/img/pb-air-f2.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀，無痕設計" loading="lazy" decoding="async"></picture>
     <div class="bs__text"><p class="pf-no en">02</p><h3 class="pf-name" id="feat-2">無痕設計 <span class="en">no-trace finish</span></h3><p class="bs__zh pf-blurb"><span class="nw"><span class="nw">刀面</span>不開刃，</span><span class="nw">剪完效果柔和絲滑。</span></p><p class="bs__en en">The blade face is unsharpened, for a soft, silky result.</p></div>
   </section>
   <section class="bs bs--l pf" aria-labelledby="feat-3">
-    <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-air-f3-m.webp" width="1080" height="1378"><img src="../assets/img/pb-air-f3.webp" srcset="../assets/img/pb-air-f3-1200.webp 1200w, ../assets/img/pb-air-f3.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀，耐磨片＋軸承（培林）" loading="lazy" decoding="async"></picture>
+    <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-air-f3-m.webp" width="1080" height="895"><img src="../assets/img/pb-air-f3.webp" srcset="../assets/img/pb-air-f3-1200.webp 1200w, ../assets/img/pb-air-f3.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀，耐磨片＋軸承（培林）" loading="lazy" decoding="async"></picture>
     <div class="bs__text"><p class="pf-no en">03</p><h3 class="pf-name" id="feat-3"><span class="nw">耐磨片</span>＋<span class="nw">軸承（培林）</span> <span class="en">wear plate + bearing</span></h3><p class="bs__zh pf-blurb"><span class="nw">剪裁更絲滑，</span><span class="nw">合刀更順暢。</span></p><p class="bs__en en">A silkier cut, a smoother close.</p></div>
   </section>
 
-  <section class="pd-pair pd-pair--1" aria-label="產品照">
-    <figure class="pd-pair__fig"><img src="../assets/img/pcp-air-p1.webp" srcset="../assets/img/pcp-air-p1-600.webp 600w, ../assets/img/pcp-air-p1.webp 1000w" sizes="(max-width:767px) 100vw, 50vw" width="1000" height="1250" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀 產品照" loading="lazy" decoding="async"></figure>
-  </section>
   </div>
 
   <!-- 4. 規格（依 Simon 規格稿＋工廠規格表） -->
@@ -99,7 +112,8 @@
 
   <!-- 5. 購買 -->
   <section id="buy" class="section buy-te" aria-labelledby="buy-title">
-    <div class="wrap buy-te__grid">
+    <div class="wrap buy-te__grid pd-buy">
+      <figure class="buy-te__media pd-buy__media"><img src="../assets/img/pbuy-air.webp" srcset="../assets/img/pbuy-air-800.webp 800w, ../assets/img/pbuy-air.webp 1600w" sizes="(max-width:767px) 100vw, 50vw" width="1600" height="1069" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀，整把完整產品照" loading="lazy" decoding="async"></figure>
       <div class="buy-te__info te-center">
         <h2 id="buy-title" class="h-m">透 <span class="en">air</span>.</h2>
         <p class="buy-te__model model muted">MP–103S</p>
@@ -170,5 +184,6 @@
   </ul>
   <p class="footer__copy">© 2026 問淵有限公司</p>
 </footer>
+<script src="../assets/js/gallery.js" defer></script>
 </body>
 </html>

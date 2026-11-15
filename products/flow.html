@@ -48,6 +48,22 @@
     </div>
   </section>
 
+  <!-- 1b. 滑動圖庫：不同角度／組合圖（不自動播放） -->
+  <section class="pg" aria-roledescription="carousel" aria-label="順 flow 產品照片，可左右滑動">
+    <div class="pg__wrap">
+      <ul class="pg__track" id="pg-flow-track" tabindex="0" aria-label="產品照片，左右滑動瀏覽">
+        <li class="pg__slide" id="pg-flow-s1" role="group" aria-roledescription="slide" aria-label="第 1 張，共 5 張"><img src="../assets/img/pg-flow-1.webp" srcset="../assets/img/pg-flow-1-900.webp 900w, ../assets/img/pg-flow-1.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 順 flow 銀色 5.5 吋單刃滑剪，張開整把" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-flow-s2" role="group" aria-roledescription="slide" aria-label="第 2 張，共 5 張"><img src="../assets/img/pg-flow-2.webp" srcset="../assets/img/pg-flow-2-900.webp 900w, ../assets/img/pg-flow-2.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 順 flow 銀色 5.5 吋單刃滑剪，刀刃張開" loading="lazy" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-flow-s3" role="group" aria-roledescription="slide" aria-label="第 3 張，共 5 張"><img src="../assets/img/pg-flow-3.webp" srcset="../assets/img/pg-flow-3-900.webp 900w, ../assets/img/pg-flow-3.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 順 flow 銀色 5.5 吋單刃滑剪，握柄角度" loading="lazy" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-flow-s4" role="group" aria-roledescription="slide" aria-label="第 4 張，共 5 張"><img src="../assets/img/pg-flow-4.webp" srcset="../assets/img/pg-flow-4-900.webp 900w, ../assets/img/pg-flow-4.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 順 flow 銀色 5.5 吋單刃滑剪，手持整把" loading="lazy" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-flow-s5" role="group" aria-roledescription="slide" aria-label="第 5 張，共 5 張"><img src="../assets/img/pg-flow-5.webp" srcset="../assets/img/pg-flow-5-900.webp 900w, ../assets/img/pg-flow-5.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 順 flow 銀色 5.5 吋單刃滑剪，盒裝組合" loading="lazy" decoding="async" draggable="false"></li>
+      </ul>
+      <button type="button" class="pg__arrow pg__arrow--prev" aria-label="上一張" aria-controls="pg-flow-track">‹</button>
+      <button type="button" class="pg__arrow pg__arrow--next" aria-label="下一張" aria-controls="pg-flow-track">›</button>
+    </div>
+    <div class="pg__dots" role="group" aria-label="選擇照片"><button type="button" class="pg__dot" aria-label="看第 1 張" aria-controls="pg-flow-s1" aria-current="true"></button><button type="button" class="pg__dot" aria-label="看第 2 張" aria-controls="pg-flow-s2"></button><button type="button" class="pg__dot" aria-label="看第 3 張" aria-controls="pg-flow-s3"></button><button type="button" class="pg__dot" aria-label="看第 4 張" aria-controls="pg-flow-s4"></button><button type="button" class="pg__dot" aria-label="看第 5 張" aria-controls="pg-flow-s5"></button></div>
+  </section>
+
   <div class="bs-flow pf-flow">
   <!-- 2. 定位：手持主圖＋定位句 -->
   <section class="bs bs--r pf--hero pf--stack pf" aria-labelledby="pos-h">
@@ -60,19 +76,11 @@
     <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-flow-f1-m.webp" width="1080" height="1401"><img src="../assets/img/pb-flow-f1.webp" srcset="../assets/img/pb-flow-f1-1200.webp 1200w, ../assets/img/pb-flow-f1.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 順 flow 銀色 5.5 吋單刃滑剪，單刃" loading="lazy" decoding="async"></picture>
     <div class="bs__text"><p class="pf-no en">01</p><h3 class="pf-name" id="feat-1">單刃 <span class="en">single edge</span></h3><p class="bs__zh pf-blurb">只有一面是<span class="nw">切割點</span>。</p><p class="bs__en en">Only one side is a cutting point.</p></div>
   </section>
-  <section class="bs bs--l pf" aria-labelledby="feat-2">
-    <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-flow-f2-m.webp" width="1080" height="837"><img src="../assets/img/pb-flow-f2.webp" srcset="../assets/img/pb-flow-f2-1200.webp 1200w, ../assets/img/pb-flow-f2.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 順 flow 銀色 5.5 吋單刃滑剪，5.5 吋" loading="lazy" decoding="async"></picture>
-    <div class="bs__text"><p class="pf-no en">02</p><h3 class="pf-name" id="feat-2"><span class="nw">5.5 吋</span> <span class="en">5.5 inch</span></h3><p class="bs__zh pf-blurb">更好<span class="nw">上手</span>。</p><p class="bs__en en">Easier to pick up.</p></div>
-  </section>
-  <section class="bs bs--bl pf" aria-labelledby="feat-3">
+  <section class="bs bs--bl pf" aria-labelledby="feat-2">
     <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-flow-f3-m.webp" width="1080" height="811"><img src="../assets/img/pb-flow-f3.webp" srcset="../assets/img/pb-flow-f3-1200.webp 1200w, ../assets/img/pb-flow-f3.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 順 flow 銀色 5.5 吋單刃滑剪，耐磨片＋軸承（培林）" loading="lazy" decoding="async"></picture>
-    <div class="bs__text"><p class="pf-no en">03</p><h3 class="pf-name" id="feat-3"><span class="nw">耐磨片</span>＋<span class="nw">軸承（培林）</span> <span class="en">wear plate + bearing</span></h3><p class="bs__zh pf-blurb"><span class="nw">滑動更順、</span><span class="nw">更穩。</span></p><p class="bs__en en">A smoother, steadier glide.</p></div>
+    <div class="bs__text"><p class="pf-no en">02</p><h3 class="pf-name" id="feat-2"><span class="nw">耐磨片</span>＋<span class="nw">軸承（培林）</span> <span class="en">wear plate + bearing</span></h3><p class="bs__zh pf-blurb"><span class="nw">滑動更順、</span><span class="nw">更穩。</span></p><p class="bs__en en">A smoother, steadier glide.</p></div>
   </section>
 
-  <section class="pd-pair pd-pair--2" aria-label="產品照">
-    <figure class="pd-pair__fig"><img src="../assets/img/pcp-flow-p1.webp" srcset="../assets/img/pcp-flow-p1-600.webp 600w, ../assets/img/pcp-flow-p1.webp 1000w" sizes="(max-width:767px) 100vw, 50vw" width="1000" height="1250" alt="毫剪 順 flow 銀色 5.5 吋單刃滑剪 產品照" loading="lazy" decoding="async"></figure>
-    <figure class="pd-pair__fig"><img src="../assets/img/pcp-flow-p2.webp" srcset="../assets/img/pcp-flow-p2-600.webp 600w, ../assets/img/pcp-flow-p2.webp 1000w" sizes="(max-width:767px) 100vw, 50vw" width="1000" height="1250" alt="毫剪 順 flow 銀色 5.5 吋單刃滑剪 產品照" loading="lazy" decoding="async"></figure>
-  </section>
   </div>
 
   <!-- 4. 規格（依 Simon 規格稿＋工廠規格表） -->
@@ -99,7 +107,8 @@
 
   <!-- 5. 購買 -->
   <section id="buy" class="section buy-te" aria-labelledby="buy-title">
-    <div class="wrap buy-te__grid">
+    <div class="wrap buy-te__grid pd-buy">
+      <figure class="buy-te__media pd-buy__media"><img src="../assets/img/pbuy-flow.webp" srcset="../assets/img/pbuy-flow-800.webp 800w, ../assets/img/pbuy-flow.webp 1600w" sizes="(max-width:767px) 100vw, 50vw" width="1600" height="1069" alt="毫剪 順 flow 銀色 5.5 吋單刃滑剪，整把完整產品照" loading="lazy" decoding="async"></figure>
       <div class="buy-te__info te-center">
         <h2 id="buy-title" class="h-m">順 <span class="en">flow</span>.</h2>
         <p class="buy-te__model model muted">MP–102S</p>
@@ -170,5 +179,6 @@
   </ul>
   <p class="footer__copy">© 2026 問淵有限公司</p>
 </footer>
+<script src="../assets/js/gallery.js" defer></script>
 </body>
 </html>

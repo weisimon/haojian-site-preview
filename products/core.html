@@ -48,6 +48,22 @@
     </div>
   </section>
 
+  <!-- 1b. 滑動圖庫：不同角度／組合圖（不自動播放） -->
+  <section class="pg" aria-roledescription="carousel" aria-label="通 core 產品照片，可左右滑動">
+    <div class="pg__wrap">
+      <ul class="pg__track" id="pg-core-track" tabindex="0" aria-label="產品照片，左右滑動瀏覽">
+        <li class="pg__slide" id="pg-core-s1" role="group" aria-roledescription="slide" aria-label="第 1 張，共 5 張"><img src="../assets/img/pg-core-1.webp" srcset="../assets/img/pg-core-1-900.webp 900w, ../assets/img/pg-core-1.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 通 core 銀色 6.8 吋通用綜合刀，張開整把" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-core-s2" role="group" aria-roledescription="slide" aria-label="第 2 張，共 5 張"><img src="../assets/img/pg-core-2.webp" srcset="../assets/img/pg-core-2-900.webp 900w, ../assets/img/pg-core-2.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 通 core 銀色 6.8 吋通用綜合刀，俯視握柄與軸心" loading="lazy" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-core-s3" role="group" aria-roledescription="slide" aria-label="第 3 張，共 5 張"><img src="../assets/img/pg-core-3.webp" srcset="../assets/img/pg-core-3-900.webp 900w, ../assets/img/pg-core-3.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 通 core 銀色 6.8 吋通用綜合刀，握柄側角" loading="lazy" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-core-s4" role="group" aria-roledescription="slide" aria-label="第 4 張，共 5 張"><img src="../assets/img/pg-core-4.webp" srcset="../assets/img/pg-core-4-900.webp 900w, ../assets/img/pg-core-4.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 通 core 銀色 6.8 吋通用綜合刀，俯拍桌面組合" loading="lazy" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-core-s5" role="group" aria-roledescription="slide" aria-label="第 5 張，共 5 張"><img src="../assets/img/pg-core-5.webp" srcset="../assets/img/pg-core-5-900.webp 900w, ../assets/img/pg-core-5.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 通 core 銀色 6.8 吋通用綜合刀，盒裝組合" loading="lazy" decoding="async" draggable="false"></li>
+      </ul>
+      <button type="button" class="pg__arrow pg__arrow--prev" aria-label="上一張" aria-controls="pg-core-track">‹</button>
+      <button type="button" class="pg__arrow pg__arrow--next" aria-label="下一張" aria-controls="pg-core-track">›</button>
+    </div>
+    <div class="pg__dots" role="group" aria-label="選擇照片"><button type="button" class="pg__dot" aria-label="看第 1 張" aria-controls="pg-core-s1" aria-current="true"></button><button type="button" class="pg__dot" aria-label="看第 2 張" aria-controls="pg-core-s2"></button><button type="button" class="pg__dot" aria-label="看第 3 張" aria-controls="pg-core-s3"></button><button type="button" class="pg__dot" aria-label="看第 4 張" aria-controls="pg-core-s4"></button><button type="button" class="pg__dot" aria-label="看第 5 張" aria-controls="pg-core-s5"></button></div>
+  </section>
+
   <div class="bs-flow pf-flow">
   <!-- 2. 定位：手持主圖＋定位句 -->
   <section class="bs bs--r pf--hero pf--stack pf" aria-labelledby="pos-h">
@@ -56,8 +72,8 @@
   </section>
 
   <!-- 3. 三個重點：每點一個細節圓，字壓在圖上 -->
-  <section class="bs bs--l pf" aria-labelledby="feat-1">
-    <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-core-f1-m.webp" width="1080" height="648"><img src="../assets/img/pb-core-f1.webp" srcset="../assets/img/pb-core-f1-1200.webp 1200w, ../assets/img/pb-core-f1.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 通 core 銀色 6.8 吋通用綜合刀，上下不對稱" loading="lazy" decoding="async"></picture>
+  <section class="bs bs--tl pf" aria-labelledby="feat-1">
+    <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-core-f1-m.webp" width="1080" height="760"><img src="../assets/img/pb-core-f1.webp" srcset="../assets/img/pb-core-f1-1200.webp 1200w, ../assets/img/pb-core-f1.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 通 core 銀色 6.8 吋通用綜合刀，上下不對稱" loading="lazy" decoding="async"></picture>
     <div class="bs__text"><p class="pf-no en">01</p><h3 class="pf-name" id="feat-1">上下不對稱 <span class="en">asymmetric blades</span></h3><p class="bs__zh pf-blurb"><span class="nw">靜刃托住<span class="nw">頭髮</span>，</span><span class="nw">動刃負責切割。</span></p><p class="bs__en en">The still blade holds, the moving blade cuts.</p></div>
   </section>
   <section class="bs bs--tl pf" aria-labelledby="feat-2">
@@ -69,10 +85,6 @@
     <div class="bs__text"><p class="pf-no en">03</p><h3 class="pf-name" id="feat-3"><span class="nw">耐磨片</span>＋<span class="nw">軸承（培林）</span> <span class="en">wear plate + bearing</span></h3><p class="bs__zh pf-blurb"><span class="nw">磨合更穩定，</span><span class="nw">合刀更絲滑。</span></p><p class="bs__en en">A steadier break-in, a silkier close.</p></div>
   </section>
 
-  <section class="pd-pair pd-pair--2" aria-label="產品照">
-    <figure class="pd-pair__fig"><img src="../assets/img/pcp-core-p1.webp" srcset="../assets/img/pcp-core-p1-600.webp 600w, ../assets/img/pcp-core-p1.webp 1000w" sizes="(max-width:767px) 100vw, 50vw" width="1000" height="1250" alt="毫剪 通 core 銀色 6.8 吋通用綜合刀 產品照" loading="lazy" decoding="async"></figure>
-    <figure class="pd-pair__fig"><img src="../assets/img/pcp-core-p2.webp" srcset="../assets/img/pcp-core-p2-600.webp 600w, ../assets/img/pcp-core-p2.webp 1000w" sizes="(max-width:767px) 100vw, 50vw" width="1000" height="1250" alt="毫剪 通 core 銀色 6.8 吋通用綜合刀 產品照" loading="lazy" decoding="async"></figure>
-  </section>
   </div>
 
   <!-- 4. 規格（依 Simon 規格稿＋工廠規格表） -->
@@ -99,7 +111,8 @@
 
   <!-- 5. 購買 -->
   <section id="buy" class="section buy-te" aria-labelledby="buy-title">
-    <div class="wrap buy-te__grid">
+    <div class="wrap buy-te__grid pd-buy">
+      <figure class="buy-te__media pd-buy__media"><img src="../assets/img/pbuy-core.webp" srcset="../assets/img/pbuy-core-800.webp 800w, ../assets/img/pbuy-core.webp 1600w" sizes="(max-width:767px) 100vw, 50vw" width="1600" height="1069" alt="毫剪 通 core 銀色 6.8 吋通用綜合刀，整把完整產品照" loading="lazy" decoding="async"></figure>
       <div class="buy-te__info te-center">
         <h2 id="buy-title" class="h-m">通 <span class="en">core</span>.</h2>
         <p class="buy-te__model model muted">MP–101S</p>
@@ -170,5 +183,6 @@
   </ul>
   <p class="footer__copy">© 2026 問淵有限公司</p>
 </footer>
+<script src="../assets/js/gallery.js" defer></script>
 </body>
 </html>
