@@ -65,7 +65,23 @@
     $('co-disc-row').hidden = !disc;
     $('co-disc').textContent = '−' + fmt(disc);
     $('co-disc-code').textContent = applied ? '(' + applied + ')' : '';
-    $('co-total').textContent = fmt(subtotal - disc);
+    var total = subtotal - disc;
+    $('co-total').textContent = fmt(total);
+    // 分期：任選 3／4 把＋信用卡才可選 3 期 0 利率；單支只有一次付清
+    var credit = val('payment_method') === 'Credit';
+    var instOK = mode !== 'single';
+    var box = f.querySelector('[data-inst]'), opt3 = f.querySelector('[data-inst3]');
+    box.hidden = !credit; opt3.hidden = !instOK;
+    opt3.querySelector('input').disabled = !instOK;
+    if (!instOK && val('credit_installment') === '3') f.querySelector('input[name="credit_installment"][value="0"]').checked = true;
+    var useInst = credit && instOK && val('credit_installment') === '3';
+    $('co-inst-row').hidden = !useInst;
+    if (useInst) {
+      // 綠界分期：每期金額無條件捨去，除不盡的餘數加在第一期（上線前請以綠界實際試算確認）
+      var per = Math.floor(total / 3), first = total - per * 2;
+      $('co-inst').innerHTML = first === per ? fmt(per) + ' × 3 期'
+        : '首期 ' + fmt(first) + '，<br>之後 ' + fmt(per) + ' × 2 期';
+    }
   }
 
   $('co-apply').addEventListener('click', function () {

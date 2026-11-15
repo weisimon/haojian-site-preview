@@ -50,8 +50,8 @@
       <legend class="co-sec__title"><span class="co-no en">01</span> 訂購內容 <span class="en">order</span></legend>
       <div class="co-modes" role="radiogroup" aria-label="購買方式">
         <label class="co-mode"><input type="radio" name="mp_bundle" value="single" checked><span>單支 <span class="en">single</span><b>NT$5,000</b></span></label>
-        <label class="co-mode"><input type="radio" name="mp_bundle" value="any3"><span>任選 3 把 <span class="en">any three</span><b>NT$13,500</b></span></label>
-        <label class="co-mode"><input type="radio" name="mp_bundle" value="any4"><span>任選 4 把 <span class="en">any four</span><b>NT$17,500</b></span></label>
+        <label class="co-mode"><input type="radio" name="mp_bundle" value="any3"><span>任選 3 把 <span class="en">any three</span><b>NT$13,500</b><i class="inst-tag">3 期 0 利率</i></span></label>
+        <label class="co-mode"><input type="radio" name="mp_bundle" value="any4"><span>任選 4 把 <span class="en">any four</span><b>NT$17,500</b><i class="inst-tag">3 期 0 利率</i></span></label>
       </div>
       <div class="co-single" data-mode="single">
         <label class="co-field"><span class="co-label">款式 <span class="en">shear</span></span><select name="single_item" class="co-input"><option value="fine">緻 fine・MP–100S</option><option value="core">通 core・MP–101S</option><option value="air">透 air・MP–103S</option><option value="flow">順 flow・MP–102S</option></select></label>
@@ -115,6 +115,11 @@
       <legend class="co-sec__title"><span class="co-no en">05</span> 付款方式 <span class="en">payment</span></legend>
       <div class="co-opts">
         <label class="co-opt"><input type="radio" name="payment_method" value="Credit" checked><span>信用卡 <span class="en">credit card</span></span></label>
+        <!-- 綠界 CreditInstallment：任選 3／4 把可選 3 期 0 利率；單支只有一次付清 -->
+        <div class="co-inst" data-inst>
+          <label class="co-opt co-opt--sub"><input type="radio" name="credit_installment" value="0" checked><span>一次付清 <span class="en">pay in full</span></span></label>
+          <label class="co-opt co-opt--sub" data-inst3><input type="radio" name="credit_installment" value="3"><span>3 期 0 利率 <span class="en">3 interest-free instalments</span></span></label>
+        </div>
         <label class="co-opt"><input type="radio" name="payment_method" value="ATM"><span>ATM 虛擬帳號 <span class="en">ATM transfer</span></span></label>
         <label class="co-opt"><input type="radio" name="payment_method" value="CVS"><span>超商代碼 <span class="en">convenience store code</span></span></label>
       </div>
@@ -135,6 +140,7 @@
       <div id="co-disc-row" hidden><dt>折扣 <span class="en">discount</span> <span id="co-disc-code" class="en"></span></dt><dd id="co-disc">−NT$0</dd></div>
       <div><dt>運費 <span class="en">shipping</span></dt><dd class="muted">依配送方式 <span class="en">at checkout</span></dd></div>
       <div class="co-total"><dt>總計 <span class="en">total</span></dt><dd id="co-total">NT$5,000</dd></div>
+      <div class="co-inst-sum" id="co-inst-row" hidden><dt>3 期 0 利率 <span class="en">instalments</span></dt><dd id="co-inst"></dd></div>
     </dl>
     <aside class="return-note" aria-label="退換貨須知">
           <p class="return-note__label">7 天猶豫期<span class="return-note__not">非試用期</span> <span class="en">7-day cooling-off, not a trial</span></p>

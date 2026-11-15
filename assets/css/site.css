@@ -1246,3 +1246,17 @@ select.co-input { appearance:auto; }
 @media (min-width:1024px) { .co-grid { grid-template-columns:minmax(0,1fr) minmax(320px,400px); gap:calc(var(--sp-xl)*1.3); } .co-sum { position:sticky; top:var(--sp-lg); } .co-main { max-width:44em; } }
 .co [hidden] { display:none !important; }
 .co-totals dd { text-align:right; }
+
+/* 2026-11-15 Simon：任選 3／4 把加碼 信用卡 3 期 0 利率 */
+.buy-opts__row { flex-wrap:wrap; }
+.inst-tag { display:inline-block; font-style:normal; padding:.1em .55em; border:1px solid var(--mp-orange); color:var(--mp-orange); font-size:var(--fs-10); letter-spacing:.04em; line-height:1.6; }
+.buy-opts .inst-tag { flex-basis:100%; width:max-content; max-width:max-content; margin-top:.35em; }
+.inst-tag .en { font-size:.92em; margin-left:.3em; }
+.co-mode .inst-tag { margin-top:.2em; }
+.co-inst { display:grid; gap:.5em; margin:0 0 .2em 1.8em; }
+.co-opt--sub { padding:.6em .9em; }
+.co-inst-sum { color:var(--mp-orange); }
+.co-inst-sum dt .en { color:var(--mp-orange-80) !important; }
+.buy-opts { max-width:28em; }
+.buy-opts__name { flex:1 1 auto; }
+.co-inst-sum dd { white-space:nowrap; }
