@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>會員｜毫剪 Milli Peak</title>
+  <meta name="description" content="W 選物會員：登入、註冊、訂單紀錄與我的課程。">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/logo/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon-180.png">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<header class="site-header wrap">
+  <a class="mp-logo mp-logo--wordmark brand" href="index.html"><img src="assets/logo/logo-wordmark-black.svg" width="376" height="36" alt="毫剪 Milli Peak 首頁"></a>
+  <nav class="nav" aria-label="主要導覽">
+    <ul class="wm-row"><li><a class="wm" href="products/fine.html"><span class="wm__ch" lang="zh-Hant">緻</span><span class="wm__en">fine</span><span class="wm__no">MP–100S</span></a></li><li><a class="wm" href="products/core.html"><span class="wm__ch" lang="zh-Hant">通</span><span class="wm__en">core</span><span class="wm__no">MP–101S</span></a></li><li><a class="wm" href="products/air.html"><span class="wm__ch" lang="zh-Hant">透</span><span class="wm__en">air</span><span class="wm__no">MP–103S</span></a></li><li><a class="wm" href="products/flow.html"><span class="wm__ch" lang="zh-Hant">順</span><span class="wm__en">flow</span><span class="wm__no">MP–102S</span></a></li></ul>
+    <ul class="nav__sec">
+      <li><a href="story.html">品牌故事<span class="en">story</span></a></li>
+      <li><a href="select.html">選物<span class="en">select</span></a></li>
+    </ul>
+  </nav>
+  <a class="wp-logo wp-logo--v1" href="https://www.wpicked.com" target="_blank" rel="noopener"><img src="assets/logo/wpicked-logo-v1.svg" width="1635" height="360" alt="W 選物 W.PICKED"></a>
+  <a class="cart-link" href="cart.html" aria-label="購物車 cart"><svg class="cart-link__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="cart-link__n" data-cart-count hidden>0</span></a>
+  <!-- 會員選單：WordPress → WooCommerce 我的帳戶 /my-account/（登入、註冊、訂單 /my-account/orders/、帳戶資料 /my-account/edit-account/、登出 /my-account/customer-logout/）。預覽預設未登入；?demo=member 顯示已登入 -->
+  <details class="acct">
+    <summary class="acct__btn" aria-label="會員 account"><svg class="acct__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></summary>
+    <div class="acct__panel">
+      <ul class="acct__list" data-acct="guest">
+        <li><a href="account.html#login">登入 <span class="en">log in</span></a></li>
+        <li><a href="account.html#register">註冊 <span class="en">register</span></a></li>
+      </ul>
+      <ul class="acct__list" data-acct="member" hidden>
+        <li class="acct__hd"><a href="account.html">我的帳戶 <span class="en">my account</span></a></li>
+        <li><a href="account.html#orders">訂單紀錄 <span class="en">orders</span></a></li>
+        <li><a href="account.html#courses">我的課程 <span class="en">my courses</span></a></li>
+        <li><a href="account.html#details">帳戶資料 <span class="en">account details</span></a></li>
+        <li><a href="account.html?demo=guest" data-logout>登出 <span class="en">log out</span></a></li>
+      </ul>
+    </div>
+  </details>
+  <details class="menu">
+    <summary aria-label="開關選單"><span class="when-closed">選單 <span class="en">menu</span></span><span class="when-open">關閉 <span class="en">close</span></span></summary>
+    <nav class="menu__panel" aria-label="行動版導覽">
+      <p class="menu__brand en">milli peak</p>
+      <ul class="mwm-row"><li><a class="mwm" href="products/fine.html"><span class="mwm__ch" lang="zh-Hant">緻</span><span class="mwm__en">fine</span><span class="mwm__no">MP–100S</span></a></li><li><a class="mwm" href="products/core.html"><span class="mwm__ch" lang="zh-Hant">通</span><span class="mwm__en">core</span><span class="mwm__no">MP–101S</span></a></li><li><a class="mwm" href="products/air.html"><span class="mwm__ch" lang="zh-Hant">透</span><span class="mwm__en">air</span><span class="mwm__no">MP–103S</span></a></li><li><a class="mwm" href="products/flow.html"><span class="mwm__ch" lang="zh-Hant">順</span><span class="mwm__en">flow</span><span class="mwm__no">MP–102S</span></a></li></ul>
+      <ul class="menu__sec">
+        <li><a href="story.html">品牌故事 <span class="en">story</span></a></li>
+        <li><a href="select.html">選物 <span class="en">select</span></a></li>
+      </ul>
+      <p class="menu__brand menu__brand--acct en">member</p>
+      <ul class="menu__sec menu__sec--acct" data-acct="guest">
+        <li><a href="account.html#login">登入 <span class="en">log in</span></a></li>
+        <li><a href="account.html#register">註冊 <span class="en">register</span></a></li>
+        <li><a href="cart.html">購物車 <span class="en">cart</span></a></li>
+      </ul>
+      <ul class="menu__sec menu__sec--acct" data-acct="member" hidden>
+        <li><a href="account.html">我的帳戶 <span class="en">my account</span></a></li>
+        <li><a href="account.html#orders">訂單紀錄 <span class="en">orders</span></a></li>
+        <li><a href="account.html#courses">我的課程 <span class="en">my courses</span></a></li>
+        <li><a href="account.html#details">帳戶資料 <span class="en">account details</span></a></li>
+        <li><a href="cart.html">購物車 <span class="en">cart</span></a></li>
+        <li><a href="account.html?demo=guest" data-logout>登出 <span class="en">log out</span></a></li>
+      </ul>
+    </nav>
+  </details>
+</header>
+<nav class="mstrip" aria-label="產品"><ul class="sw-row"><li><a class="sw" href="products/fine.html"><span class="sw__ch" lang="zh-Hant">緻</span><span class="sw__en">fine</span><span class="sw__no">MP–100S</span></a></li><li><a class="sw" href="products/core.html"><span class="sw__ch" lang="zh-Hant">通</span><span class="sw__en">core</span><span class="sw__no">MP–101S</span></a></li><li><a class="sw" href="products/air.html"><span class="sw__ch" lang="zh-Hant">透</span><span class="sw__en">air</span><span class="sw__no">MP–103S</span></a></li><li><a class="sw" href="products/flow.html"><span class="sw__ch" lang="zh-Hant">順</span><span class="sw__en">flow</span><span class="sw__no">MP–102S</span></a></li></ul></nav>
+
+<main id="main" class="acc wrap">
+  <header class="co-head"><h1 class="h-l">會員 <span class="en">account</span></h1></header>
+  <div class="acc-grid" data-acct="guest">
+    <form class="acc-form" id="login" novalidate data-demo-form>
+      <h2 class="co-sec__title">登入 <span class="en">log in</span></h2>
+      <label class="co-field"><span class="co-label">Email <span class="en">email</span></span><input class="co-input" name="username" type="email" autocomplete="email" required></label>
+      <label class="co-field"><span class="co-label">密碼 <span class="en">password</span></span><input class="co-input" name="password" type="password" autocomplete="current-password" required></label>
+      <label class="co-agree co-agree--plain"><input type="checkbox" name="rememberme"><span>記住我 <span class="en">remember me</span></span></label>
+      <button type="submit" class="co-btn co-btn--submit">登入 <span class="en">log in</span></button>
+      <p class="acc-small"><a href="#login" data-lost>忘記密碼？<span class="en">lost password</span></a></p>
+      <p class="co-out" role="status" aria-live="polite"></p>
+    </form>
+    <form class="acc-form" id="register" novalidate data-demo-form>
+      <h2 class="co-sec__title">註冊 <span class="en">register</span></h2>
+      <label class="co-field"><span class="co-label">Email <span class="en">email</span></span><input class="co-input" name="email" type="email" autocomplete="email" required></label>
+      <label class="co-field"><span class="co-label">密碼 <span class="en">password</span></span><input class="co-input" name="password" type="password" autocomplete="new-password" minlength="8" required></label>
+      <p class="co-hint">會員以 Email 識別，訂單與電子發票寄至此 Email。<span class="en">Your email is your member account.</span></p>
+      <button type="submit" class="co-btn co-btn--submit">註冊 <span class="en">register</span></button>
+      <p class="co-out" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+  <div class="acc-member" data-acct="member" hidden>
+    <nav class="acc-tabs" aria-label="我的帳戶">
+      <a href="#orders">訂單紀錄 <span class="en">orders</span></a>
+      <a href="#courses">我的課程 <span class="en">my courses</span></a>
+      <a href="#details">帳戶資料 <span class="en">account details</span></a>
+      <a href="account.html?demo=guest" data-logout>登出 <span class="en">log out</span></a>
+    </nav>
+    <section class="acc-sec" id="orders"><h2 class="co-sec__title">訂單紀錄 <span class="en">orders</span></h2><p class="acc-empty">尚無訂單。<span class="en">No orders yet.</span></p></section>
+    <section class="acc-sec" id="courses"><h2 class="co-sec__title">我的課程 <span class="en">my courses</span></h2><p class="acc-empty">尚無課程。<span class="en">No courses yet.</span> <a class="accent-link" href="select.html">選物 <span class="en">select</span></a></p></section>
+    <section class="acc-sec" id="details"><h2 class="co-sec__title">帳戶資料 <span class="en">account details</span></h2>
+      <form class="acc-form acc-form--flat" novalidate data-demo-form>
+        <label class="co-field"><span class="co-label">姓名 <span class="en">name</span></span><input class="co-input" name="account_first_name" autocomplete="name"></label>
+        <label class="co-field"><span class="co-label">Email <span class="en">email</span></span><input class="co-input" name="account_email" type="email" autocomplete="email"></label>
+        <label class="co-field"><span class="co-label">新密碼（不變更請留空） <span class="en">new password</span></span><input class="co-input" name="password_1" type="password" autocomplete="new-password"></label>
+        <button type="submit" class="co-btn co-btn--line">儲存 <span class="en">save</span></button>
+        <p class="co-out" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </div>
+  <p class="acc-small acc-note">預覽頁：會員功能尚未開放。<span class="en">Preview only; accounts are not open yet.</span></p>
+</main>
+<footer class="site-footer wrap">
+  <a class="mp-logo mp-logo--lockup" href="index.html"><picture><source media="(max-width:767px)" srcset="assets/logo/logo-lockup-white.svg"><img src="assets/logo/logo-lockup.svg" width="786" height="322" alt="毫剪 Milli Peak"></picture></a>
+  <ul class="footer__links">
+    <li><a href="index.html#products">產品</a></li>
+    <li><a href="story.html">品牌故事</a></li>
+  </ul>
+  <p class="footer__copy">© 2026 問淵有限公司</p>
+</footer>
+<script src="assets/js/catalog.js" defer></script>
+<script src="assets/js/cart.js" defer></script>
+<script src="assets/js/member.js" defer></script>
+</body>
+</html>

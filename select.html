@@ -24,6 +24,23 @@
   </nav>
   <a class="wp-logo wp-logo--v1" href="https://www.wpicked.com" target="_blank" rel="noopener"><img src="assets/logo/wpicked-logo-v1.svg" width="1635" height="360" alt="W 選物 W.PICKED"></a>
   <a class="cart-link" href="cart.html" aria-label="購物車 cart"><svg class="cart-link__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="cart-link__n" data-cart-count hidden>0</span></a>
+  <!-- 會員選單：WordPress → WooCommerce 我的帳戶 /my-account/（登入、註冊、訂單 /my-account/orders/、帳戶資料 /my-account/edit-account/、登出 /my-account/customer-logout/）。預覽預設未登入；?demo=member 顯示已登入 -->
+  <details class="acct">
+    <summary class="acct__btn" aria-label="會員 account"><svg class="acct__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></summary>
+    <div class="acct__panel">
+      <ul class="acct__list" data-acct="guest">
+        <li><a href="account.html#login">登入 <span class="en">log in</span></a></li>
+        <li><a href="account.html#register">註冊 <span class="en">register</span></a></li>
+      </ul>
+      <ul class="acct__list" data-acct="member" hidden>
+        <li class="acct__hd"><a href="account.html">我的帳戶 <span class="en">my account</span></a></li>
+        <li><a href="account.html#orders">訂單紀錄 <span class="en">orders</span></a></li>
+        <li><a href="account.html#courses">我的課程 <span class="en">my courses</span></a></li>
+        <li><a href="account.html#details">帳戶資料 <span class="en">account details</span></a></li>
+        <li><a href="account.html?demo=guest" data-logout>登出 <span class="en">log out</span></a></li>
+      </ul>
+    </div>
+  </details>
   <details class="menu">
     <summary aria-label="開關選單"><span class="when-closed">選單 <span class="en">menu</span></span><span class="when-open">關閉 <span class="en">close</span></span></summary>
     <nav class="menu__panel" aria-label="行動版導覽">
@@ -32,6 +49,20 @@
       <ul class="menu__sec">
         <li><a href="story.html">品牌故事 <span class="en">story</span></a></li>
         <li><a href="select.html">選物 <span class="en">select</span></a></li>
+      </ul>
+      <p class="menu__brand menu__brand--acct en">member</p>
+      <ul class="menu__sec menu__sec--acct" data-acct="guest">
+        <li><a href="account.html#login">登入 <span class="en">log in</span></a></li>
+        <li><a href="account.html#register">註冊 <span class="en">register</span></a></li>
+        <li><a href="cart.html">購物車 <span class="en">cart</span></a></li>
+      </ul>
+      <ul class="menu__sec menu__sec--acct" data-acct="member" hidden>
+        <li><a href="account.html">我的帳戶 <span class="en">my account</span></a></li>
+        <li><a href="account.html#orders">訂單紀錄 <span class="en">orders</span></a></li>
+        <li><a href="account.html#courses">我的課程 <span class="en">my courses</span></a></li>
+        <li><a href="account.html#details">帳戶資料 <span class="en">account details</span></a></li>
+        <li><a href="cart.html">購物車 <span class="en">cart</span></a></li>
+        <li><a href="account.html?demo=guest" data-logout>登出 <span class="en">log out</span></a></li>
       </ul>
     </nav>
   </details>
@@ -74,5 +105,6 @@
 </footer>
 <script src="assets/js/catalog.js" defer></script>
 <script src="assets/js/cart.js" defer></script>
+<script src="assets/js/member.js" defer></script>
 </body>
 </html>

@@ -33,12 +33,12 @@
   }
   function price(cart) {
     var lines = [], subtotal = 0, units = 0, nShear = 0, names = [], hasDemo = false,
-        physical = false, course = false, shear = false;
+        physical = false, course = false, shear = false, discUnits = 0, shearDisc = false;
     cart.forEach(function (l) {
       var p = CAT[l.id]; if (!p) return;
       if (p.physical) physical = true; if (p.kind === 'course') course = true;
-      if (p.kind === 'shear') { shear = true; nShear += l.qty; for (var i = 0; i < l.qty; i++) names.push(p.name); return; }
-      if (p.price) { subtotal += p.price * l.qty; units += l.qty; lines.push({ label: p.name + ' × ' + l.qty, amount: fmt(p.price * l.qty) }); }
+      if (p.kind === 'shear') { shear = true; if (p.discountable) shearDisc = true; nShear += l.qty; for (var i = 0; i < l.qty; i++) names.push(p.name); return; }
+      if (p.price) { subtotal += p.price * l.qty; units += l.qty; if (p.discountable) discUnits += l.qty; lines.push({ label: p.name + ' × ' + l.qty, amount: fmt(p.price * l.qty) }); }
       else { hasDemo = true; lines.push({ label: p.name + ' × ' + l.qty, amount: '示範價格（待提供）', demo: true }); }
     });
     var split = shearSplit(nShear), bundle = split.a + split.b > 0;
@@ -49,9 +49,9 @@
       if (split.c) sl.push({ label: '單支 single × ' + split.c, amount: fmt(split.c * B.single) });
       sl.push({ label: names.join('・'), amount: '', sub: true });
       lines = sl.concat(lines);
-      subtotal += split.cost; units += split.a + split.b + split.c;
+      subtotal += split.cost; units += split.a + split.b + split.c; if (shearDisc) discUnits += split.a + split.b + split.c;
     }
-    return { lines: lines, subtotal: subtotal, units: units, bundle: bundle, hasDemo: hasDemo, physical: physical, course: course, shear: shear, nShear: nShear, empty: !cart.length };
+    return { lines: lines, subtotal: subtotal, units: units, bundle: bundle, hasDemo: hasDemo, physical: physical, course: course, shear: shear, nShear: nShear, discUnits: discUnits, empty: !cart.length };
   }
 
   function badge() {

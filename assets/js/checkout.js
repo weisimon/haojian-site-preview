@@ -3,8 +3,10 @@
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
   var C = window.MPCart; if (!C) return;
-  // 折扣碼：在這裡新增或修改。perUnit＝每支單支剪刀／每組任選組／每件其他商品折（新台幣）
-  var DISCOUNT_CODES = { 'MILLI100': { perUnit: 100, label: '每件／每組折 NT$100' } };
+  // 折扣碼：在這裡新增或修改。perUnit＝每支單支剪刀／每組任選組折（新台幣）。
+  // 只有商品目錄 discountable: true 的商品（目前只有剪刀）計入；課程、吹風機、離子夾不折。
+  var DISCOUNT_CODES = { 'MILLI100': { perUnit: 100, label: '剪刀每支／每組折 NT$100' } };
+  var NOT_ELIGIBLE = '此折扣碼僅適用毫剪剪刀。This code applies to Milli Peak shears only.';
   var f = document.getElementById('co-form'); if (!f) return;
   var $ = function (id) { return document.getElementById(id); };
   var applied = null, fmt = C.fmt;
@@ -42,7 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
     $('co-sum-no').textContent = ('0' + (n + 1)).slice(-2);
 
     $('co-lines').innerHTML = pr.lines.map(function (x) { return '<li' + (x.sub ? ' class="co-lines__sub"' : '') + '><span>' + esc(x.label) + '</span><span>' + esc(x.amount) + '</span></li>'; }).join('');
-    var disc = applied && pr.subtotal ? Math.min(pr.subtotal, DISCOUNT_CODES[applied].perUnit * pr.units) : 0, total = pr.subtotal - disc;
+    if (applied && !pr.discUnits) { applied = null; var m = $('co-code-msg'); m.className = 'co-code__msg is-err'; m.textContent = NOT_ELIGIBLE; }
+    var disc = applied ? Math.min(pr.subtotal, DISCOUNT_CODES[applied].perUnit * pr.discUnits) : 0, total = pr.subtotal - disc;
+    $('co-disc-note').hidden = !(applied && (pr.discUnits < pr.units || pr.hasDemo));
     $('co-subtotal').textContent = fmt(pr.subtotal);
     $('co-disc-row').hidden = !disc; $('co-disc').textContent = '−' + fmt(disc);
     $('co-disc-code').textContent = applied ? '(' + applied + ')' : '';
@@ -65,7 +69,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   $('co-apply').addEventListener('click', function () {
     var code = $('co-code').value.trim().toUpperCase(), msg = $('co-code-msg'), input = $('co-code');
-    if (code && DISCOUNT_CODES[code]) { applied = code; msg.className = 'co-code__msg is-ok'; msg.textContent = '已套用 ' + code + '：' + DISCOUNT_CODES[code].label; input.removeAttribute('aria-invalid'); }
+    if (code && DISCOUNT_CODES[code] && !C.price(C.get()).discUnits) { applied = null; msg.className = 'co-code__msg is-err'; msg.textContent = NOT_ELIGIBLE; input.setAttribute('aria-invalid', 'true'); }
+    else if (code && DISCOUNT_CODES[code]) { applied = code; msg.className = 'co-code__msg is-ok'; msg.textContent = '已套用 ' + code + '：' + DISCOUNT_CODES[code].label; input.removeAttribute('aria-invalid'); }
     else { applied = null; msg.className = 'co-code__msg is-err'; msg.textContent = code ? '折扣碼無效，請再確認。Invalid code.' : '請輸入折扣碼。Enter a code.'; input.setAttribute('aria-invalid', 'true'); }
     render();
   });

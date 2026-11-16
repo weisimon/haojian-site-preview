@@ -8,7 +8,8 @@ window.MP_CATALOG = {
   "physical": true,
   "img": "assets/img/card-fine.webp",
   "max": 10,
-  "enabled": true
+  "enabled": true,
+  "discountable": true
  },
  "core": {
   "kind": "shear",
@@ -18,7 +19,8 @@ window.MP_CATALOG = {
   "physical": true,
   "img": "assets/img/card-core.webp",
   "max": 10,
-  "enabled": true
+  "enabled": true,
+  "discountable": true
  },
  "air": {
   "kind": "shear",
@@ -28,7 +30,8 @@ window.MP_CATALOG = {
   "physical": true,
   "img": "assets/img/card-air.webp",
   "max": 10,
-  "enabled": true
+  "enabled": true,
+  "discountable": true
  },
  "flow": {
   "kind": "shear",
@@ -38,7 +41,8 @@ window.MP_CATALOG = {
   "physical": true,
   "img": "assets/img/card-flow.webp",
   "max": 10,
-  "enabled": true
+  "enabled": true,
+  "discountable": true
  },
  "dryer": {
   "kind": "item",
