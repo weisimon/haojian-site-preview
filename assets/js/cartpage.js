@@ -2,6 +2,11 @@
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
   var C = window.MPCart; if (!C) return;
+  // 預覽用：cart.html?demo=mixed 放入混合購物車示範（剪刀 3 把＋吹風機＋課程）
+  if (new URLSearchParams(location.search).get('demo') === 'mixed') {
+    C.set([{ id: 'fine', qty: 2 }, { id: 'air', qty: 1 }, { id: 'dryer', qty: 1 }, { id: 'course-basic', qty: 1 }]);
+    if (history.replaceState) history.replaceState(null, '', location.pathname);
+  }
   var $ = function (id) { return document.getElementById(id); };
   function esc(t) { var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
   function render() {
