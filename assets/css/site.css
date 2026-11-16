@@ -1295,3 +1295,10 @@ select.co-input { appearance:auto; }
 .pt-rule .en { display:block; color:var(--mp-black-80); }
 .pt-addr { font-size:var(--fs-15); color:var(--mp-black-80); margin:.5em 0 0; padding:.6em .8em; background:var(--mp-silver-40); }
 @media (min-width:768px) { .pt-cards { grid-template-columns:1fr 1fr; } .pt-card { grid-template-columns:1fr; align-items:start; } }
+/* 2026-11-16 Milli Peak × 合作店 logo */
+.pt-co { display:flex; align-items:center; gap:clamp(12px,2vw,24px); margin:0; }
+.pt-co .mp-logo img { display:block; width:auto; height:clamp(16px,1.6vw,22px); }
+.pt-co__x { font-size:clamp(18px,1.8vw,26px); font-weight:300; color:var(--mp-black-80); line-height:1; }
+.pt-co__logo { display:block; width:auto; height:clamp(44px,4.4vw,60px); }
+.pt-co__partner--text { font-size:clamp(18px,1.8vw,24px); letter-spacing:.06em; }
+.pt-co__partner:empty, .pt-co__partner:empty ~ * { display:none; }

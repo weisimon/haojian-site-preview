@@ -11,13 +11,26 @@
 
   if (partner) {
     $('pt-title').innerHTML = '';
-    $('pt-title').appendChild(document.createTextNode(partner.name + ' 員工專屬優惠 '));
+    $('pt-title').appendChild(document.createTextNode((partner.short || partner.name) + ' 員工專屬優惠 '));
     var en = document.createElement('span'); en.className = 'en'; en.textContent = 'staff offer'; $('pt-title').appendChild(en);
-    document.title = partner.name + ' 員工專屬優惠｜毫剪 Milli Peak';
+    document.title = (partner.short || partner.name) + ' 員工專屬優惠｜毫剪 Milli Peak';
+    // 合作店 logo（沒有就用文字名稱）
+    var slot = $('pt-partner');
+    if (partner.logo) {
+      var im = document.createElement('img'); im.src = partner.logo; im.alt = partner.name;
+      im.width = partner.logo_w || 80; im.height = partner.logo_h || 80; im.className = 'pt-co__logo'; slot.appendChild(im);
+    } else { slot.textContent = partner.name; slot.classList.add('pt-co__partner--text'); }
+    // 分店：有 city 就依縣市分組
+    var groups = {}, order = [];
     partner.branches.forEach(function (b) {
-      var o = document.createElement('option'); o.value = b.id; o.textContent = b.name; $('pt-branch').appendChild(o);
+      var o = document.createElement('option'); o.value = b.id; o.textContent = b.name + (b.city ? '｜' + b.addr : '');
+      if (!b.city) { $('pt-branch').appendChild(o); return; }
+      if (!groups[b.city]) { groups[b.city] = document.createElement('optgroup'); groups[b.city].label = b.city; order.push(b.city); }
+      groups[b.city].appendChild(o);
     });
+    order.forEach(function (c) { $('pt-branch').appendChild(groups[c]); });
   } else {
+    document.querySelector('.pt-co__x').hidden = true;
     $('co-unavail').hidden = false;
     $('co-unavail').textContent = '連結無效，請洽合作窗口。This link is not valid; please contact your partner coordinator.';
     f.querySelectorAll('input,select,button').forEach(function (el) { el.disabled = true; });
