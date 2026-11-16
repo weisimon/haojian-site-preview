@@ -64,7 +64,7 @@
     if (!partner) { out.textContent = '連結無效，請洽合作窗口。'; return; }
     if (!render()) { out.textContent = '請至少選擇 1 把剪刀。Please choose at least one shear.'; return; }
     if (!f.checkValidity()) { f.reportValidity(); out.textContent = '請完成必填欄位。Please complete the required fields.'; return; }
-    out.textContent = '預覽版不會送出訂單：上線後將於 WordPress 串接綠界 ECPay 付款。Preview only: this will connect to ECPay on WordPress.';
+    out.textContent = '目前尚未開放線上下單。Online ordering not open yet.';
   });
   render();
 })();
