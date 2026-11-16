@@ -1267,3 +1267,11 @@ select.co-input { appearance:auto; }
 .co-mode__sub { display:block; flex-basis:100%; font-size:.85em; color:var(--mp-black-80); font-weight:300; }
 .co-inst-sum, .co-inst-sum dt .en { color:inherit !important; }
 .co-inst-sum dt .en { color:var(--mp-black-80) !important; }
+/* 2026-11-16 checkout v2：通用商品、宅配、Email 會員 */
+.co-static { font-size:var(--fs-15); line-height:1.7; margin:0; }
+.co-static .en { display:block; color:var(--mp-black-80); }
+.co-agree--plain { margin-top:var(--sp-md); }
+.co-unavail { margin:0 0 var(--sp-lg); padding:1em 1.2em; border:1.5px solid var(--mp-black); font-size:var(--fs-15); }
+.co-unavail[hidden] { display:none; }
+.co-item { font-size:var(--fs-20); margin:0; display:flex; justify-content:space-between; gap:1em; }
+.co-btn--submit:disabled { opacity:.35; cursor:not-allowed; }

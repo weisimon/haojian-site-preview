@@ -1,13 +1,14 @@
-/* 毫剪 結帳預覽（靜態）。WordPress 版改由 WooCommerce + 綠界 ECPay 外掛處理；此檔只示範欄位與計價。 */
+/* 毫剪／W 選物 通用結帳預覽（靜態）。商品目錄見 catalog.js（由 build_pages2.py 產生）。
+   WordPress 版改由 WooCommerce + 綠界 ECPay 外掛處理；此檔只示範欄位與計價。
+   網址：checkout.html?item=<id>；剪刀也可用 ?shear=<key>。 */
 (function () {
   'use strict';
-  // 價格（新台幣，含稅）
-  var PRICE = { single: 5000, any3: 13500, any4: 17500 };
+  var CATALOG = window.MP_CATALOG || {};
+  var BUNDLES = window.MP_BUNDLES || { single: 5000, any3: 13500, any4: 17500 };
   var SETN = { any3: 3, any4: 4 };
-  var NAMES = { fine: '緻 fine', core: '通 core', air: '透 air', flow: '順 flow' };
-  // 折扣碼：在這裡新增或修改。perUnit＝單支每把折、任選組每組折（新台幣）
+  // 折扣碼：在這裡新增或修改。perUnit＝單件每件折、剪刀任選組每組折（新台幣）
   var DISCOUNT_CODES = {
-    'MILLI100': { perUnit: 100, label: '每把／每組折 NT$100' }
+    'MILLI100': { perUnit: 100, label: '每件／每組折 NT$100' }
   };
 
   var f = document.getElementById('co-form');
@@ -15,10 +16,27 @@
   var $ = function (id) { return document.getElementById(id); };
   var applied = null;
   var fmt = function (n) { return 'NT$' + n.toLocaleString('en-US'); };
+  var nameOf = function (k) { return CATALOG[k] ? CATALOG[k].name : k; };
 
-  // 由商品頁帶入 ?shear=fine
-  var q = new URLSearchParams(location.search).get('shear');
-  if (q && NAMES[q]) { f.single_item.value = q; for (var i = 1; i <= 4; i++) f['set_item_' + i].value = q; }
+  // 決定結帳商品
+  var qs = new URLSearchParams(location.search);
+  var id = qs.get('item') || qs.get('shear') || 'fine';
+  var prod = CATALOG[id];
+  var kind = prod ? prod.kind : 'none';
+  var available = !!(prod && prod.enabled && prod.price);
+  if (kind === 'shear') {
+    f.single_item.value = id;
+    for (var i = 1; i <= 4; i++) f['set_item_' + i].value = id;
+  } else if (prod) {
+    $('co-item-id').value = id;
+    $('co-item-name').textContent = prod.name;
+    $('co-item-price').textContent = prod.price ? fmt(prod.price) : '';
+  }
+  if (!available) {
+    $('co-unavail').hidden = false;
+    $('co-unavail').textContent = (prod ? prod.name + '：' : '') + '此商品尚未開放購買。This item is not available yet.';
+    f.querySelector('.co-btn--submit').disabled = true;
+  }
 
   function val(name) { var el = f.querySelector('input[name="' + name + '"]:checked'); return el ? el.value : ''; }
   function toggle(sel, show) {
@@ -29,50 +47,54 @@
   }
 
   function render() {
-    var mode = val('mp_bundle');
-    toggle('[data-mode="single"]', mode === 'single');
-    toggle('[data-mode="set"]', mode !== 'single');
-    if (mode !== 'single') {
-      var picks = f.querySelectorAll('.co-field--pick');
-      picks.forEach(function (p, i) {
+    var isShear = kind === 'shear';
+    toggle('[data-kind="shear"]', isShear);
+    toggle('[data-kind="item"]', !isShear && !!prod);
+    var mode = isShear ? val('mp_bundle') : 'item';
+    if (isShear) {
+      toggle('[data-mode="single"]', mode === 'single');
+      toggle('[data-mode="set"]', mode !== 'single');
+      if (mode !== 'single') f.querySelectorAll('.co-field--pick').forEach(function (p, i) {
         var on = i < SETN[mode]; p.hidden = !on; p.querySelector('select').disabled = !on;
       });
     }
-    var ship = val('shipping_method');
-    toggle('[data-ship="home"]', ship === 'home');
-    toggle('[data-ship="cvs"]', ship === 'cvs');
-    var inv = val('invoice_type');
-    ['mobile', 'cert', 'company'].forEach(function (k) { toggle('[data-inv="' + k + '"]', inv === k); });
+    toggle('[data-inv="company"]', $('co-company').checked);
 
     // 計價
-    var lines = [], subtotal, units;
+    var lines = [], subtotal = 0, units = 0;
     if (mode === 'single') {
       var qty = Math.max(1, Math.min(10, parseInt(f.quantity.value, 10) || 1));
-      subtotal = PRICE.single * qty; units = qty;
-      lines.push([NAMES[f.single_item.value] + ' × ' + qty, fmt(subtotal)]);
-    } else {
-      subtotal = PRICE[mode]; units = 1;
+      subtotal = BUNDLES.single * qty; units = qty;
+      lines.push([nameOf(f.single_item.value) + ' × ' + qty, fmt(subtotal)]);
+    } else if (mode === 'any3' || mode === 'any4') {
+      subtotal = BUNDLES[mode]; units = 1;
       var picked = [];
-      for (var j = 1; j <= SETN[mode]; j++) picked.push(NAMES[f['set_item_' + j].value]);
+      for (var j = 1; j <= SETN[mode]; j++) picked.push(nameOf(f['set_item_' + j].value));
       lines.push(['任選 ' + SETN[mode] + ' 把 any ' + (mode === 'any3' ? 'three' : 'four'), fmt(subtotal)]);
       lines.push([picked.join('・'), '']);
+    } else if (prod) {
+      var iq = Math.max(1, Math.min(10, parseInt(f.item_quantity.value, 10) || 1));
+      subtotal = (prod.price || 0) * iq; units = iq;
+      lines.push([prod.name + ' × ' + iq, prod.price ? fmt(subtotal) : '—']);
     }
     $('co-lines').innerHTML = lines.map(function (l) {
       return '<li><span>' + l[0] + '</span><span>' + l[1] + '</span></li>';
     }).join('');
-    var disc = applied ? DISCOUNT_CODES[applied].perUnit * units : 0;
-    $('co-subtotal').textContent = fmt(subtotal);
+    var disc = applied && subtotal ? DISCOUNT_CODES[applied].perUnit * units : 0;
+    var total = subtotal - disc;
+    $('co-subtotal').textContent = subtotal ? fmt(subtotal) : '—';
     $('co-disc-row').hidden = !disc;
     $('co-disc').textContent = '−' + fmt(disc);
     $('co-disc-code').textContent = applied ? '(' + applied + ')' : '';
-    var total = subtotal - disc;
-    $('co-total').textContent = fmt(total);
-    // 分期：任選 3／4 把＋信用卡才可選 3 期 0 利率；單支只有一次付清
+    $('co-total').textContent = subtotal ? fmt(total) : '—';
+
+    // 分期：僅 信用卡 ＋ 剪刀任選 3／4 把 可選 3 期 0 利率；其他只有一次付清
     var credit = val('payment_method') === 'Credit';
-    var instOK = mode !== 'single';
+    var instOK = mode === 'any3' || mode === 'any4';
     var box = f.querySelector('[data-inst]'), opt3 = f.querySelector('[data-inst3]');
     box.hidden = !credit; opt3.hidden = !instOK;
-    opt3.querySelector('input').disabled = !instOK;
+    box.querySelectorAll('input').forEach(function (el) { el.disabled = !credit; });
+    opt3.querySelector('input').disabled = !(credit && instOK);
     if (!instOK && val('credit_installment') === '3') f.querySelector('input[name="credit_installment"][value="0"]').checked = true;
     var useInst = credit && instOK && val('credit_installment') === '3';
     $('co-inst-row').hidden = !useInst;
@@ -100,17 +122,12 @@
   });
   $('co-code').addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); $('co-apply').click(); } });
 
-  // 超商門市：WordPress 版開啟綠界電子地圖
-  $('co-store').addEventListener('click', function () {
-    var brand = val('cvs_type') === 'FAMI' ? '全家' : '7-ELEVEN';
-    $('co-store-out').textContent = '預覽版：此處將開啟綠界 ' + brand + ' 門市地圖。Preview: opens the ECPay store map on WordPress.';
-  });
-
   f.addEventListener('input', render);
   f.addEventListener('change', render);
   f.addEventListener('submit', function (e) {
     e.preventDefault();
     var out = $('co-out');
+    if (!available) { out.textContent = '此商品尚未開放購買。This item is not available yet.'; return; }
     if (!f.checkValidity()) { f.reportValidity(); out.textContent = '請完成必填欄位。Please complete the required fields.'; return; }
     out.textContent = '預覽版不會送出訂單：上線後此按鈕將於 WordPress 串接綠界 ECPay 付款。Preview only: this will connect to ECPay on WordPress.';
   });
