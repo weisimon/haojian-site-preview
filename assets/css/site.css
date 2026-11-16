@@ -1275,3 +1275,23 @@ select.co-input { appearance:auto; }
 .co-unavail[hidden] { display:none; }
 .co-item { font-size:var(--fs-20); margin:0; display:flex; justify-content:space-between; gap:1em; }
 .co-btn--submit:disabled { opacity:.35; cursor:not-allowed; }
+
+/* ===== 2026-11-16 合作店員工優惠結帳 partner.html ===== */
+.pt-header { justify-content:flex-start; }
+.pt-footer { display:block; }
+.pt-cards { list-style:none; margin:0; padding:0; display:grid; gap:var(--sp-md); }
+.pt-card { display:grid; grid-template-columns:44% 1fr; gap:var(--sp-md); align-items:center; border:1px solid var(--mp-black-40); padding:.6em; }
+.pt-card__img { width:100%; height:auto; aspect-ratio:4/3; object-fit:contain; background:#000; display:block; }
+.pt-card__name { margin:0; font-size:var(--fs-20); }
+.pt-card__ch { font-size:1.15em; }
+.pt-card__model { display:block; font-size:.7em; color:var(--mp-black-80); margin-top:.2em; }
+.pt-card__price { margin:.4em 0 .6em; font-size:var(--fs-15); }
+.pt-step { display:inline-flex; align-items:stretch; border:1px solid var(--mp-black); }
+.pt-step__btn { width:2.6em; min-height:2.6em; font:inherit; font-size:18px; background:#fff; color:var(--mp-black); border:0; cursor:pointer; }
+.pt-step__btn:hover { background:var(--mp-black); color:#fff; }
+.pt-step__n { width:3em; text-align:center; font:inherit; font-size:16px; border:0; border-inline:1px solid var(--mp-black); -moz-appearance:textfield; }
+.pt-step__n::-webkit-outer-spin-button, .pt-step__n::-webkit-inner-spin-button { -webkit-appearance:none; margin:0; }
+.pt-rule { margin:0 0 var(--sp-md); padding:.8em 1em; border:1.5px solid var(--mp-black); font-size:var(--fs-15); line-height:1.6; }
+.pt-rule .en { display:block; color:var(--mp-black-80); }
+.pt-addr { font-size:var(--fs-15); color:var(--mp-black-80); margin:.5em 0 0; padding:.6em .8em; background:var(--mp-silver-40); }
+@media (min-width:768px) { .pt-cards { grid-template-columns:1fr 1fr; } .pt-card { grid-template-columns:1fr; align-items:start; } }

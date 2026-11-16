@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>員工專屬優惠｜毫剪 Milli Peak</title>
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="pt-page">
+<header class="site-header wrap pt-header">
+  <span class="mp-logo mp-logo--wordmark brand"><img src="assets/logo/logo-wordmark-black.svg" width="376" height="36" alt="毫剪 Milli Peak"></span>
+</header>
+<main id="main" class="co wrap">
+  <header class="co-head">
+    <h1 class="h-l" id="pt-title">員工專屬優惠 <span class="en">staff offer</span></h1>
+    <p class="co-preview">合作店員工專屬：每把 NT$4,000，僅寄送至合作店分店。預覽版：送出後將於 WordPress 串接綠界 ECPay。<span class="en">Partner-salon staff only. Preview; will connect to ECPay on WordPress.</span></p>
+  </header>
+  <p class="co-unavail" id="co-unavail" role="alert" hidden></p>
+  <form id="pt-form" class="co-grid" novalidate>
+   <div class="co-main">
+    <fieldset class="co-sec">
+      <legend class="co-sec__title"><span class="co-no en">01</span> 選擇剪刀 <span class="en">choose shears</span></legend>
+      <ul class="pt-cards">
+      <li class="pt-card">
+        <img class="pt-card__img" src="assets/img/card-fine.webp" width="1200" height="900" alt="毫剪 緻 fine 黑色 5.25 吋精準結構刀，整把產品照" loading="lazy" decoding="async">
+        <div class="pt-card__meta">
+          <p class="pt-card__name"><span class="pt-card__ch">緻</span> <span class="en">fine</span> <span class="pt-card__model en">MP–100S・黑</span></p>
+          <p class="pt-card__price">NT$4,000</p>
+          <div class="pt-step" role="group" aria-label="緻 fine 數量">
+            <button type="button" class="pt-step__btn" data-step="-1" data-k="fine" aria-label="減少 緻 數量">−</button>
+            <input class="pt-step__n" type="number" name="qty_fine" id="qty-fine" value="0" min="0" max="10" inputmode="numeric" aria-label="緻 fine 數量">
+            <button type="button" class="pt-step__btn" data-step="1" data-k="fine" aria-label="增加 緻 數量">＋</button>
+          </div>
+        </div>
+      </li>
+      <li class="pt-card">
+        <img class="pt-card__img" src="assets/img/card-core.webp" width="1200" height="900" alt="毫剪 通 core 銀色 6.8 吋通用綜合刀，整把產品照" loading="lazy" decoding="async">
+        <div class="pt-card__meta">
+          <p class="pt-card__name"><span class="pt-card__ch">通</span> <span class="en">core</span> <span class="pt-card__model en">MP–101S・銀</span></p>
+          <p class="pt-card__price">NT$4,000</p>
+          <div class="pt-step" role="group" aria-label="通 core 數量">
+            <button type="button" class="pt-step__btn" data-step="-1" data-k="core" aria-label="減少 通 數量">−</button>
+            <input class="pt-step__n" type="number" name="qty_core" id="qty-core" value="0" min="0" max="10" inputmode="numeric" aria-label="通 core 數量">
+            <button type="button" class="pt-step__btn" data-step="1" data-k="core" aria-label="增加 通 數量">＋</button>
+          </div>
+        </div>
+      </li>
+      <li class="pt-card">
+        <img class="pt-card__img" src="assets/img/card-air.webp" width="1200" height="900" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀，整把產品照" loading="lazy" decoding="async">
+        <div class="pt-card__meta">
+          <p class="pt-card__name"><span class="pt-card__ch">透</span> <span class="en">air</span> <span class="pt-card__model en">MP–103S・銀</span></p>
+          <p class="pt-card__price">NT$4,000</p>
+          <div class="pt-step" role="group" aria-label="透 air 數量">
+            <button type="button" class="pt-step__btn" data-step="-1" data-k="air" aria-label="減少 透 數量">−</button>
+            <input class="pt-step__n" type="number" name="qty_air" id="qty-air" value="0" min="0" max="10" inputmode="numeric" aria-label="透 air 數量">
+            <button type="button" class="pt-step__btn" data-step="1" data-k="air" aria-label="增加 透 數量">＋</button>
+          </div>
+        </div>
+      </li>
+      <li class="pt-card">
+        <img class="pt-card__img" src="assets/img/card-flow.webp" width="1200" height="900" alt="毫剪 順 flow 銀色 5.5 吋單刃滑剪，整把產品照" loading="lazy" decoding="async">
+        <div class="pt-card__meta">
+          <p class="pt-card__name"><span class="pt-card__ch">順</span> <span class="en">flow</span> <span class="pt-card__model en">MP–102S・銀</span></p>
+          <p class="pt-card__price">NT$4,000</p>
+          <div class="pt-step" role="group" aria-label="順 flow 數量">
+            <button type="button" class="pt-step__btn" data-step="-1" data-k="flow" aria-label="減少 順 數量">−</button>
+            <input class="pt-step__n" type="number" name="qty_flow" id="qty-flow" value="0" min="0" max="10" inputmode="numeric" aria-label="順 flow 數量">
+            <button type="button" class="pt-step__btn" data-step="1" data-k="flow" aria-label="增加 順 數量">＋</button>
+          </div>
+        </div>
+      </li>
+      </ul>
+      <p class="co-hint">員工價每把 NT$4,000，不適用組合價與折扣碼。<span class="en">Staff price per shear; no bundles or discount codes.</span></p>
+    </fieldset>
+
+    <fieldset class="co-sec">
+      <legend class="co-sec__title"><span class="co-no en">02</span> 寄送 <span class="en">delivery</span></legend>
+      <p class="pt-rule">僅寄送至合作店分店，不提供寄送到府。<span class="en">Ships to partner salon branches only; no home delivery.</span></p>
+      <p class="co-static">郵局宅配，寄送至所選分店。<span class="en">Delivered by Chunghwa Post to the selected branch.</span></p>
+      <input type="hidden" name="shipping_method" value="post_branch">
+      <label class="co-field"><span class="co-label">寄送分店 <span class="en">branch</span></span><select class="co-input" name="branch" id="pt-branch" required><option value="">請選擇分店</option></select></label>
+      <p class="pt-addr" id="pt-addr" aria-live="polite">分店地址 <span class="en">branch address</span>：—</p>
+      <label class="co-field"><span class="co-label">收件人姓名 <span class="en">recipient name</span></span><input class="co-input" name="shipping_first_name" autocomplete="name" required></label>
+      <label class="co-field"><span class="co-label">收件人電話 <span class="en">recipient phone</span></span><input class="co-input" name="shipping_phone" type="tel" inputmode="tel" pattern="[0-9+\-\(\) ]{8,20}" placeholder="0912345678" required></label>
+    </fieldset>
+
+    <fieldset class="co-sec">
+      <legend class="co-sec__title"><span class="co-no en">03</span> 訂購人資料 <span class="en">your details</span></legend>
+      <label class="co-field"><span class="co-label">姓名 <span class="en">name</span></span><input class="co-input" name="billing_first_name" autocomplete="name" required></label>
+      <label class="co-field"><span class="co-label">電話 <span class="en">phone</span></span><input class="co-input" name="billing_phone" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9+\-\(\) ]{8,20}" placeholder="0912345678" required></label>
+      <label class="co-field"><span class="co-label">Email <span class="en">email</span></span><input class="co-input" name="billing_email" type="email" autocomplete="email" required aria-describedby="pt-email-hint"></label>
+      <p class="co-hint" id="pt-email-hint">電子發票將寄至此 Email。<span class="en">The e-invoice is sent to this email.</span></p>
+      <label class="co-agree co-agree--plain"><input type="checkbox" name="invoice_company" id="co-company"><span>需要統一編號（公司） <span class="en">I need a company tax ID</span></span></label>
+      <div data-inv="company" hidden>
+        <label class="co-field"><span class="co-label">統一編號 <span class="en">tax ID</span></span><input class="co-input" name="invoice_customer_identifier" pattern="[0-9]{8}" inputmode="numeric" placeholder="12345678" required></label>
+        <label class="co-field"><span class="co-label">公司抬頭 <span class="en">company name</span></span><input class="co-input" name="invoice_customer_company" required></label>
+      </div>
+    </fieldset>
+
+    <fieldset class="co-sec">
+      <legend class="co-sec__title"><span class="co-no en">04</span> 付款方式 <span class="en">payment</span></legend>
+      <div class="co-opts">
+        <label class="co-opt"><input type="radio" name="payment_method" value="Credit" checked><span>信用卡（綠界） <span class="en">credit card via ECPay</span></span></label>
+        <label class="co-opt"><input type="radio" name="payment_method" value="ATM"><span>ATM 轉帳（綠界指定虛擬帳號） <span class="en">bank transfer to an ECPay virtual account</span></span></label>
+      </div>
+      <p class="co-hint">付款於綠界頁面完成，本站不儲存卡號。<span class="en">Payment is completed on ECPay; card numbers are never stored here.</span></p>
+    </fieldset>
+   </div>
+
+   <aside class="co-sum" aria-labelledby="co-sum-title">
+    <h2 id="co-sum-title" class="co-sec__title"><span class="co-no en">05</span> 訂單摘要 <span class="en">summary</span></h2>
+    <ul class="co-lines" id="co-lines"></ul>
+    <dl class="co-totals">
+      <div><dt>數量 <span class="en">shears</span></dt><dd id="pt-count">0 把</dd></div>
+      <div><dt>運費 <span class="en">shipping</span></dt><dd class="muted">運費另計 <span class="en">calculated separately</span></dd></div>
+      <div class="co-total"><dt>總計 <span class="en">total</span></dt><dd id="co-total">NT$0</dd></div>
+    </dl>
+    <aside class="return-note" aria-label="退換貨須知">
+          <p class="return-note__label">7 天猶豫期<span class="return-note__not">非試用期</span> <span class="en">7-day cooling-off, not a trial</span></p>
+          <p class="return-note__body">商品需保持全新未使用、包裝完整方可退換；剪刀拆封使用後無法退換。</p>
+          <p class="return-note__en en">7-day cooling-off period, not a trial. Unused items in original packaging only.</p>
+        </aside>
+    <label class="co-agree"><input type="checkbox" name="terms" required><span>我已閱讀並同意 7 天猶豫期（非試用期）退換貨規定。<span class="en">I agree to the 7-day cooling-off terms (not a trial).</span></span></label>
+    <button type="submit" class="co-btn co-btn--submit">送出訂單 <span class="en">place order</span></button>
+    <p class="co-out" id="co-out" role="status" aria-live="polite"></p>
+   </aside>
+  </form>
+</main>
+<footer class="site-footer wrap pt-footer"><p class="footer__copy">© 2026 問淵有限公司</p></footer>
+<script src="assets/js/partners.js" defer></script>
+<script src="assets/js/partner.js" defer></script>
+</body>
+</html>
