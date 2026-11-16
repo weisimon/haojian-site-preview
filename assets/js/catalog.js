@@ -74,8 +74,7 @@ window.MP_CATALOG = {
   "physical": false,
   "img": null,
   "max": 1,
-  "enabled": true,
-  "href": "https://www.wpicked.com/courses/cientific-haircutting-basic-techniques/"
+  "enabled": true
  }
 };
 window.MP_BUNDLES = {"single": 5000, "any3": 13500, "any4": 17500};
