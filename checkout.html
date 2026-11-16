@@ -24,6 +24,7 @@
     </ul>
   </nav>
   <a class="wp-logo wp-logo--v1" href="https://www.wpicked.com" target="_blank" rel="noopener"><img src="assets/logo/wpicked-logo-v1.svg" width="1635" height="360" alt="W 選物 W.PICKED"></a>
+  <a class="cart-link" href="cart.html" aria-label="購物車 cart"><svg class="cart-link__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="cart-link__n" data-cart-count hidden>0</span></a>
   <details class="menu">
     <summary aria-label="開關選單"><span class="when-closed">選單 <span class="en">menu</span></span><span class="when-open">關閉 <span class="en">close</span></span></summary>
     <nav class="menu__panel" aria-label="行動版導覽">
@@ -46,46 +47,34 @@
   <form id="co-form" class="co-grid" novalidate>
    <div class="co-main">
 
-    <fieldset class="co-sec">
+    <fieldset class="co-sec" data-sec>
       <legend class="co-sec__title"><span class="co-no en">01</span> 訂購內容 <span class="en">order</span></legend>
-      <div data-kind="shear">
-        <div class="co-modes" role="radiogroup" aria-label="購買方式">
-          <label class="co-mode"><input type="radio" name="mp_bundle" value="single" checked><span>單支 <span class="en">single</span><b>NT$5,000</b></span></label>
-          <label class="co-mode"><input type="radio" name="mp_bundle" value="any3"><span>任選 3 把 <span class="en">any three</span><b>NT$13,500</b><small class="co-mode__sub">四款任選三把（加碼信用卡 3 期 0 利率）</small></span></label>
-          <label class="co-mode"><input type="radio" name="mp_bundle" value="any4"><span>任選 4 把 <span class="en">any four</span><b>NT$17,500</b><small class="co-mode__sub">四款任選四把（加碼信用卡 3 期 0 利率）</small></span></label>
-        </div>
-        <div class="co-single" data-mode="single">
-          <label class="co-field"><span class="co-label">款式 <span class="en">shear</span></span><select name="single_item" class="co-input"><option value="fine">緻 fine・MP–100S</option><option value="core">通 core・MP–101S</option><option value="air">透 air・MP–103S</option><option value="flow">順 flow・MP–102S</option></select></label>
-          <label class="co-field co-field--qty"><span class="co-label">數量 <span class="en">qty</span></span><input class="co-input" type="number" name="quantity" value="1" min="1" max="10" inputmode="numeric"></label>
-        </div>
-        <div class="co-set" data-mode="set" hidden>
-          <p class="co-hint">四款任選，可重複。<span class="en">Any combination, repeats allowed.</span></p>
-          <label class="co-field co-field--pick"><span class="co-label">第 1 把 <span class="en">shear 1</span></span><select name="set_item_1" class="co-input"><option value="fine">緻 fine・MP–100S</option><option value="core">通 core・MP–101S</option><option value="air">透 air・MP–103S</option><option value="flow">順 flow・MP–102S</option></select></label><label class="co-field co-field--pick"><span class="co-label">第 2 把 <span class="en">shear 2</span></span><select name="set_item_2" class="co-input"><option value="fine">緻 fine・MP–100S</option><option value="core">通 core・MP–101S</option><option value="air">透 air・MP–103S</option><option value="flow">順 flow・MP–102S</option></select></label><label class="co-field co-field--pick"><span class="co-label">第 3 把 <span class="en">shear 3</span></span><select name="set_item_3" class="co-input"><option value="fine">緻 fine・MP–100S</option><option value="core">通 core・MP–101S</option><option value="air">透 air・MP–103S</option><option value="flow">順 flow・MP–102S</option></select></label><label class="co-field co-field--pick"><span class="co-label">第 4 把 <span class="en">shear 4</span></span><select name="set_item_4" class="co-input"><option value="fine">緻 fine・MP–100S</option><option value="core">通 core・MP–101S</option><option value="air">透 air・MP–103S</option><option value="flow">順 flow・MP–102S</option></select></label>
-        </div>
-      </div>
-      <div data-kind="item" hidden>
-        <p class="co-item"><span class="co-item__name" id="co-item-name"></span> <span class="co-item__price" id="co-item-price"></span></p>
-        <input type="hidden" name="item_id" id="co-item-id">
-        <label class="co-field co-field--qty"><span class="co-label">數量 <span class="en">qty</span></span><input class="co-input" type="number" name="item_quantity" value="1" min="1" max="10" inputmode="numeric"></label>
-      </div>
+      <ul class="co-cart" id="co-cart"></ul>
+      <p class="co-hint" data-shear-hint hidden>剪刀任意款式滿 3 把／4 把，自動以任選 3 把／任選 4 把計價（加碼信用卡 3 期 0 利率）。<span class="en">3 or 4 shears of any model are priced as a set.</span></p>
+      <p><a class="co-edit" href="cart.html">修改購物車 <span class="en">edit cart</span></a></p>
     </fieldset>
 
-    <fieldset class="co-sec">
+    <fieldset class="co-sec" data-sec>
       <legend class="co-sec__title"><span class="co-no en">02</span> 訂購人資料 <span class="en">your details</span></legend>
       <label class="co-field"><span class="co-label">姓名 <span class="en">name</span></span><input class="co-input" name="billing_first_name" autocomplete="name" required></label>
       <label class="co-field"><span class="co-label">電話 <span class="en">phone</span></span><input class="co-input" name="billing_phone" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9+\-\(\) ]{8,20}" placeholder="0912345678" required></label>
-      <label class="co-field"><span class="co-label">地址 <span class="en">address</span></span><input class="co-input" name="billing_address_1" autocomplete="street-address" placeholder="縣市、區、路名門牌" required></label>
+      <label class="co-field" data-physical><span class="co-label">地址 <span class="en">address</span></span><input class="co-input" name="billing_address_1" autocomplete="street-address" placeholder="縣市、區、路名門牌" required></label>
       <label class="co-field"><span class="co-label">Email（會員帳號） <span class="en">email · member account</span></span><input class="co-input" name="billing_email" type="email" autocomplete="email" required aria-describedby="co-email-hint"></label>
       <p class="co-hint" id="co-email-hint">會員以 Email 識別；電子發票將寄至此 Email。<span class="en">Your email is your member account; the e-invoice is sent here.</span></p>
     </fieldset>
 
-    <fieldset class="co-sec">
+    <fieldset class="co-sec" data-sec data-physical>
       <legend class="co-sec__title"><span class="co-no en">03</span> 配送 <span class="en">delivery</span></legend>
       <p class="co-static">郵局宅配，免運，寄送至上方地址。<span class="en">Free shipping by Chunghwa Post to the address above.</span></p>
       <input type="hidden" name="shipping_method" value="post_home">
     </fieldset>
 
-    <fieldset class="co-sec">
+    <fieldset class="co-sec" data-sec data-course>
+      <legend class="co-sec__title"><span class="co-no en">03</span> 課程開通 <span class="en">course access</span></legend>
+      <p class="co-static">線上課程，付款完成後以 Email 開通課程帳號（W 選物會員）。<span class="en">Online course: access is set up by email (W.PICKED member) after payment.</span></p>
+    </fieldset>
+
+    <fieldset class="co-sec" data-sec>
       <legend class="co-sec__title"><span class="co-no en">04</span> 電子發票 <span class="en">e-invoice</span></legend>
       <p class="co-static">電子發票寄至訂購人 Email。<span class="en">The e-invoice is emailed to you.</span></p>
       <label class="co-agree co-agree--plain"><input type="checkbox" name="invoice_company" id="co-company"><span>需要統一編號（公司） <span class="en">I need a company tax ID</span></span></label>
@@ -95,11 +84,11 @@
       </div>
     </fieldset>
 
-    <fieldset class="co-sec">
+    <fieldset class="co-sec" data-sec>
       <legend class="co-sec__title"><span class="co-no en">05</span> 付款方式 <span class="en">payment</span></legend>
       <div class="co-opts">
         <label class="co-opt"><input type="radio" name="payment_method" value="Credit" checked><span>信用卡（綠界） <span class="en">credit card via ECPay</span></span></label>
-        <!-- 綠界 CreditInstallment：剪刀任選 3／4 把可選 3 期 0 利率；其他只有一次付清 -->
+        <!-- 綠界 CreditInstallment：購物車內有剪刀任選 3／4 把組合時，才可選 3 期 0 利率 -->
         <div class="co-inst" data-inst>
           <label class="co-opt co-opt--sub"><input type="radio" name="credit_installment" value="0" checked><span>一次付清 <span class="en">pay in full</span></span></label>
           <label class="co-opt co-opt--sub" data-inst3><input type="radio" name="credit_installment" value="3"><span>3 期 0 利率 <span class="en">3 interest-free instalments</span></span></label>
@@ -111,7 +100,7 @@
    </div>
 
    <aside class="co-sum" aria-labelledby="co-sum-title">
-    <h2 id="co-sum-title" class="co-sec__title"><span class="co-no en">06</span> 訂單摘要 <span class="en">summary</span></h2>
+    <h2 id="co-sum-title" class="co-sec__title"><span class="co-no en" id="co-sum-no">06</span> 訂單摘要 <span class="en">summary</span></h2>
     <ul class="co-lines" id="co-lines"></ul>
     <div class="co-code">
       <label class="co-field"><span class="co-label">折扣碼 <span class="en">discount code</span></span>
@@ -119,24 +108,30 @@
       <p class="co-code__msg" id="co-code-msg" aria-live="polite"></p>
     </div>
     <dl class="co-totals">
-      <div><dt>小計 <span class="en">subtotal</span></dt><dd id="co-subtotal">NT$5,000</dd></div>
+      <div><dt>小計 <span class="en">subtotal</span></dt><dd id="co-subtotal">NT$0</dd></div>
       <div id="co-disc-row" hidden><dt>折扣 <span class="en">discount</span> <span id="co-disc-code" class="en"></span></dt><dd id="co-disc">−NT$0</dd></div>
-      <div><dt>運費 <span class="en">shipping</span></dt><dd>免運 NT$0 <span class="en">free shipping</span></dd></div>
-      <div class="co-total"><dt>總計 <span class="en">total</span></dt><dd id="co-total">NT$5,000</dd></div>
+      <div data-physical><dt>運費 <span class="en">shipping</span></dt><dd>免運 NT$0 <span class="en">free shipping</span></dd></div>
+      <div class="co-total"><dt>總計 <span class="en">total</span></dt><dd id="co-total">NT$0</dd></div>
       <div class="co-inst-sum" id="co-inst-row" hidden><dt>3 期 0 利率 <span class="en">instalments</span></dt><dd id="co-inst"></dd></div>
     </dl>
-    <aside class="return-note" aria-label="退換貨須知">
+    <p class="co-hint" id="co-demo-note" hidden>示範商品價格待提供，未計入總計。<span class="en">Demo items have no price yet and are not included.</span></p>
+    <div data-terms="physical"><aside class="return-note" aria-label="退換貨須知">
           <p class="return-note__label">7 天猶豫期<span class="return-note__not">非試用期</span> <span class="en">7-day cooling-off, not a trial</span></p>
           <p class="return-note__body">商品需保持全新未使用、包裝完整方可退換；剪刀拆封使用後無法退換。</p>
           <p class="return-note__en en">7-day cooling-off period, not a trial. Unused items in original packaging only.</p>
-        </aside>
-    <label class="co-agree"><input type="checkbox" name="terms" required><span>我已閱讀並同意 7 天猶豫期（非試用期）退換貨規定。<span class="en">I agree to the 7-day cooling-off terms (not a trial).</span></span></label>
+        </aside></div>
+    <div data-terms="course"><aside class="return-note" aria-label="課程購買說明">
+          <p class="return-note__label">課程購買說明 <span class="en">course terms</span></p>
+          <p class="return-note__body">課程退費規則待提供。</p>
+          <p class="return-note__en en">Course refund policy to be provided.</p>
+        </aside></div>
+    <label class="co-agree" data-terms="physical"><input type="checkbox" name="terms" required><span>我已閱讀並同意 7 天猶豫期（非試用期）退換貨規定。<span class="en">I agree to the 7-day cooling-off terms (not a trial).</span></span></label>
+    <label class="co-agree" data-terms="course"><input type="checkbox" name="terms_course" required><span>我已閱讀課程購買說明。<span class="en">I have read the course terms.</span></span></label>
     <button type="submit" class="co-btn co-btn--submit">送出訂單 <span class="en">place order</span></button>
     <p class="co-out" id="co-out" role="status" aria-live="polite"></p>
    </aside>
   </form>
 </main>
-<script src="assets/js/catalog.js" defer></script>
 <script src="assets/js/checkout.js" defer></script>
 <footer class="site-footer wrap">
   <a class="mp-logo mp-logo--lockup" href="index.html"><picture><source media="(max-width:767px)" srcset="assets/logo/logo-lockup-white.svg"><img src="assets/logo/logo-lockup.svg" width="786" height="322" alt="毫剪 Milli Peak"></picture></a>
@@ -146,5 +141,7 @@
   </ul>
   <p class="footer__copy">© 2026 問淵有限公司</p>
 </footer>
+<script src="assets/js/catalog.js" defer></script>
+<script src="assets/js/cart.js" defer></script>
 </body>
 </html>

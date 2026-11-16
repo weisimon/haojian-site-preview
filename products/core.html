@@ -23,6 +23,7 @@
     </ul>
   </nav>
   <a class="wp-logo wp-logo--v1" href="https://www.wpicked.com" target="_blank" rel="noopener"><img src="../assets/logo/wpicked-logo-v1.svg" width="1635" height="360" alt="W 選物 W.PICKED"></a>
+  <a class="cart-link" href="../cart.html" aria-label="購物車 cart"><svg class="cart-link__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="cart-link__n" data-cart-count hidden>0</span></a>
   <details class="menu">
     <summary aria-label="開關選單"><span class="when-closed">選單 <span class="en">menu</span></span><span class="when-open">關閉 <span class="en">close</span></span></summary>
     <nav class="menu__panel" aria-label="行動版導覽">
@@ -122,8 +123,12 @@
           <li class="buy-opts__row"><span class="buy-opts__name">任選 3 把 <span class="buy-opts__set buy-opts__set--sub">四款任選三把（加碼信用卡 3 期 0 利率） <span class="en">any three</span></span></span><span class="buy-opts__price">NT$13,500</span></li>
           <li class="buy-opts__row"><span class="buy-opts__name">任選 4 把 <span class="buy-opts__set buy-opts__set--sub">四款任選四把（加碼信用卡 3 期 0 利率） <span class="en">any four</span></span></span><span class="buy-opts__price">NT$17,500</span></li>
         </ul>
-        <!-- WordPress：對應 WooCommerce 結帳頁 /checkout/?add-to-cart=… -->
-        <a class="buy-cta" href="../checkout.html?shear=core">購買 <span class="en">buy</span></a>
+        <!-- 購物車（localStorage）＋立即購買；WordPress：對應 WooCommerce 加入購物車／結帳 -->
+        <div class="buy-actions">
+          <button type="button" class="buy-cta" data-add-to-cart="core">加入購物車 <span class="en">add to cart</span></button>
+          <a class="buy-cta buy-cta--solid" href="../checkout.html?shear=core">立即購買 <span class="en">buy now</span></a>
+        </div>
+        <p class="cart-msg" data-cart-msg aria-live="polite"></p>
         <aside class="return-note" aria-label="退換貨須知">
           <p class="return-note__label">7 天猶豫期<span class="return-note__not">非試用期</span> <span class="en">7-day cooling-off, not a trial</span></p>
           <p class="return-note__body">商品需保持全新未使用、包裝完整方可退換；剪刀拆封使用後無法退換。</p>
@@ -187,6 +192,8 @@
   </ul>
   <p class="footer__copy">© 2026 問淵有限公司</p>
 </footer>
+<script src="../assets/js/catalog.js" defer></script>
+<script src="../assets/js/cart.js" defer></script>
 <script src="../assets/js/gallery.js" defer></script>
 </body>
 </html>

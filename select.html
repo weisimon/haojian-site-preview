@@ -23,6 +23,7 @@
     </ul>
   </nav>
   <a class="wp-logo wp-logo--v1" href="https://www.wpicked.com" target="_blank" rel="noopener"><img src="assets/logo/wpicked-logo-v1.svg" width="1635" height="360" alt="W 選物 W.PICKED"></a>
+  <a class="cart-link" href="cart.html" aria-label="購物車 cart"><svg class="cart-link__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="cart-link__n" data-cart-count hidden>0</span></a>
   <details class="menu">
     <summary aria-label="開關選單"><span class="when-closed">選單 <span class="en">menu</span></span><span class="when-open">關閉 <span class="en">close</span></span></summary>
     <nav class="menu__panel" aria-label="行動版導覽">
@@ -41,23 +42,25 @@
   <header class="sel-head">
     <h1 class="h-l">選物 <span class="en">select</span></h1>
   </header>
+  <p class="cart-msg" data-cart-msg aria-live="polite"></p>
   <section class="sel-sec" aria-labelledby="sel-courses">
     <h2 id="sel-courses" class="sel-sec__title">課程 <span class="en">courses</span></h2>
     <ul class="sel-courses">
-      <li class="sel-course"><a class="sel-course__link" href="https://www.wpicked.com/courses/cientific-haircutting-basic-techniques/" target="_blank" rel="noopener">
+      <li class="sel-course"><div class="sel-course__link">
         <p class="sel-course__eyebrow en">course</p>
         <h3 class="sel-course__title">《科學剪髮・基礎剪髮教學》</h3>
         <p class="sel-course__en en">scientific haircutting: basic techniques</p>
         <p class="sel-course__price">NT$6,000</p>
-        <p class="sel-course__more">查看課程 <span class="en">view course</span> ↗</p>
-      </a></li>
+        <div class="sel-actions sel-actions--dark"><button type="button" class="sel-btn" data-add-to-cart="course-basic">加入購物車 <span class="en">add to cart</span></button><a class="sel-btn sel-btn--solid" href="checkout.html?item=course-basic">立即購買 <span class="en">buy now</span></a></div>
+        <p class="sel-course__more"><a href="https://www.wpicked.com/courses/cientific-haircutting-basic-techniques/" target="_blank" rel="noopener">課程介紹 <span class="en">about the course</span> ↗</a></p>
+      </div></li>
     </ul>
   </section>
   <section class="sel-sec" aria-labelledby="sel-products">
     <h2 id="sel-products" class="sel-sec__title">選物 <span class="en">products</span></h2>
     <ul class="sel-grid">
-      <li class="sel-item"><div class="sel-item__ph" aria-hidden="true"></div><h3 class="sel-item__name">吹風機</h3></li>
-      <li class="sel-item"><div class="sel-item__ph" aria-hidden="true"></div><h3 class="sel-item__name">離子夾</h3></li>
+      <li class="sel-item"><div class="sel-item__ph" aria-hidden="true"></div><h3 class="sel-item__name">吹風機</h3><div class="sel-actions "><button type="button" class="sel-btn" data-add-to-cart="dryer">加入購物車 <span class="en">add to cart</span></button><a class="sel-btn sel-btn--solid" href="checkout.html?item=dryer">立即購買 <span class="en">buy now</span></a></div></li>
+      <li class="sel-item"><div class="sel-item__ph" aria-hidden="true"></div><h3 class="sel-item__name">離子夾</h3><div class="sel-actions "><button type="button" class="sel-btn" data-add-to-cart="iron">加入購物車 <span class="en">add to cart</span></button><a class="sel-btn sel-btn--solid" href="checkout.html?item=iron">立即購買 <span class="en">buy now</span></a></div></li>
     </ul>
   </section>
 </main>
@@ -69,5 +72,7 @@
   </ul>
   <p class="footer__copy">© 2026 問淵有限公司</p>
 </footer>
+<script src="assets/js/catalog.js" defer></script>
+<script src="assets/js/cart.js" defer></script>
 </body>
 </html>

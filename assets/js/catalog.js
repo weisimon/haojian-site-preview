@@ -1,10 +1,13 @@
-/* 由 build_pages2.py 產生：毫剪／W 選物 結帳商品目錄。請改 build 設定，不要手改。 */
+/* 由 build_pages2.py 產生：毫剪／W 選物 商品目錄。請改 build 設定，不要手改。 */
 window.MP_CATALOG = {
  "fine": {
   "kind": "shear",
   "name": "緻 fine",
   "model": "MP–100S",
   "price": 5000,
+  "physical": true,
+  "img": "assets/img/card-fine.webp",
+  "max": 10,
   "enabled": true
  },
  "core": {
@@ -12,6 +15,9 @@ window.MP_CATALOG = {
   "name": "通 core",
   "model": "MP–101S",
   "price": 5000,
+  "physical": true,
+  "img": "assets/img/card-core.webp",
+  "max": 10,
   "enabled": true
  },
  "air": {
@@ -19,6 +25,9 @@ window.MP_CATALOG = {
   "name": "透 air",
   "model": "MP–103S",
   "price": 5000,
+  "physical": true,
+  "img": "assets/img/card-air.webp",
+  "max": 10,
   "enabled": true
  },
  "flow": {
@@ -26,6 +35,9 @@ window.MP_CATALOG = {
   "name": "順 flow",
   "model": "MP–102S",
   "price": 5000,
+  "physical": true,
+  "img": "assets/img/card-flow.webp",
+  "max": 10,
   "enabled": true
  },
  "dryer": {
@@ -33,14 +45,33 @@ window.MP_CATALOG = {
   "name": "吹風機",
   "model": "",
   "price": null,
-  "enabled": false
+  "demo": true,
+  "physical": true,
+  "img": null,
+  "max": 10,
+  "enabled": true
  },
  "iron": {
   "kind": "item",
   "name": "離子夾",
   "model": "",
   "price": null,
-  "enabled": false
+  "demo": true,
+  "physical": true,
+  "img": null,
+  "max": 10,
+  "enabled": true
+ },
+ "course-basic": {
+  "kind": "course",
+  "name": "《科學剪髮・基礎剪髮教學》",
+  "model": "線上課程",
+  "price": 6000,
+  "physical": false,
+  "img": null,
+  "max": 1,
+  "enabled": true,
+  "href": "https://www.wpicked.com/courses/cientific-haircutting-basic-techniques/"
  }
 };
 window.MP_BUNDLES = {"single": 5000, "any3": 13500, "any4": 17500};

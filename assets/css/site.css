@@ -1302,3 +1302,48 @@ select.co-input { appearance:auto; }
 .pt-co__logo { display:block; width:auto; height:clamp(44px,4.4vw,60px); }
 .pt-co__partner--text { font-size:clamp(18px,1.8vw,24px); letter-spacing:.06em; }
 .pt-co__partner:empty, .pt-co__partner:empty ~ * { display:none; }
+
+/* ===== 2026-11-16 購物車 cart ===== */
+.cart-link { position:relative; flex:none; display:inline-flex; align-items:center; color:inherit; margin-left:clamp(10px,1.4vw,20px); padding:4px; }
+.cart-link:hover { opacity:.7; text-decoration:none; }
+.cart-link__n { position:absolute; top:-4px; right:-8px; min-width:18px; height:18px; padding:0 5px; box-sizing:border-box; border-radius:9px; background:var(--mp-orange); color:#fff; font-size:11px; line-height:18px; text-align:center; }
+.buy-actions { display:flex; flex-wrap:wrap; gap:.6em; justify-content:center; margin-top:var(--sp-lg); }
+.buy-actions .buy-cta { margin-top:0; font:inherit; font-size:var(--fs-20); background:#fff; cursor:pointer; }
+.buy-cta--solid { background:var(--mp-black) !important; color:#fff !important; }
+.buy-cta--solid:hover { opacity:.88; }
+.cart-msg { font-size:var(--fs-15); min-height:1.4em; margin:.6em 0 0; }
+.cart-msg a { color:var(--mp-orange); }
+.sel-actions { display:flex; flex-wrap:wrap; gap:.5em; margin-top:.8em; }
+.sel-btn { display:inline-block; padding:.55em 1em; border:1px solid var(--mp-black); background:#fff; color:var(--mp-black); font:inherit; font-size:var(--fs-15); cursor:pointer; text-decoration:none; }
+.sel-btn:hover { text-decoration:none; opacity:.85; }
+.sel-btn--solid { background:var(--mp-black); color:#fff; }
+.sel-btn .en { font-size:.82em; }
+.sel-actions--dark .sel-btn { background:transparent; color:#fff; border-color:#fff; }
+.sel-actions--dark .sel-btn--solid { background:#fff; color:#000; }
+.sel-course__more a { color:var(--mp-orange-60); }
+.cart-rows { list-style:none; margin:0; padding:0; }
+.cart-row { display:grid; grid-template-columns:110px 1fr; gap:var(--sp-md); padding:var(--sp-md) 0; border-bottom:1px solid var(--mp-silver-100); }
+.cart-row:first-child { border-top:1px solid var(--mp-black); }
+.cart-row__img img, .cart-row__ph { display:block; width:100%; aspect-ratio:4/3; height:auto; object-fit:contain; background:#000; }
+.cart-row__ph { background:var(--mp-silver-40); border:1px solid var(--mp-silver-100); box-sizing:border-box; }
+.cart-row__name { margin:0; font-size:var(--fs-20); }
+.cart-row__sub { margin:.2em 0 .6em; font-size:var(--fs-15); color:var(--mp-black-80); }
+.cart-row__ctl { display:flex; align-items:center; gap:1em; flex-wrap:wrap; }
+.cart-row__rm { background:none; border:0; padding:0; font:inherit; font-size:var(--fs-15); color:var(--mp-black-80); text-decoration:underline; cursor:pointer; }
+.pt-step__btn:disabled { opacity:.3; cursor:not-allowed; }
+.cart-empty { font-size:var(--fs-20); margin:0 0 var(--sp-lg); }
+.cart-empty[hidden], .co [hidden] { display:none !important; }
+.co-btn--link { text-align:center; text-decoration:none; box-sizing:border-box; }
+.co-btn--link:hover { text-decoration:none; }
+.co-lines__sub { color:var(--mp-black-80); font-size:.92em; }
+.co-cart { list-style:none; margin:0; padding:0; font-size:var(--fs-20); }
+.co-cart li { display:flex; justify-content:space-between; gap:1em; padding:.5em 0; border-bottom:1px solid var(--mp-silver-100); }
+.co-edit { font-size:var(--fs-15); color:var(--mp-orange); }
+@media (min-width:768px) { .cart-row { grid-template-columns:180px 1fr; } }
+@media (max-width:1100px) { .cart-link { margin-left:8px; } .nav { gap:clamp(14px,2vw,48px); } .wp-logo { padding-left:clamp(12px,1.6vw,40px); } }
+@media (max-width:767px) { .site-header { gap:10px; } .cart-link { margin-left:0; padding:2px; } .menu > summary .when-closed .en { display:none; } }
+@media (max-width:1100px) and (min-width:768px) { .site-header { gap:clamp(16px,2.4vw,40px); } }
+.buy-actions button.buy-cta { color:var(--mp-black); border:1px solid var(--mp-black); }
+.site-header .cart-link__icon { width:22px; height:22px; max-width:none; display:block; }
+.co-sum .co-totals dt { white-space:nowrap; }
+.buy-actions button.buy-cta:hover, .buy-actions button.buy-cta:focus-visible { background:var(--mp-black); color:#fff; }
