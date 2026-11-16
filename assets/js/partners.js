@@ -203,22 +203,154 @@ window.MP_PARTNERS = {
   ]
  },
  "yuna": {
-  "name": "尤拿",
+  "name": "尤拿 UNA HAIR",
   "short": "尤拿",
   "logo": null,
-  "source": null,
+  "source": "partners/yuna_branches.csv",
   "branches": [
    {
-    "id": "A",
-    "name": "範例分店 A（待提供）",
-    "addr": "地址待提供",
-    "city": ""
+    "id": "una-01",
+    "name": "尤拿•台大店",
+    "addr": "台北市中正區汀州路三段295號2樓",
+    "city": "台北",
+    "phone": "02-2368-5908",
+    "confidence": "high"
    },
    {
-    "id": "B",
-    "name": "範例分店 B（待提供）",
-    "addr": "地址待提供",
-    "city": ""
+    "id": "una-02",
+    "name": "尤拿台北國館（待確認）",
+    "addr": "台北市大安區光復南路290巷55號B1",
+    "city": "台北",
+    "phone": "02-2741-3003",
+    "confidence": "medium"
+   },
+   {
+    "id": "una-03",
+    "name": "una x nc2 公館店（待確認）",
+    "addr": "台北市中正區羅斯福路三段278號2樓之1",
+    "city": "台北",
+    "phone": "02-2366-0018",
+    "confidence": "medium"
+   },
+   {
+    "id": "una-04",
+    "name": "淡水尤拿 UNA Tamsui",
+    "addr": "新北市淡水區英專路2巷27號",
+    "city": "新北",
+    "phone": "02-2622-6627",
+    "confidence": "high"
+   },
+   {
+    "id": "una-05",
+    "name": "una x nc2 土城店（待確認）",
+    "addr": "新北市土城區裕生路21巷6弄33號",
+    "city": "新北",
+    "phone": "02-2260-3377",
+    "confidence": "medium"
+   },
+   {
+    "id": "una-06",
+    "name": "una x nc2 桃園店（待確認）",
+    "addr": "桃園市蘆竹區忠孝西路30號",
+    "city": "桃園",
+    "phone": "03-222-9666",
+    "confidence": "medium"
+   },
+   {
+    "id": "una-07",
+    "name": "尤拿中壢店（待確認）",
+    "addr": "桃園市中壢區中正路140號",
+    "city": "桃園",
+    "phone": "",
+    "confidence": "medium"
+   },
+   {
+    "id": "una-08",
+    "name": "UNA J9S Hair 沙鹿總店（待確認）",
+    "addr": "台中市沙鹿區中山路633號",
+    "city": "台中",
+    "phone": "04-2662-6966",
+    "confidence": "low"
+   },
+   {
+    "id": "una-09",
+    "name": "UNA J9S Hair 北勢店（待確認）",
+    "addr": "台中市沙鹿區北勢東路309號",
+    "city": "台中",
+    "phone": "04-2631-3670",
+    "confidence": "low"
+   },
+   {
+    "id": "una-10",
+    "name": "UNA J9S Hair 靜宜店（待確認）",
+    "addr": "台中市沙鹿區北勢二街1號",
+    "city": "台中",
+    "phone": "04-2632-0929",
+    "confidence": "low"
+   },
+   {
+    "id": "una-11",
+    "name": "UNA J9S Hair 逢甲店（待確認）",
+    "addr": "台中市西屯區文華路102號",
+    "city": "台中",
+    "phone": "04-2451-0017",
+    "confidence": "low"
+   },
+   {
+    "id": "una-12",
+    "name": "嘉義尤拿 小雅店",
+    "addr": "嘉義市東區小雅路340號",
+    "city": "嘉義",
+    "phone": "05-2771-687",
+    "confidence": "high"
+   },
+   {
+    "id": "una-13",
+    "name": "台南尤拿髮藝 成大館",
+    "addr": "台南市東區長榮路二段171號2-3樓",
+    "city": "台南",
+    "phone": "06-200-6700",
+    "confidence": "high"
+   },
+   {
+    "id": "una-14",
+    "name": "尤拿髮藝 新田一館（待確認）",
+    "addr": "高雄市前金區新田路205之1號",
+    "city": "高雄",
+    "phone": "07-2513-133",
+    "confidence": "medium"
+   },
+   {
+    "id": "una-15",
+    "name": "尤拿髮藝 中華二館（待確認）",
+    "addr": "高雄市前金區中華四路348號",
+    "city": "高雄",
+    "phone": "07-2216-122",
+    "confidence": "medium"
+   },
+   {
+    "id": "una-16",
+    "name": "尤拿髮藝 自由旗艦館（待確認）",
+    "addr": "高雄市左營區自由二路311號",
+    "city": "高雄",
+    "phone": "07-5567-588",
+    "confidence": "medium"
+   },
+   {
+    "id": "una-17",
+    "name": "尤拿髮藝 青海館（待確認）",
+    "addr": "高雄市鼓山區青海路197號",
+    "city": "高雄",
+    "phone": "07-5550-388",
+    "confidence": "medium"
+   },
+   {
+    "id": "una-18",
+    "name": "尤拿概念館（待確認）",
+    "addr": "高雄市前金區五福三路25號",
+    "city": "高雄",
+    "phone": "07-2217-188",
+    "confidence": "low"
    }
   ]
  }
