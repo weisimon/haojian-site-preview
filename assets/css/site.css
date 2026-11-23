@@ -1131,7 +1131,7 @@ p, li { text-wrap: pretty; }
 
 /* 購買區：整把完整產品照（不裁切）＋資訊 */
 .pd .buy-te__grid.pd-buy { grid-template-columns:1fr 1fr; justify-items:stretch; }
-.pd-buy__media { aspect-ratio:auto; background:#000; margin:0; }
+.pd-buy__media { aspect-ratio:auto; background:transparent; margin:0; } /* 2026-11-23：圖未載入時不留黑色空框 */
 .pd-buy__media img { display:block; width:100%; height:auto; }
 @media (max-width: 767px) { .pd .buy-te__grid.pd-buy { grid-template-columns:1fr; } }
 @media (max-width: 767px) { .pd .pd-buy__media { margin-inline:calc(var(--pad) * -1); width:auto; } }
