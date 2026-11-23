@@ -20,7 +20,7 @@ https://raw.githack.com/weisimon/haojian-site-preview/master/index.html
 
 ## 設計師推薦網址示意（2026-11-23，原地顯示、網址不變；客人看不到說明）
 
-- `mpa/` … `mpj/`：直接顯示首頁內容。`mpa/core/` 等（fine／core／air／flow）：直接顯示該商品頁內容。網址列不變、不轉址。
+- `mpa/` … `mpz/`（26 組）：直接顯示首頁內容。`mpa/core/` 等（fine／core／air／flow）：直接顯示該商品頁內容。網址列不變、不轉址。
 - 每頁注入 `<base href>`（讓相對路徑的圖、CSS、連結正常）、`<meta name="robots" content="noindex,follow">`、`<link rel="canonical">`（指向 `index.html` 或 `products/{款}.html`），以及產生隨機 cookie `mp_vt` 的小段 script（看不出代號）。
 - 靜態站沒有伺服器，示意版把 token→代號對照存在瀏覽器 localStorage `mp_vt_demo`；正式版由 WordPress 外掛 `wpicked-designer-ref` 在伺服器端設 HttpOnly cookie、資料表對照，網址為 `wpicked.com/mpa`、`wpicked.com/mpa/core`。
 - 產生：`build_ref.py`（由 build_site.py 最後呼叫；複製已產生的 index.html／products/*.html 再注入）。
