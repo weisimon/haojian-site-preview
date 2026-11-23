@@ -22,6 +22,7 @@ https://raw.githack.com/weisimon/haojian-site-preview/master/index.html
 
 - `mpa/` … `mpj/`：開啟後產生隨機 cookie `mp_vt`（看不出代號），立刻轉回首頁。預覽網址例：`https://raw.githack.com/weisimon/haojian-site-preview/master/mpa/index.html`
 - 靜態站沒有伺服器，示意版把 token→代號對照存在瀏覽器 localStorage `mp_vt_demo`（開發者工具可看）；正式版由 WordPress 外掛 `wpicked-designer-ref` 在伺服器端 302＋HttpOnly cookie、資料表對照，網址為 `wpicked.com/mpa`。
+- 商品深連結：`mpa/core/index.html` → 歸 mpa 後轉到 `products/core.html`（四款 fine／core／air／flow × mpa…mpj）。正式站為 `wpicked.com/mpa/core` → `/mp/core/`。
 - 產生：`build_ref.py`（由 build_site.py 最後呼叫）。
 
 ## 2026-11-23 更新

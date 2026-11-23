@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>毫剪 Milli Peak</title>
+<script>
+(function(){
+  // 靜態示意：產生隨機不透明 token 存 cookie（看不出是誰），對應關係只存在本機（正式版存伺服器資料表）
+  try{
+    var t='';var a=new Uint8Array(16);crypto.getRandomValues(a);for(var i=0;i<a.length;i++)t+=('0'+a[i].toString(16)).slice(-2);
+    document.cookie='mp_vt='+t+'; Max-Age='+(30*86400)+'; Path=/; SameSite=Lax'+(location.protocol==='https:'?'; Secure':'');
+    var m=JSON.parse(localStorage.getItem('mp_vt_demo')||'{}');m[t]={c:'mpi',ts:Date.now()};localStorage.setItem('mp_vt_demo',JSON.stringify(m));
+  }catch(e){}
+  location.replace('../../products/core.html');
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0;url=../../products/core.html"></noscript>
+</head>
+<body></body>
+</html>
