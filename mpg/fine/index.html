@@ -1,23 +1,247 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant-TW">
 <head>
-<meta charset="utf-8">
-<meta name="robots" content="noindex,nofollow">
-<meta name="referrer" content="no-referrer">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>毫剪 Milli Peak</title>
-<script>
-(function(){
-  // 靜態示意：產生隨機不透明 token 存 cookie（看不出是誰），對應關係只存在本機（正式版存伺服器資料表）
-  try{
-    var t='';var a=new Uint8Array(16);crypto.getRandomValues(a);for(var i=0;i<a.length;i++)t+=('0'+a[i].toString(16)).slice(-2);
-    document.cookie='mp_vt='+t+'; Max-Age='+(30*86400)+'; Path=/; SameSite=Lax'+(location.protocol==='https:'?'; Secure':'');
-    var m=JSON.parse(localStorage.getItem('mp_vt_demo')||'{}');m[t]={c:'mpg',ts:Date.now()};localStorage.setItem('mp_vt_demo',JSON.stringify(m));
-  }catch(e){}
-  location.replace('../../products/fine.html');
-})();
-</script>
-<noscript><meta http-equiv="refresh" content="0;url=../../products/fine.html"></noscript>
+  <meta charset="utf-8">
+<base href="../../products/">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="fine.html">
+<script>(function(){try{var m=JSON.parse(localStorage.getItem('mp_vt_demo')||'{}');var c=(document.cookie.match(/(?:^|; )mp_vt=([a-f0-9]{32})/)||[])[1];if(!c||!m[c]||m[c].c!=='mpg'){var a=new Uint8Array(16);crypto.getRandomValues(a);c='';for(var i=0;i<a.length;i++)c+=('0'+a[i].toString(16)).slice(-2);}m[c]={c:'mpg',ts:Date.now()};localStorage.setItem('mp_vt_demo',JSON.stringify(m));document.cookie='mp_vt='+c+'; Max-Age='+(30*86400)+'; Path=/; SameSite=Lax'+(location.protocol==='https:'?'; Secure':'');}catch(e){}})();</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>緻 fine MP–100S｜毫剪 Milli Peak</title>
+  <meta name="description" content="毫剪 緻 fine MP–100S，精準剪裁。NT$4,900。">
+  <link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/logo/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon-180.png">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/site.css">
 </head>
-<body></body>
+<body class="pd pd--fine">
+<a class="skip" href="#main">跳到主要內容</a>
+<header class="site-header wrap">
+  <a class="mp-logo mp-logo--wordmark brand" href="../index.html"><img src="../assets/logo/logo-wordmark-black.svg" width="376" height="36" alt="毫剪 Milli Peak 首頁"></a>
+  <nav class="nav" aria-label="主要導覽">
+    <ul class="wm-row"><li><a class="wm is-current" href="../products/fine.html" aria-current="page"><span class="wm__ch" lang="zh-Hant">緻</span><span class="wm__en">fine</span><span class="wm__no">MP–100S</span></a></li><li><a class="wm" href="../products/core.html"><span class="wm__ch" lang="zh-Hant">通</span><span class="wm__en">core</span><span class="wm__no">MP–101S</span></a></li><li><a class="wm" href="../products/air.html"><span class="wm__ch" lang="zh-Hant">透</span><span class="wm__en">air</span><span class="wm__no">MP–103S</span></a></li><li><a class="wm" href="../products/flow.html"><span class="wm__ch" lang="zh-Hant">順</span><span class="wm__en">flow</span><span class="wm__no">MP–102S</span></a></li></ul>
+    <ul class="nav__sec">
+      <li><a href="../story.html">品牌故事<span class="en">story</span></a></li>
+      <li><a href="../select.html">選物<span class="en">select</span></a></li>
+    </ul>
+  </nav>
+  <!-- 本站即 W 選物（舊站將換成本站）：W 選物標誌連回本站首頁 -->
+  <a class="wp-logo wp-logo--v1" href="../index.html"><img src="../assets/logo/wpicked-logo-v1.svg" width="1635" height="360" alt="W 選物 W.PICKED"></a>
+  <a class="cart-link" href="../cart.html" aria-label="購物車 cart"><svg class="cart-link__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="cart-link__n" data-cart-count hidden>0</span></a>
+  <!-- 會員選單：WordPress → WooCommerce 我的帳戶 /my-account/（登入、註冊、訂單 /my-account/orders/、帳戶資料 /my-account/edit-account/、登出 /my-account/customer-logout/）。預覽預設未登入；?demo=member 顯示已登入 -->
+  <details class="acct">
+    <summary class="acct__btn" aria-label="會員 account"><svg class="acct__icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20c.9-3.6 3.8-5.6 7.2-5.6s6.3 2 7.2 5.6"/></svg></summary>
+    <div class="acct__panel">
+      <ul class="acct__list" data-acct="guest">
+        <li><a href="../account.html#login">登入 <span class="en">log in</span></a></li>
+        <li><a href="../account.html#register">註冊 <span class="en">register</span></a></li>
+      </ul>
+      <ul class="acct__list" data-acct="member" hidden>
+        <li class="acct__hd"><a href="../account.html">我的帳戶 <span class="en">my account</span></a></li>
+        <li><a href="../account.html#orders">訂單紀錄 <span class="en">orders</span></a></li>
+        <li><a href="../account.html#courses">我的課程 <span class="en">my courses</span></a></li>
+        <li><a href="../account.html#details">帳戶資料 <span class="en">account details</span></a></li>
+        <li><a href="../account.html?demo=guest" data-logout>登出 <span class="en">log out</span></a></li>
+      </ul>
+    </div>
+  </details>
+  <details class="menu">
+    <summary aria-label="開關選單"><span class="when-closed">選單 <span class="en">menu</span></span><span class="when-open">關閉 <span class="en">close</span></span></summary>
+    <nav class="menu__panel" aria-label="行動版導覽">
+      <p class="menu__brand en">milli peak</p>
+      <ul class="mwm-row"><li><a class="mwm is-current" href="../products/fine.html" aria-current="page"><span class="mwm__ch" lang="zh-Hant">緻</span><span class="mwm__en">fine</span><span class="mwm__no">MP–100S</span></a></li><li><a class="mwm" href="../products/core.html"><span class="mwm__ch" lang="zh-Hant">通</span><span class="mwm__en">core</span><span class="mwm__no">MP–101S</span></a></li><li><a class="mwm" href="../products/air.html"><span class="mwm__ch" lang="zh-Hant">透</span><span class="mwm__en">air</span><span class="mwm__no">MP–103S</span></a></li><li><a class="mwm" href="../products/flow.html"><span class="mwm__ch" lang="zh-Hant">順</span><span class="mwm__en">flow</span><span class="mwm__no">MP–102S</span></a></li></ul>
+      <ul class="menu__sec">
+        <li><a href="../story.html">品牌故事 <span class="en">story</span></a></li>
+        <li><a href="../select.html">選物 <span class="en">select</span></a></li>
+      </ul>
+      <p class="menu__brand menu__brand--acct en">member</p>
+      <ul class="menu__sec menu__sec--acct" data-acct="guest">
+        <li><a href="../account.html#login">登入 <span class="en">log in</span></a></li>
+        <li><a href="../account.html#register">註冊 <span class="en">register</span></a></li>
+        <li><a href="../cart.html">購物車 <span class="en">cart</span></a></li>
+      </ul>
+      <ul class="menu__sec menu__sec--acct" data-acct="member" hidden>
+        <li><a href="../account.html">我的帳戶 <span class="en">my account</span></a></li>
+        <li><a href="../account.html#orders">訂單紀錄 <span class="en">orders</span></a></li>
+        <li><a href="../account.html#courses">我的課程 <span class="en">my courses</span></a></li>
+        <li><a href="../account.html#details">帳戶資料 <span class="en">account details</span></a></li>
+        <li><a href="../cart.html">購物車 <span class="en">cart</span></a></li>
+        <li><a href="../account.html?demo=guest" data-logout>登出 <span class="en">log out</span></a></li>
+      </ul>
+    </nav>
+  </details>
+</header>
+<nav class="mstrip" aria-label="產品"><ul class="sw-row"><li><a class="sw is-current" href="../products/fine.html" aria-current="page"><span class="sw__ch" lang="zh-Hant">緻</span><span class="sw__en">fine</span><span class="sw__no">MP–100S</span></a></li><li><a class="sw" href="../products/core.html"><span class="sw__ch" lang="zh-Hant">通</span><span class="sw__en">core</span><span class="sw__no">MP–101S</span></a></li><li><a class="sw" href="../products/air.html"><span class="sw__ch" lang="zh-Hant">透</span><span class="sw__en">air</span><span class="sw__no">MP–103S</span></a></li><li><a class="sw" href="../products/flow.html"><span class="sw__ch" lang="zh-Hant">順</span><span class="sw__en">flow</span><span class="sw__no">MP–102S</span></a></li></ul></nav>
+
+<main id="main">
+  <!-- 1. 首屏橫幅：圖字融合，中文主句＋英文 slogan -->
+  <section class="pd-banner" aria-labelledby="pd-title">
+    <picture class="pd-banner__pic"><source media="(max-width:767px)" srcset="../assets/img/banner-fine-m.webp" width="1080" height="1600"><img src="../assets/img/banner-fine.webp" srcset="../assets/img/banner-fine-1200.webp 1200w, ../assets/img/banner-fine.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 緻 fine 黑色 5.25 吋精準結構刀，黑底橫幅產品主視覺" fetchpriority="high" decoding="async"></picture>
+    <div class="pd-banner__text">
+      <h1 id="pd-title" class="pd-banner__title"><span class="pd-banner__zh"><span class="nw">為細節而生，</span><span class="nw">緻經典</span></span><span class="pd-banner__slogan en">born for detail.</span></h1>
+      <p class="pd-banner__name en">fine</p>
+      <p class="pd-banner__model en">緻・MP–100S・5.25 吋</p>
+    </div>
+  </section>
+
+  <!-- 1b. 滑動圖庫：不同角度／組合圖（不自動播放） -->
+  <section class="pg" aria-roledescription="carousel" aria-label="緻 fine 產品照片，可左右滑動">
+    <div class="pg__wrap">
+      <ul class="pg__track" id="pg-fine-track" tabindex="0" aria-label="產品照片，左右滑動瀏覽">
+        <li class="pg__slide" id="pg-fine-s1" role="group" aria-roledescription="slide" aria-label="第 1 張，共 5 張"><img src="../assets/img/pg-fine-1.webp" srcset="../assets/img/pg-fine-1-900.webp 900w, ../assets/img/pg-fine-1.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 緻 fine 黑色 5.25 吋精準結構刀，刀身與螺絲局部" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-fine-s2" role="group" aria-roledescription="slide" aria-label="第 2 張，共 5 張"><img src="../assets/img/pg-fine-2.webp" srcset="../assets/img/pg-fine-2-900.webp 900w, ../assets/img/pg-fine-2.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 緻 fine 黑色 5.25 吋精準結構刀，剪髮中" loading="lazy" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-fine-s3" role="group" aria-roledescription="slide" aria-label="第 3 張，共 5 張"><img src="../assets/img/pg-fine-3.webp" srcset="../assets/img/pg-fine-3-900.webp 900w, ../assets/img/pg-fine-3.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 緻 fine 黑色 5.25 吋精準結構刀，斜角整把" loading="lazy" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-fine-s4" role="group" aria-roledescription="slide" aria-label="第 4 張，共 5 張"><img src="../assets/img/pg-fine-4.webp" srcset="../assets/img/pg-fine-4-900.webp 900w, ../assets/img/pg-fine-4.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 緻 fine 黑色 5.25 吋精準結構刀，桌面靜物組合" loading="lazy" decoding="async" draggable="false"></li>
+        <li class="pg__slide" id="pg-fine-s5" role="group" aria-roledescription="slide" aria-label="第 5 張，共 5 張"><img src="../assets/img/pg-fine-5.webp" srcset="../assets/img/pg-fine-5-900.webp 900w, ../assets/img/pg-fine-5.webp 1800w" sizes="(max-width:767px) 100vw, 1100px" width="1800" height="1200" alt="毫剪 緻 fine 黑色 5.25 吋精準結構刀，盒裝組合" loading="lazy" decoding="async" draggable="false"></li>
+      </ul>
+      <button type="button" class="pg__arrow pg__arrow--prev" aria-label="上一張" aria-controls="pg-fine-track">‹</button>
+      <button type="button" class="pg__arrow pg__arrow--next" aria-label="下一張" aria-controls="pg-fine-track">›</button>
+    </div>
+    <div class="pg__dots" role="group" aria-label="選擇照片"><button type="button" class="pg__dot" aria-label="看第 1 張" aria-controls="pg-fine-s1" aria-current="true"></button><button type="button" class="pg__dot" aria-label="看第 2 張" aria-controls="pg-fine-s2"></button><button type="button" class="pg__dot" aria-label="看第 3 張" aria-controls="pg-fine-s3"></button><button type="button" class="pg__dot" aria-label="看第 4 張" aria-controls="pg-fine-s4"></button><button type="button" class="pg__dot" aria-label="看第 5 張" aria-controls="pg-fine-s5"></button></div>
+  </section>
+
+  <div class="bs-flow pf-flow">
+  <!-- 2. 定位：手持主圖＋定位句 -->
+  <section class="bs bs--r pf--hero pf--stack pf" aria-labelledby="pos-h">
+    <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-fine-hero-m.webp" width="1080" height="891"><img src="../assets/img/pb-fine-hero.webp" srcset="../assets/img/pb-fine-hero-1200.webp 1200w, ../assets/img/pb-fine-hero.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 緻 fine 黑色 5.25 吋精準結構刀，黑底產品照" loading="lazy" decoding="async"></picture>
+    <div class="bs__text"><p class="bs__eyebrow">MP-100S 毫剪 精準結構刀</p><p class="pf-label">定位 <span class="en">positioning</span>｜精準剪裁</p><h2 class="bs__zh pf-lead" id="pos-h"><span class="nw">離手最近，</span><span class="nw">所以精準度最高。</span></h2><p class="bs__en en">Closest to the hand, so the most precise.</p><p class="bs__zh bs__zh--s"><span class="nw">不浮誇，</span><span class="nw">卻能掌控每一個細節，</span><span class="nw">尤其修<span class="nw">短髮</span>外線時，</span><span class="nw">更能感受工具和手之間的連動。</span><span class="nw"><span class="nw">5.25 吋</span>短刀身，</span><span class="nw">給熱愛剪髮、</span><span class="nw">喜歡剪<span class="nw">短髮</span>的<span class="nw">髮型師</span>。</span></p><p class="bs__en en">Never showy, yet in control of every detail; refining short-hair outlines, you feel tool and hand move together. A short 5.25" blade, for stylists who love cutting and love short hair.</p></div>
+  </section>
+
+  <!-- 3. 三個重點：每點一個細節圓，字壓在圖上 -->
+  <section class="bs bs--r pf--nudge pf" aria-labelledby="feat-1">
+    <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-fine-f1-m.webp" width="1080" height="856"><img src="../assets/img/pb-fine-f1.webp" srcset="../assets/img/pb-fine-f1-1200.webp 1200w, ../assets/img/pb-fine-f1.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 緻 fine 黑色 5.25 吋精準結構刀，頭段半圓弧" loading="lazy" decoding="async"></picture>
+    <div class="bs__text"><p class="pf-no en">01</p><h3 class="pf-name" id="feat-1">頭段半圓弧 <span class="en">rounded tip</span></h3><p class="bs__zh pf-blurb"><span class="nw">頭段半圓弧設計，</span><span class="nw">貼著皮膚剪也安心。</span></p><p class="bs__en en">A rounded tip, safe even close to the skin.</p></div>
+  </section>
+  <section class="bs bs--r pf" aria-labelledby="feat-2">
+    <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-fine-f2-m.webp" width="1080" height="758"><img src="../assets/img/pb-fine-f2.webp" srcset="../assets/img/pb-fine-f2-1200.webp 1200w, ../assets/img/pb-fine-f2.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 緻 fine 黑色 5.25 吋精準結構刀，耐磨片＋軸承（培林）" loading="lazy" decoding="async"></picture>
+    <div class="bs__text"><p class="pf-no en">02</p><h3 class="pf-name" id="feat-2"><span class="nw">耐磨片</span>＋<span class="nw">軸承（培林）</span> <span class="en">wear plate + bearing</span></h3><p class="bs__zh pf-blurb"><span class="nw">內附<span class="nw">耐磨片</span>與<span class="nw">軸承（培林）</span>，</span><span class="nw">張力穩定、</span><span class="nw">越用越順。</span></p><p class="bs__en en">A built-in wear plate and bearing keep tension steady and smoother with use.</p></div>
+  </section>
+  <section class="bs bs--tl pf" aria-labelledby="feat-3">
+    <picture class="bs__pic"><source media="(max-width:767px)" srcset="../assets/img/pb-fine-f3-m.webp" width="1080" height="595"><img src="../assets/img/pb-fine-f3.webp" srcset="../assets/img/pb-fine-f3-1200.webp 1200w, ../assets/img/pb-fine-f3.webp 2400w" sizes="100vw" width="2400" height="1350" alt="毫剪 緻 fine 黑色 5.25 吋精準結構刀，平頭螺絲" loading="lazy" decoding="async"></picture>
+    <div class="bs__text"><p class="pf-no en">03</p><h3 class="pf-name" id="feat-3"><span class="nw">平頭螺絲</span> <span class="en">flat-head screw</span></h3><p class="bs__zh pf-blurb"><span class="nw"><span class="nw">平頭螺絲</span>，</span><span class="nw">低調。</span></p><p class="bs__en en">A flat-head screw, understated.</p></div>
+  </section>
+
+  </div>
+
+  <!-- 4. 規格（依 Simon 規格稿＋工廠規格表） -->
+  <section id="specs" class="pd-spec" aria-labelledby="specs-title">
+    <div class="wrap">
+      <h2 id="specs-title" class="pd-spec__title">MP–100S <span class="en">specifications</span></h2>
+      <dl class="pd-spec__list">
+      <div class="pd-spec__row"><dt>型號 <span class="en">model</span></dt><dd>MP–100S</dd></div>
+      <div class="pd-spec__row"><dt>用途 <span class="en">use</span></dt><dd>精準結構刀<span class="en">precision structure shear</span></dd></div>
+      <div class="pd-spec__row"><dt>尺寸 <span class="en">size</span></dt><dd>5.25 吋</dd></div>
+      <div class="pd-spec__row"><dt>重量 <span class="en">weight</span></dt><dd>47g</dd></div>
+      <div class="pd-spec__row"><dt>整體長度（含尾柄） <span class="en">overall length, with finger rest</span></dt><dd>19cm</dd></div>
+      <div class="pd-spec__row"><dt>整體長度（不含尾柄） <span class="en">overall length, without finger rest</span></dt><dd>17.4cm</dd></div>
+      <div class="pd-spec__row"><dt>尾柄長度 <span class="en">finger rest</span></dt><dd>1.6cm</dd></div>
+      <div class="pd-spec__row"><dt>刀身長度 <span class="en">blade length</span></dt><dd>5.9cm</dd></div>
+      <div class="pd-spec__row"><dt>顏色 <span class="en">colour</span></dt><dd>黑色<span class="en">black</span></dd></div>
+      <div class="pd-spec__row"><dt>刃型 <span class="en">blade type</span></dt><dd>頭段半圓弧<span class="en">rounded tip</span></dd></div>
+      <div class="pd-spec__row"><dt>配件 <span class="en">parts</span></dt><dd>耐磨片＋軸承（培林）＋平頭螺絲<span class="en">wear plate + bearing + flat-head screw</span></dd></div>
+      <div class="pd-spec__row"><dt>產地 <span class="en">origin</span></dt><dd>中國<span class="en">Made in China</span></dd></div>
+      <div class="pd-spec__row"><dt>保固 <span class="en">warranty</span></dt><dd>3 個月（非人為損壞免費維修）<span class="en">3 months, non-accidental damage</span></dd></div>
+      <div class="pd-spec__row"><dt>售價 <span class="en">price</span></dt><dd>NT$4,900（單支）<span class="en">per pair</span></dd></div>
+      </dl>
+      <p class="pd-spec__note">＊鋼材：日本 440C <span class="en">Steel: Japanese 440C.</span></p>
+    </div>
+  </section>
+
+  <!-- 5. 購買 -->
+  <section id="buy" class="section buy-te" aria-labelledby="buy-title">
+    <div class="wrap buy-te__grid pd-buy">
+      <figure class="buy-te__media pd-buy__media"><img src="../assets/img/pbuy-fine.webp" srcset="../assets/img/pbuy-fine-800.webp 800w, ../assets/img/pbuy-fine.webp 1600w" sizes="(max-width:767px) 100vw, 50vw" width="1600" height="1069" alt="毫剪 緻 fine 黑色 5.25 吋精準結構刀，整把完整產品照" loading="lazy" decoding="async"></figure>
+      <div class="buy-te__info te-center">
+        <h2 id="buy-title" class="h-m">緻 <span class="en">fine</span>.</h2>
+        <p class="buy-te__model model muted">MP–100S</p>
+        <p class="buy-te__desc">精準剪裁</p>
+        <ul class="buy-opts" aria-label="購買選項">
+          <li class="buy-opts__row is-main"><span class="buy-opts__name">單支 <span class="en">single</span></span><span class="buy-opts__price">NT$4,900</span></li>
+          <li class="buy-opts__row"><span class="buy-opts__name">任選 3 把 <span class="buy-opts__set buy-opts__set--sub">四款任選三把（加碼信用卡 3 期 0 利率） <span class="en">any three</span></span></span><span class="buy-opts__price">NT$13,400</span></li>
+          <li class="buy-opts__row"><span class="buy-opts__name">任選 4 把 <span class="buy-opts__set buy-opts__set--sub">四款任選四把（加碼信用卡 3 期 0 利率） <span class="en">any four</span></span></span><span class="buy-opts__price">NT$17,400</span></li>
+        </ul>
+        <!-- 購物車（localStorage）＋立即購買；WordPress：對應 WooCommerce 加入購物車／結帳 -->
+        <div class="buy-actions">
+          <button type="button" class="buy-cta" data-add-to-cart="fine">加入購物車 <span class="en">add to cart</span></button>
+          <a class="buy-cta buy-cta--solid" href="../checkout.html?shear=fine">立即購買 <span class="en">buy now</span></a>
+        </div>
+        <p class="cart-msg" data-cart-msg aria-live="polite"></p>
+        <aside class="return-note" aria-label="退換貨須知">
+          <p class="return-note__label">7 天猶豫期<span class="return-note__not">非試用期</span> <span class="en">7-day cooling-off, not a trial</span></p>
+          <p class="return-note__body">商品需保持全新未使用、包裝完整方可退換；剪刀拆封使用後無法退換。</p>
+          <p class="return-note__en en">7-day cooling-off period, not a trial. Unused items in original packaging only.</p>
+        </aside>
+        <aside class="warranty-note" aria-label="保固與產地">
+          <p class="warranty-note__label">保固與產地 <span class="en">warranty &amp; origin</span></p>
+          <dl class="warranty-note__list">
+            <div><dt>保固</dt><dd>剪刀保固 3 個月，非人為損壞皆可免費維修。超過 3 個月仍協助維修，運費與維修費實報實銷。</dd></div>
+            <div><dt>產地</dt><dd>中國</dd></div>
+          </dl>
+          <p class="warranty-note__en en">3-month warranty: free repair for non-accidental damage. After 3 months we still repair at cost (shipping + repair). Made in China.</p>
+        </aside>
+        <p class="price-note">價格為新台幣，含稅，免運。<span class="en">Prices in NTD, tax included, free shipping.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 配件（置於最下方） -->
+  <section class="pd-acc" aria-labelledby="acc-title">
+    <div class="pd-acc__grid wrap">
+      <figure class="pd-acc__fig"><img src="../assets/img/pca-fine.webp" srcset="../assets/img/pca-fine-800.webp 800w, ../assets/img/pca-fine.webp 1600w" sizes="(max-width:767px) 100vw, 50vw" width="1600" height="1600" alt="毫剪 緻 fine 黑色 5.25 吋精準結構刀，盒裝與隨附配件平拍" loading="lazy" decoding="async"></figure>
+      <div class="pd-acc__text">
+        <h2 id="acc-title" class="pd-acc__h">配件 <span class="en">accessories</span></h2>
+        <p class="pd-acc__p"><span class="nw">盒裝內容：</span><span class="nw">剪刀、</span><span class="nw">包裝盒與隨附配件。</span></p>
+        <p class="pd-acc__p en">In the box: the shears, the case and included accessories.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" aria-labelledby="related-title">
+    <div class="section-head section-head--tight">
+      <h2 id="related-title" class="h-l">其他款式 <span class="en">related</span></h2>
+      <p><a class="accent-link" href="../story.html">品牌故事 story</a></p>
+    </div>
+    <ul class="pgrid pgrid--store pgrid--3">
+      <li class="pcard"><a class="pcard__link" href="../products/core.html">
+        <div class="media pcard__media"><img src="../assets/img/card-core.webp" width="1200" height="900" alt="毫剪 通 core 銀色 6.8 吋通用綜合刀" loading="lazy" decoding="async" data-placeholder="card-core"></div>
+        <div class="pcard__meta">
+          <h3 class="pcard__title"><span class="pcard__char">通</span> <span class="en">core</span> <span class="model">MP–101S</span></h3>
+          <p class="pcard__price">NT$4,900</p>
+        </div>
+        <p class="pcard__desc">最通用</p>
+      </a></li>
+      <li class="pcard"><a class="pcard__link" href="../products/air.html">
+        <div class="media pcard__media"><img src="../assets/img/card-air.webp" width="1200" height="900" alt="毫剪 透 air 銀色 6 吋 10%～15% 打薄刀" loading="lazy" decoding="async" data-placeholder="card-air"></div>
+        <div class="pcard__meta">
+          <h3 class="pcard__title"><span class="pcard__char">透</span> <span class="en">air</span> <span class="model">MP–103S</span></h3>
+          <p class="pcard__price">NT$4,900</p>
+        </div>
+        <p class="pcard__desc">通透輕盈</p>
+      </a></li>
+      <li class="pcard"><a class="pcard__link" href="../products/flow.html">
+        <div class="media pcard__media"><img src="../assets/img/card-flow.webp" width="1200" height="900" alt="毫剪 順 flow 銀色 5.5 吋單刃滑剪" loading="lazy" decoding="async" data-placeholder="card-flow"></div>
+        <div class="pcard__meta">
+          <h3 class="pcard__title"><span class="pcard__char">順</span> <span class="en">flow</span> <span class="model">MP–102S</span></h3>
+          <p class="pcard__price">NT$4,900</p>
+        </div>
+        <p class="pcard__desc">創造髮束，降低毛躁</p>
+      </a></li>
+    </ul>
+  </section>
+</main>
+<footer class="site-footer wrap">
+  <a class="mp-logo mp-logo--lockup" href="../index.html"><picture><source media="(max-width:767px)" srcset="../assets/logo/logo-lockup-white.svg"><img src="../assets/logo/logo-lockup.svg" width="786" height="322" alt="毫剪 Milli Peak"></picture></a>
+  <ul class="footer__links">
+    <li><a href="../index.html#products">產品</a></li>
+    <li><a href="../story.html">品牌故事</a></li>
+  </ul>
+  <p class="footer__note">剪刀保固 3 個月，非人為損壞免費維修；逾期仍協助維修，運費與維修費實報實銷。產地：中國。<span class="en">3-month warranty. Made in China.</span></p>
+  <p class="footer__copy">© 2026 問淵有限公司</p>
+</footer>
+<script src="../assets/js/catalog.js" defer></script>
+<script src="../assets/js/cart.js" defer></script>
+<script src="../assets/js/member.js" defer></script>
+<script src="../assets/js/gallery.js" defer></script>
+</body>
 </html>

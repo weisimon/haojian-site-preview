@@ -18,12 +18,12 @@ https://raw.githack.com/weisimon/haojian-site-preview/master/index.html
 
 重新產生頁面：`python3 /workspace/haojian/build_site.py`
 
-## 設計師推薦網址示意（2026-11-23，僅示意，客人看不到）
+## 設計師推薦網址示意（2026-11-23，原地顯示、網址不變；客人看不到說明）
 
-- `mpa/` … `mpj/`：開啟後產生隨機 cookie `mp_vt`（看不出代號），立刻轉回首頁。預覽網址例：`https://raw.githack.com/weisimon/haojian-site-preview/master/mpa/index.html`
-- 靜態站沒有伺服器，示意版把 token→代號對照存在瀏覽器 localStorage `mp_vt_demo`（開發者工具可看）；正式版由 WordPress 外掛 `wpicked-designer-ref` 在伺服器端 302＋HttpOnly cookie、資料表對照，網址為 `wpicked.com/mpa`。
-- 商品深連結：`mpa/core/index.html` → 歸 mpa 後轉到 `products/core.html`（四款 fine／core／air／flow × mpa…mpj）。正式站為 `wpicked.com/mpa/core` → `/mp/core/`。
-- 產生：`build_ref.py`（由 build_site.py 最後呼叫）。
+- `mpa/` … `mpj/`：直接顯示首頁內容。`mpa/core/` 等（fine／core／air／flow）：直接顯示該商品頁內容。網址列不變、不轉址。
+- 每頁注入 `<base href>`（讓相對路徑的圖、CSS、連結正常）、`<meta name="robots" content="noindex,follow">`、`<link rel="canonical">`（指向 `index.html` 或 `products/{款}.html`），以及產生隨機 cookie `mp_vt` 的小段 script（看不出代號）。
+- 靜態站沒有伺服器，示意版把 token→代號對照存在瀏覽器 localStorage `mp_vt_demo`；正式版由 WordPress 外掛 `wpicked-designer-ref` 在伺服器端設 HttpOnly cookie、資料表對照，網址為 `wpicked.com/mpa`、`wpicked.com/mpa/core`。
+- 產生：`build_ref.py`（由 build_site.py 最後呼叫；複製已產生的 index.html／products/*.html 再注入）。
 
 ## 2026-11-23 更新
 - 價格：單支 NT$4,900／任選 3 把 NT$13,400／任選 4 把 NT$17,400（無折扣碼）。
