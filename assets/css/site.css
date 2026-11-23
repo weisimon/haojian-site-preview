@@ -1400,3 +1400,17 @@ select.co-input { appearance:auto; }
 @media (max-width:767px) {
   .hp .bs__text, .hp.bs--r .bs__text { padding:6vw 6vw 14vw; }
 }
+
+/* ---------- 2026-11-23 保固與產地（無紅標、細黑框，對齊 return-note） ---------- */
+.warranty-note { margin:var(--sp-md, 1.2em) auto 0; max-width:30em; padding:1em 1.2em; border:1px solid var(--mp-silver-100, #ccc); text-align:left; color:var(--mp-black); background:#fff; font-weight:300; }
+.warranty-note__label { font-size:var(--fs-20); letter-spacing:.04em; margin:0 0 .45em; }
+.warranty-note__label .en { display:block; font-size:.72em; margin-top:.2em; color:var(--mp-black-80); }
+.warranty-note__list { margin:0; }
+.warranty-note__list > div { display:grid; grid-template-columns:3.2em 1fr; gap:.6em; padding:.35em 0; border-top:1px solid var(--mp-silver-100, #e5e5e5); }
+.warranty-note__list dt { color:var(--mp-black-80); font-size:var(--fs-15); }
+.warranty-note__list dd { margin:0; font-size:var(--fs-15); line-height:1.7; }
+.warranty-note__en { font-size:var(--fs-15); color:var(--mp-black-80); margin:.45em 0 0; line-height:1.5; }
+.footer__note { flex-basis:100%; order:3; margin:0; color:var(--mp-text-muted); font-size:.92em; line-height:1.7; font-weight:300; }
+.footer__note .en { margin-left:.5em; }
+.page-black .footer__note { color:var(--mp-gray-80); }
+@media (max-width: 767px) { .footer__note { color:var(--mp-gray-60); order:0; } }

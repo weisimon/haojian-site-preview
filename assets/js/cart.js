@@ -4,7 +4,7 @@
   'use strict';
   var KEY = 'mp_cart_v1';
   var CAT = window.MP_CATALOG || {};
-  var B = window.MP_BUNDLES || { single: 5000, any3: 13500, any4: 17500 };
+  var B = window.MP_BUNDLES || { single: 4900, any3: 13400, any4: 17400 };
   var fmt = function (n) { return 'NT$' + n.toLocaleString('en-US'); };
 
   function read() {

@@ -4,7 +4,7 @@ window.MP_CATALOG = {
   "kind": "shear",
   "name": "緻 fine",
   "model": "MP–100S",
-  "price": 5000,
+  "price": 4900,
   "physical": true,
   "img": "assets/img/card-fine.webp",
   "max": 10,
@@ -15,7 +15,7 @@ window.MP_CATALOG = {
   "kind": "shear",
   "name": "通 core",
   "model": "MP–101S",
-  "price": 5000,
+  "price": 4900,
   "physical": true,
   "img": "assets/img/card-core.webp",
   "max": 10,
@@ -26,7 +26,7 @@ window.MP_CATALOG = {
   "kind": "shear",
   "name": "透 air",
   "model": "MP–103S",
-  "price": 5000,
+  "price": 4900,
   "physical": true,
   "img": "assets/img/card-air.webp",
   "max": 10,
@@ -37,7 +37,7 @@ window.MP_CATALOG = {
   "kind": "shear",
   "name": "順 flow",
   "model": "MP–102S",
-  "price": 5000,
+  "price": 4900,
   "physical": true,
   "img": "assets/img/card-flow.webp",
   "max": 10,
@@ -77,4 +77,4 @@ window.MP_CATALOG = {
   "enabled": true
  }
 };
-window.MP_BUNDLES = {"single": 5000, "any3": 13500, "any4": 17500};
+window.MP_BUNDLES = {"single": 4900, "any3": 13400, "any4": 17400};

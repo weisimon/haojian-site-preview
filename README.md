@@ -17,3 +17,13 @@
 https://raw.githack.com/weisimon/haojian-site-preview/master/index.html
 
 重新產生頁面：`python3 /workspace/haojian/build_site.py`
+
+## 設計師推薦網址示意（2026-11-23，僅示意，客人看不到）
+
+- `mpa/` … `mpj/`：開啟後產生隨機 cookie `mp_vt`（看不出代號），立刻轉回首頁。預覽網址例：`https://raw.githack.com/weisimon/haojian-site-preview/master/mpa/index.html`
+- 靜態站沒有伺服器，示意版把 token→代號對照存在瀏覽器 localStorage `mp_vt_demo`（開發者工具可看）；正式版由 WordPress 外掛 `wpicked-designer-ref` 在伺服器端 302＋HttpOnly cookie、資料表對照，網址為 `wpicked.com/mpa`。
+- 產生：`build_ref.py`（由 build_site.py 最後呼叫）。
+
+## 2026-11-23 更新
+- 價格：單支 NT$4,900／任選 3 把 NT$13,400／任選 4 把 NT$17,400（無折扣碼）。
+- 保固 3 個月（非人為損壞免費維修；逾期仍協助維修，運費與維修費實報實銷）、產地中國：單品頁規格表＋購買區「保固與產地」＋全站頁尾。
